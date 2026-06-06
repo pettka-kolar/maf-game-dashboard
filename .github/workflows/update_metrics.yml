@@ -11,6 +11,10 @@ permissions:
 jobs:
   refresh-data:
     runs-on: ubuntu-latest
+    
+    # FIX: Force runner to use Node.js 24 for all steps, completely removing the deprecation warnings
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
     steps:
     - name: Checkout Code Repository
@@ -35,22 +39,21 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git pull metrics.json
         
-        # 1. Safeguard our newly scraped data file out of the git tree temporarily
+        # 1. Safeguard our newly scraped data file completely outside the git workspace tree
         if [ -f metrics.json ]; then
           cp metrics.json /tmp/metrics.json
         else
-          echo "metrics.json not found, skipping sync."
+          echo "metrics.json not found, skipping sync operations."
           exit 0
         fi
         
-        # 2. Fetch absolute latest changes and force-align local history with GitHub origin
+        # 2. Force fetch the server's history and reset our local branch pointer perfectly to origin/main
+        # This completely resolves any out-of-sync tracking or detached HEAD rejections
         git fetch origin main
-        git checkout main
-        git reset --hard origin/main
+        git checkout -B main origin/main
         
-        # 3. Move our freshly generated metrics data back into the perfectly synced workspace
+        # 3. Bring our freshly generated metrics data back into the fully synchronized workspace
         cp /tmp/metrics.json metrics.json
         
         # 4. Stage, check for changes, commit, and push upstream atomically
