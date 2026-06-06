@@ -14,14 +14,14 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/coffee-talk-tokyo",
         "opencritic_id": 20625,
         "opencritic_slug": "coffee-talk-tokyo",
-        "backup_peak": 327
+        "backup_peak": 0
     },
     "Phonopolis": {
         "steam_id": 1206070,
         "metacritic_slug": "pc/phonopolis",
         "opencritic_id": 20640,
         "opencritic_slug": "phonopolis",
-        "backup_peak": 560
+        "backup_peak": 0
     },
     "007 First Light": {
         "steam_id": 3768760,
@@ -35,7 +35,7 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/paralives",
         "opencritic_id": 18917,
         "opencritic_slug": "paralives",
-        "backup_peak": 78603
+        "backup_peak": 0
     },
     "Forza Horizon 6": {
         "steam_id": 2483190,
@@ -49,21 +49,21 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/luna-abyss",
         "opencritic_id": 20556,
         "opencritic_slug": "luna-abyss",
-        "backup_peak": 317
+        "backup_peak": 0
     },
     "Thick As Thieves": {
         "steam_id": 3341000,
         "metacritic_slug": "pc/thick-as-thieves",
         "opencritic_id": 20633,
         "opencritic_slug": "thick-as-thieves",
-        "backup_peak": 1169
+        "backup_peak": 0
     },
     "Deep Rock Galactic: Rogue Core (EA)": {
         "steam_id": 2605790,
         "metacritic_slug": "pc/deep-rock-galactic-rogue-core",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 42176
+        "backup_peak": 0
     },
     "Warhammer 40,000: Mechanicus II": {
         "steam_id": 2532480,
@@ -91,7 +91,7 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/zero-parades-for-dead-spies",
         "opencritic_id": 20490,
         "opencritic_slug": "zero-parades-for-dead-spies",
-        "backup_peak": 3177
+        "backup_peak": 0
     },
     "Farming Simulator 26": {
         "steam_id": 0,
@@ -112,7 +112,7 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/mina-the-hollower",
         "opencritic_id": 19213,
         "opencritic_slug": "mina-the-hollower",
-        "backup_peak": 12916
+        "backup_peak": 0
     },
     "Fatekeeper": {
         "steam_id": 2186990,
@@ -161,21 +161,21 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/gothic-remake",
         "opencritic_id": 20135,
         "opencritic_slug": "gothic-1-remake",
-        "backup_peak": 12743
+        "backup_peak": 0
     },
     "Solarpunk": {
         "steam_id": 1805110,
         "metacritic_slug": "pc/solarpunk",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 3728
+        "backup_peak": 0
     },
     "Starseeker: Astroneer Expeditions": {
         "steam_id": 1454370,
         "metacritic_slug": "pc/starseeker-astroneer-expeditions",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 1889
+        "backup_peak": 0
     },
     "Beastro": {
         "steam_id": 2417470,
