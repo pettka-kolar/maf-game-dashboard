@@ -41,8 +41,8 @@ else:
     df = pd.DataFrame(rows)
 
 if not df.empty:
-    # Standard Date Conversions
-    df["Release Date"] = pd.to_datetime(df["Release Date"], errors="coerce")
+    # CRITICAL FIX: Add format="mixed" to correctly parse heterogeneous date formats seamlessly
+    df["Release Date"] = pd.to_datetime(df["Release Date"], errors="coerce", format="mixed")
     df["Release Date"] = df["Release Date"].fillna(pd.to_datetime("2099-01-01"))
 
     # Dynamic lookback window matching requirements
@@ -56,7 +56,7 @@ if not df.empty:
         df[col] = pd.to_numeric(df[col], errors="coerce")
 
     # -------------------------------------------------------------------------
-    # TABLE分割 AREA 1: PC / STEAM TRACKS
+    # TABLE DIVISION 1: PC / STEAM TRACKS
     # -------------------------------------------------------------------------
     st.subheader("🖥️ PC & Steam Tracking Node")
     
@@ -64,8 +64,6 @@ if not df.empty:
     if not df_steam.empty:
         # Sort PC tracks by their Steam review scores
         df_steam = df_steam.sort_values(by="Steam Rating %", ascending=False, na_position="last")
-        
-        # Drop columns irrelevant to Steam views or internal trackers
         df_steam = df_steam.drop(columns=["steam_id"])
         
         dynamic_height_steam = (len(df_steam) + 1) * 35 + 10
@@ -94,7 +92,7 @@ if not df.empty:
     st.markdown("---")
 
     # -------------------------------------------------------------------------
-    # TABLE分割 AREA 2: CONSOLE EXCLUSIVE TRACKS
+    # TABLE DIVISION 2: CONSOLE EXCLUSIVE TRACKS
     # -------------------------------------------------------------------------
     st.subheader("🎮 Console Exclusive / First Tracks")
     
@@ -103,7 +101,7 @@ if not df.empty:
         # Sort console tracks by OpenCritic values since Steam metrics don't apply
         df_console = df_console.sort_values(by="OpenCritic Score", ascending=False, na_position="last")
         
-        # Completely isolate the viewport to show only console-relevant parameters
+        # Isolate the viewport to show only console-relevant parameters
         df_console = df_console[["Game Title", "Release Date", "OpenCritic Score", "Metacritic Score"]]
         
         dynamic_height_console = (len(df_console) + 1) * 35 + 10
@@ -121,6 +119,6 @@ if not df.empty:
             height=dynamic_height_console
         )
     else:
-        st.info("No Console-first exclusives current within the tracking window viewport.")
+        st.info("No Console-first exclusives currently within the tracking window viewport.")
 
     st.caption("Ecosystem Status: Active. Public presentation data synchronized.")
