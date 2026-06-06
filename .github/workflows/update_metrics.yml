@@ -15,6 +15,8 @@ jobs:
     steps:
     - name: Checkout Code Repository
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0    # Fetches full history to ensure seamless branch tracking alignments
 
     - name: Set up Python Instance
       uses: actions/setup-python@v5
@@ -34,17 +36,27 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         
-        # Stage the freshly generated metrics file
-        git add metrics.json
+        # 1. Safeguard our newly scraped data file out of the git tree temporarily
+        if [ -f metrics.json ]; then
+          cp metrics.json /tmp/metrics.json
+        else
+          echo "metrics.json not found, skipping sync."
+          exit 0
+        fi
         
-        # Only proceed if the data has actually changed
+        # 2. Fetch absolute latest changes and force-align local history with GitHub origin
+        git fetch origin main
+        git checkout main
+        git reset --hard origin/main
+        
+        # 3. Move our freshly generated metrics data back into the perfectly synced workspace
+        cp /tmp/metrics.json metrics.json
+        
+        # 4. Stage, check for changes, commit, and push upstream atomically
+        git add metrics.json
         if ! git diff-index --quiet HEAD; then
           git commit -m "Automated metrics snapshot update [skip ci]"
-          
-          # FIX: Pull any human updates pushed during runtime. 
-          # '-X theirs' tells git to favor the bot's freshly generated data if a json layout collision occurs.
-          git pull --rebase -X theirs origin main
-          
-          # Safely push the combined history back upstream
           git push origin main
+        else
+          echo "No numerical changes detected in metrics parameters. Skipping push routine."
         fi
