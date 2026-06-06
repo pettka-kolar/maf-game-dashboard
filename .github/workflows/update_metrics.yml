@@ -2,7 +2,7 @@ name: Scheduled Metrics Data Tracker
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Automatically runs every single hour on the hour
+    - cron: '13 * * * *'  # Automatically runs every single hour at X:13
   workflow_dispatch:      # Allows you to click a button and trigger updates manually
 
 permissions:
