@@ -7,7 +7,7 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/lego-batman-legacy-of-the-dark-knight",
         "opencritic_id": 19919,
         "opencritic_slug": "lego-batman-legacy-of-the-dark-knight",
-        "backup_peak": 0
+        "backup_peak": 33456
     },
     "Coffee Talk Tokyo": {
         "steam_id": 3161220,
@@ -28,14 +28,14 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/007-first-light",
         "opencritic_id": 19224,
         "opencritic_slug": "007-first-light",
-        "backup_peak": 0
+        "backup_peak": 71073
     },
     "Paralives (Early Access)": {
         "steam_id": 1118520,
         "metacritic_slug": "pc/paralives",
         "opencritic_id": 18917,
         "opencritic_slug": "paralives",
-        "backup_peak": 0
+        "backup_peak": 78603
     },
     "Forza Horizon 6": {
         "steam_id": 2483190,
@@ -84,7 +84,7 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/pit-panic",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 0
+        "backup_peak": 7
     },
     "Zero Parades: For Dead Spies": {
         "steam_id": 2863680,
@@ -112,21 +112,21 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/mina-the-hollower",
         "opencritic_id": 19213,
         "opencritic_slug": "mina-the-hollower",
-        "backup_peak": 0
+        "backup_peak": 12916
     },
     "Fatekeeper": {
         "steam_id": 2186990,
         "metacritic_slug": "pc/fatekeeper",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 0
+        "backup_peak": 6442
     },
     "Battleship Command": {
         "steam_id": 3367430,
         "metacritic_slug": "pc/battleship-command",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 0
+        "backup_peak": 406
     },
     "Final Fantasy VII Rebirth": {
         "steam_id": 0,  
@@ -140,21 +140,21 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/the-7th-guest-remake",
         "opencritic_id": 8546,
         "opencritic_slug": "the-7th-guest",
-        "backup_peak": 223
+        "backup_peak": 67
     },
     "Medic: Pacific War": {
         "steam_id": 1281640,
         "metacritic_slug": "pc/medic-pacific-war",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 52
+        "backup_peak": 150
     },
     "Swan Song": {
         "steam_id": 3265290,
         "metacritic_slug": "pc/swan-song",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 0
+        "backup_peak": 31
     },
     "Gothic 1 Remake": {
         "steam_id": 1297900,
