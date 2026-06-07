@@ -1,8 +1,8 @@
 {
     "LEGO Batman: Legacy of the Dark Knight": {
         "all_time_peak": 10090,
-        "release_date": "22 May, 2026",
-        "live_ccu": 8301,
+        "release_date": "May 22, 2026",
+        "live_ccu": 8135,
         "steam_rating": 95.99,
         "total_reviews": 4988,
         "opencritic_score": 84,
@@ -10,17 +10,17 @@
     },
     "Coffee Talk Tokyo": {
         "all_time_peak": 107,
-        "release_date": "May 21, 2026",
-        "live_ccu": 72,
-        "steam_rating": 93.81,
-        "total_reviews": 113,
+        "release_date": "21 May, 2026",
+        "live_ccu": 73,
+        "steam_rating": 93.86,
+        "total_reviews": 114,
         "opencritic_score": 83,
         "metacritic_score": 81
     },
     "Phonopolis": {
         "all_time_peak": 159,
         "release_date": "May 20, 2026",
-        "live_ccu": 53,
+        "live_ccu": 50,
         "steam_rating": 95.08,
         "total_reviews": 427,
         "opencritic_score": "N/A",
@@ -29,7 +29,7 @@
     "007 First Light": {
         "all_time_peak": 37413,
         "release_date": "May 26, 2026",
-        "live_ccu": 25000,
+        "live_ccu": 23686,
         "steam_rating": 91.18,
         "total_reviews": 11307,
         "opencritic_score": 88,
@@ -38,7 +38,7 @@
     "Paralives (Early Access)": {
         "all_time_peak": 25555,
         "release_date": "25 May, 2026",
-        "live_ccu": 19934,
+        "live_ccu": 19663,
         "steam_rating": 91.4,
         "total_reviews": 9945,
         "opencritic_score": "N/A",
@@ -47,7 +47,7 @@
     "Forza Horizon 6": {
         "all_time_peak": 162626,
         "release_date": "May 18, 2026",
-        "live_ccu": 108108,
+        "live_ccu": 106673,
         "steam_rating": 86.67,
         "total_reviews": 30203,
         "opencritic_score": 91,
@@ -56,7 +56,7 @@
     "Luna Abyss": {
         "all_time_peak": 98,
         "release_date": "May 21, 2026",
-        "live_ccu": 52,
+        "live_ccu": 53,
         "steam_rating": 88.41,
         "total_reviews": 328,
         "opencritic_score": 81,
@@ -65,7 +65,7 @@
     "Thick As Thieves": {
         "all_time_peak": 266,
         "release_date": "May 20, 2026",
-        "live_ccu": 173,
+        "live_ccu": 159,
         "steam_rating": 75.13,
         "total_reviews": 583,
         "opencritic_score": 69,
@@ -74,16 +74,16 @@
     "Deep Rock Galactic: Rogue Core (EA)": {
         "all_time_peak": 5348,
         "release_date": "May 20, 2026",
-        "live_ccu": 3525,
-        "steam_rating": 69.42,
-        "total_reviews": 6109,
+        "live_ccu": 3538,
+        "steam_rating": 69.44,
+        "total_reviews": 6112,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A"
     },
     "Warhammer 40,000: Mechanicus II": {
         "all_time_peak": 1022,
-        "release_date": "May 21, 2026",
-        "live_ccu": 646,
+        "release_date": "21 May, 2026",
+        "live_ccu": 608,
         "steam_rating": 53.02,
         "total_reviews": 1160,
         "opencritic_score": "N/A",
@@ -92,7 +92,7 @@
     "Corsairs: Battle of the Caribbean": {
         "all_time_peak": 14,
         "release_date": "May 18, 2026",
-        "live_ccu": 4,
+        "live_ccu": 5,
         "steam_rating": 31.58,
         "total_reviews": 38,
         "opencritic_score": "N/A",
@@ -109,10 +109,10 @@
     },
     "Zero Parades: For Dead Spies": {
         "all_time_peak": 1218,
-        "release_date": "May 21, 2026",
-        "live_ccu": 780,
-        "steam_rating": 86.01,
-        "total_reviews": 829,
+        "release_date": "21 May, 2026",
+        "live_ccu": 737,
+        "steam_rating": 86.04,
+        "total_reviews": 831,
         "opencritic_score": 83,
         "metacritic_score": 84
     },
@@ -136,8 +136,8 @@
     },
     "Mina the Hollower": {
         "all_time_peak": 7907,
-        "release_date": "May 28, 2026",
-        "live_ccu": 7028,
+        "release_date": "28 May, 2026",
+        "live_ccu": 6933,
         "steam_rating": 88.92,
         "total_reviews": 2842,
         "opencritic_score": 91,
@@ -145,8 +145,8 @@
     },
     "Fatekeeper": {
         "all_time_peak": 3574,
-        "release_date": "Jun 2, 2026",
-        "live_ccu": 2374,
+        "release_date": "2 Jun, 2026",
+        "live_ccu": 2238,
         "steam_rating": 75.01,
         "total_reviews": 3297,
         "opencritic_score": "N/A",
@@ -154,8 +154,8 @@
     },
     "Battleship Command": {
         "all_time_peak": 200,
-        "release_date": "2 Jun, 2026",
-        "live_ccu": 104,
+        "release_date": "Jun 2, 2026",
+        "live_ccu": 111,
         "steam_rating": 93.46,
         "total_reviews": 107,
         "opencritic_score": "N/A",
@@ -173,7 +173,7 @@
     "The 7th Guest Remake": {
         "all_time_peak": 223,
         "release_date": "Oct 19, 2023",
-        "live_ccu": 1,
+        "live_ccu": 2,
         "steam_rating": 93.77,
         "total_reviews": 321,
         "opencritic_score": 78,
@@ -181,8 +181,8 @@
     },
     "Medic: Pacific War": {
         "all_time_peak": 52,
-        "release_date": "4 Jun, 2026",
-        "live_ccu": 30,
+        "release_date": "Jun 4, 2026",
+        "live_ccu": 33,
         "steam_rating": 59.46,
         "total_reviews": 37,
         "opencritic_score": "N/A",
@@ -190,8 +190,8 @@
     },
     "Swan Song": {
         "all_time_peak": 21,
-        "release_date": "4 Jun, 2026",
-        "live_ccu": 13,
+        "release_date": "Jun 4, 2026",
+        "live_ccu": 9,
         "steam_rating": 100.0,
         "total_reviews": 16,
         "opencritic_score": "N/A",
@@ -200,9 +200,9 @@
     "Gothic 1 Remake": {
         "all_time_peak": 63086,
         "release_date": "5 Jun, 2026",
-        "live_ccu": 32986,
-        "steam_rating": 74.86,
-        "total_reviews": 1265,
+        "live_ccu": 28324,
+        "steam_rating": 75.08,
+        "total_reviews": 1300,
         "opencritic_score": 72,
         "metacritic_score": 73
     },
