@@ -10,7 +10,7 @@
     },
     "Coffee Talk Tokyo": {
         "all_time_peak": 119,
-        "release_date": "May 21, 2026",
+        "release_date": "21 May, 2026",
         "live_ccu": 83,
         "steam_rating": 94.12,
         "total_reviews": 119,
@@ -20,7 +20,7 @@
     "Phonopolis": {
         "all_time_peak": 159,
         "release_date": "May 20, 2026",
-        "live_ccu": 74,
+        "live_ccu": 69,
         "steam_rating": 94.95,
         "total_reviews": 436,
         "opencritic_score": "N/A",
@@ -28,7 +28,7 @@
     },
     "007 First Light": {
         "all_time_peak": 71073,
-        "release_date": "26 May, 2026",
+        "release_date": "May 26, 2026",
         "live_ccu": 21501,
         "steam_rating": 91.11,
         "total_reviews": 12078,
@@ -37,8 +37,8 @@
     },
     "Paralives (Early Access)": {
         "all_time_peak": 78603,
-        "release_date": "25 May, 2026",
-        "live_ccu": 17222,
+        "release_date": "May 25, 2026",
+        "live_ccu": 17132,
         "steam_rating": 91.44,
         "total_reviews": 10435,
         "opencritic_score": "N/A",
@@ -47,18 +47,18 @@
     "Forza Horizon 6": {
         "all_time_peak": 162626,
         "release_date": "May 18, 2026",
-        "live_ccu": 94815,
-        "steam_rating": 86.66,
-        "total_reviews": 31026,
+        "live_ccu": 93320,
+        "steam_rating": 86.65,
+        "total_reviews": 31051,
         "opencritic_score": 91,
         "metacritic_score": 91
     },
     "Luna Abyss": {
         "all_time_peak": 98,
         "release_date": "May 21, 2026",
-        "live_ccu": 57,
-        "steam_rating": 88.79,
-        "total_reviews": 339,
+        "live_ccu": 60,
+        "steam_rating": 88.53,
+        "total_reviews": 340,
         "opencritic_score": 81,
         "metacritic_score": 81
     },
@@ -74,7 +74,7 @@
     "Deep Rock Galactic: Rogue Core (EA)": {
         "all_time_peak": 5348,
         "release_date": "May 20, 2026",
-        "live_ccu": 3135,
+        "live_ccu": 3034,
         "steam_rating": 69.38,
         "total_reviews": 6205,
         "opencritic_score": "N/A",
@@ -84,8 +84,8 @@
         "all_time_peak": 1077,
         "release_date": "May 21, 2026",
         "live_ccu": 718,
-        "steam_rating": 52.7,
-        "total_reviews": 1184,
+        "steam_rating": 52.65,
+        "total_reviews": 1187,
         "opencritic_score": "N/A",
         "metacritic_score": 71
     },
@@ -110,7 +110,7 @@
     "Zero Parades: For Dead Spies": {
         "all_time_peak": 1368,
         "release_date": "May 21, 2026",
-        "live_ccu": 893,
+        "live_ccu": 894,
         "steam_rating": 85.88,
         "total_reviews": 864,
         "opencritic_score": 83,
@@ -146,7 +146,7 @@
     "Fatekeeper": {
         "all_time_peak": 3574,
         "release_date": "Jun 2, 2026",
-        "live_ccu": 1653,
+        "live_ccu": 1584,
         "steam_rating": 76.72,
         "total_reviews": 3994,
         "opencritic_score": "N/A",
@@ -182,7 +182,7 @@
     "Medic: Pacific War": {
         "all_time_peak": 150,
         "release_date": "Jun 4, 2026",
-        "live_ccu": 16,
+        "live_ccu": 14,
         "steam_rating": 55.56,
         "total_reviews": 45,
         "opencritic_score": "N/A",
@@ -193,14 +193,14 @@
         "release_date": "Jun 4, 2026",
         "live_ccu": 11,
         "steam_rating": 100.0,
-        "total_reviews": 21,
+        "total_reviews": 24,
         "opencritic_score": "N/A",
         "metacritic_score": 81
     },
     "Gothic 1 Remake": {
         "all_time_peak": 77359,
-        "release_date": "Jun 5, 2026",
-        "live_ccu": 55385,
+        "release_date": "5 Jun, 2026",
+        "live_ccu": 52868,
         "steam_rating": 79.28,
         "total_reviews": 2345,
         "opencritic_score": 72,
@@ -208,10 +208,10 @@
     },
     "Solarpunk": {
         "all_time_peak": 10075,
-        "release_date": "Jun 8, 2026",
-        "live_ccu": 8051,
-        "steam_rating": 72.63,
-        "total_reviews": 95,
+        "release_date": "8 Jun, 2026",
+        "live_ccu": 7920,
+        "steam_rating": 72.45,
+        "total_reviews": 98,
         "opencritic_score": "N/A",
         "metacritic_score": 64
     },
