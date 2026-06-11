@@ -152,7 +152,7 @@ GAME_DATABASE = {
     "Swan Song": {
         "steam_id": 3265290,
         "metacritic_slug": "pc/swan-song",
-        "backup_peak": 31
+        "backup_peak": 31,
         "opencritic_id": 20647,
         "opencritic_slug": "swan-song",
     },
