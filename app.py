@@ -2,9 +2,11 @@ import streamlit as st
 import pandas as pd
 import json
 import os
+import importlib  # 💡 Added: Enables manual cache busting for imported files
 
 # Cross-reference database definitions to identify console vs steam tracks natively
 import game_database as gd
+importlib.reload(gd)  # 💡 Added: Forces Streamlit to always pull the newest game_database.py from disk
 
 METRICS_FILE = "metrics.json"
 
