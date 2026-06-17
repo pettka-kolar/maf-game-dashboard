@@ -4,7 +4,7 @@
         "release_date": "May 22, 2026",
         "live_ccu": 3254,
         "steam_rating": 95.82,
-        "total_reviews": 5503,
+        "total_reviews": 5506,
         "opencritic_score": 84,
         "metacritic_score": 83
     },
@@ -37,7 +37,7 @@
     },
     "Paralives (Early Access)": {
         "all_time_peak": 78603,
-        "release_date": "25 May, 2026",
+        "release_date": "May 25, 2026",
         "live_ccu": 8131,
         "steam_rating": 91.4,
         "total_reviews": 11451,
@@ -47,9 +47,9 @@
     "Forza Horizon 6": {
         "all_time_peak": 162626,
         "release_date": "May 18, 2026",
-        "live_ccu": 51387,
+        "live_ccu": 52101,
         "steam_rating": 86.54,
-        "total_reviews": 33472,
+        "total_reviews": 33491,
         "opencritic_score": 91,
         "metacritic_score": 91
     },
@@ -235,10 +235,10 @@
     },
     "Copa City": {
         "all_time_peak": 375,
-        "release_date": "16 Jun, 2026",
+        "release_date": "Jun 16, 2026",
         "live_ccu": 106,
-        "steam_rating": 21.43,
-        "total_reviews": 14,
+        "steam_rating": 20.0,
+        "total_reviews": 15,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A"
     },
