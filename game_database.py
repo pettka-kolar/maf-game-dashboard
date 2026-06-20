@@ -194,35 +194,35 @@ GAME_DATABASE = {
         "steam_id": 2210520,
         "metacritic_slug": "pc/copa-city",
         "opencritic_id": 0,
-        "opencritic_slug": "",
+        "opencritic_slug": "copa-city",
         "backup_peak": 0
     },
     "Shift at Midnight": {
         "steam_id": 3722330,
         "metacritic_slug": "pc/shift-at-midnight",
         "opencritic_id": 0,
-        "opencritic_slug": "",
+        "opencritic_slug": "shift-at-midnight",
         "backup_peak": 0
     },
     "The Adventures of Elliot: The Millennium Tales": {
         "steam_id": 3483510,
         "metacritic_slug": "pc/the-adventures-of-elliot-the-millennium-tales",
-        "opencritic_id": 0,
-        "opencritic_slug": "",
+        "opencritic_id": 20344,
+        "opencritic_slug": "the-adventures-of-elliot-the-millennium-tales",
         "backup_peak": 0
     },
     "R-Type Tactics I • II Cosmos": {
         "steam_id": 2169930,
         "metacritic_slug": "pc/r-type-tactics-i-and-ii-cosmos",
-        "opencritic_id": 0,
-        "opencritic_slug": "",
+        "opencritic_id": 20853,
+        "opencritic_slug": "r-type-tactics-i-ii-cosmos",
         "backup_peak": 0
     },
     "EA Sports UFC 6": {
         "steam_id": 0, # Console Exclusive Track (PS5 / Xbox Series X|S)
         "metacritic_slug": "playstation-5/ea-sports-ufc-6",
         "opencritic_id": 0,
-        "opencritic_slug": "",
+        "opencritic_slug": "ea-sports-ufc-6",
         "backup_peak": 0,
         "release_date": "2026-06-19"
     },
@@ -230,14 +230,14 @@ GAME_DATABASE = {
         "steam_id": 4144680,
         "metacritic_slug": "pc/dead-or-alive-6-last-round",
         "opencritic_id": 0,
-        "opencritic_slug": "",
+        "opencritic_slug": "dead-or-alive-6-last-round",
         "backup_peak": 0
     },
     "Star Fox": {
         "steam_id": 0, # Console Exclusive Track (Nintendo Switch 2)
         "metacritic_slug": "nintendo-switch-2/star-fox",
         "opencritic_id": 0,
-        "opencritic_slug": "",
+        "opencritic_slug": "star-fox",
         "backup_peak": 0,
         "release_date": "2026-06-30"
     },
@@ -245,21 +245,21 @@ GAME_DATABASE = {
         "steam_id": 3936610,
         "metacritic_slug": "pc/monopoly-star-wars-heroes-vs-villains",
         "opencritic_id": 0,
-        "opencritic_slug": "",
+        "opencritic_slug": "monopoly-star-wars-heroes-vs-villains",
         "backup_peak": 0
     },
     "Age of Empires Mobile: PC Edition": {
         "steam_id": 2783360,
-        "metacritic_slug": "pc/age-of-empires-mobile-pc-edition",
+        "metacritic_slug": "pc/age-of-empires-mobile",
         "opencritic_id": 0,
-        "opencritic_slug": "",
+        "opencritic_slug": "age-of-empires-mobile",
         "backup_peak": 0
     },
     "Type or die": {
         "steam_id": 4252830,
         "metacritic_slug": "pc/type-or-die",
         "opencritic_id": 0,
-        "opencritic_slug": "",
+        "opencritic_slug": "type-or-die",
         "backup_peak": 0
     }
 }
