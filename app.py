@@ -28,7 +28,7 @@ else:
         game_config = gd.GAME_DATABASE.get(game_name, {})
         steam_id = game_config.get("steam_id", 0)
         
-        # 💡 FIX: Prioritize manual date from game_database.py. If missing, fall back to metrics.json
+        # Prioritize manual date from game_database.py. If missing, fall back to metrics.json
         release_date = game_config.get("release_date") or metrics.get("release_date")
         
         rows.append({
@@ -56,6 +56,9 @@ if not df.empty:
     fifteen_days_ago = current_time - pd.Timedelta(days=15)
     df = df[df["Release Date"] >= fifteen_days_ago]
 
+    # 💡 FIX: Turn datetime objects into standard strings and replace the placeholder date
+    df["Release Date"] = df["Release Date"].dt.strftime('%Y-%m-%d').replace("2099-01-01", "To be released")
+
     # Convert all numeric data columns cleanly
     numeric_columns = ["Live CCU (Steam)", "All-Time Peak", "Steam Rating %", "Total Steam Reviews", "OpenCritic Score", "Metacritic Score"]
     for col in numeric_columns:
@@ -78,7 +81,8 @@ if not df.empty:
             df_steam,
             column_config={
                 "Game Title": st.column_config.TextColumn(width="medium"),
-                "Release Date": st.column_config.DateColumn(format="YYYY-MM-DD"),
+                # 💡 Updated: Changed from DateColumn to TextColumn to accept custom text strings cleanly
+                "Release Date": st.column_config.TextColumn(width="small"),
                 "Live CCU (Steam)": st.column_config.NumberColumn(format="%d"),
                 "All-Time Peak": st.column_config.NumberColumn(format="%d"),
                 "Steam Rating %": st.column_config.NumberColumn(format="%.2f%%"),
@@ -116,7 +120,8 @@ if not df.empty:
             df_console,
             column_config={
                 "Game Title": st.column_config.TextColumn(width="medium"),
-                "Release Date": st.column_config.DateColumn(format="YYYY-MM-DD"),
+                # 💡 Updated: Changed from DateColumn to TextColumn here as well
+                "Release Date": st.column_config.TextColumn(width="small"),
                 "OpenCritic Score": st.column_config.NumberColumn(format="%d"),
                 "Metacritic Score": st.column_config.NumberColumn(format="%d"),
             },
