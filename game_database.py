@@ -239,7 +239,7 @@ GAME_DATABASE = {
         "opencritic_id": 0,
         "opencritic_slug": "",
         "backup_peak": 0,
-        "release_date": "2026-06-´30"
+        "release_date": "2026-06-30"
     },
     "Monopoly: Star Wars™ Heroes vs. Villains": {
         "steam_id": 3936610,
