@@ -24,13 +24,17 @@ else:
     
     rows = []
     for game_name, metrics in raw_data.items():
-        # Look up the steam ID from our configuration module dynamically
-        steam_id = gd.GAME_DATABASE.get(game_name, {}).get("steam_id", 0)
+        # Look up the game configuration profile dynamically
+        game_config = gd.GAME_DATABASE.get(game_name, {})
+        steam_id = game_config.get("steam_id", 0)
+        
+        # 💡 FIX: Prioritize manual date from game_database.py. If missing, fall back to metrics.json
+        release_date = game_config.get("release_date") or metrics.get("release_date")
         
         rows.append({
             "Game Title": game_name,
             "steam_id": steam_id,  # Retained temporarily for dataframe filtering splits
-            "Release Date": metrics.get("release_date"),
+            "Release Date": release_date,
             "Live CCU (Steam)": metrics.get("live_ccu"),
             "All-Time Peak": metrics.get("all_time_peak"),
             "Steam Rating %": metrics.get("steam_rating"),

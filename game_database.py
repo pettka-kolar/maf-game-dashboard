@@ -98,14 +98,16 @@ GAME_DATABASE = {
         "metacritic_slug": "switch/farming-simulator-26",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-05-19"
     },
     "Yoshi and the Mysterious Book": {
         "steam_id": 0,
         "metacritic_slug": "switch/yoshi-and-the-mysterious-book",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-05-21"
     },
     "Mina the Hollower": {
         "steam_id": 1875580,
@@ -133,7 +135,8 @@ GAME_DATABASE = {
         "metacritic_slug": "playstation-5/final-fantasy-vii-rebirth",
         "opencritic_id": 15136,
         "opencritic_slug": "final-fantasy-vii-rebirth",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-06-03"
     },
     "The 7th Guest Remake": {
         "steam_id": 2456960,  
@@ -220,7 +223,8 @@ GAME_DATABASE = {
         "metacritic_slug": "playstation-5/ea-sports-ufc-6",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-06-19"
     },
     "DEAD OR ALIVE 6 Last Round": {
         "steam_id": 4144680,
@@ -234,7 +238,8 @@ GAME_DATABASE = {
         "metacritic_slug": "nintendo-switch-2/star-fox",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-06-´30"
     },
     "Monopoly: Star Wars™ Heroes vs. Villains": {
         "steam_id": 3936610,
