@@ -76,7 +76,8 @@ def fetch_game_data(game_name, config, existing_data):
 
     # 4. Fetch Steam Storefront Reviews
     if appid:
-        url = f"https://store.steampowered.com/appreviews/{appid}?json=1"
+        # 💡 CRITICAL FIX: Explicitly request all languages and purchase variants
+        url = f"https://store.steampowered.com/appreviews/{appid}?json=1&language=all&purchase_type=all"
         try:
             res = requests.get(url, headers=BASE_HEADERS, timeout=TIMEOUT)
             if res.status_code == 200:
