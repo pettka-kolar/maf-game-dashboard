@@ -37,13 +37,6 @@ GAME_DATABASE = {
         "opencritic_slug": "paralives",
         "backup_peak": 78603
     },
-    "Forza Horizon 6": {
-        "steam_id": 2483190,
-        "metacritic_slug": "pc/forza-horizon-6",
-        "opencritic_id": 19996,
-        "opencritic_slug": "forza-horizon-6",
-        "backup_peak": 0
-    },
     "Luna Abyss": {
         "steam_id": 1933000,
         "metacritic_slug": "pc/luna-abyss",
@@ -72,13 +65,6 @@ GAME_DATABASE = {
         "opencritic_slug": "",
         "backup_peak": 0
     },
-    "Corsairs: Battle of the Caribbean": {
-        "steam_id": 2397510,
-        "metacritic_slug": "pc/corsairs-battle-of-the-caribbean",
-        "opencritic_id": 0,
-        "opencritic_slug": "",
-        "backup_peak": 0
-    },
     "Pit Panic": {
         "steam_id": 4600360,
         "metacritic_slug": "pc/pit-panic",
@@ -92,14 +78,6 @@ GAME_DATABASE = {
         "opencritic_id": 20490,
         "opencritic_slug": "zero-parades-for-dead-spies",
         "backup_peak": 0
-    },
-    "Farming Simulator 26": {
-        "steam_id": 0,
-        "metacritic_slug": "switch/farming-simulator-26",
-        "opencritic_id": 0,
-        "opencritic_slug": "",
-        "backup_peak": 0,
-        "release_date": "2026-05-19"
     },
     "Yoshi and the Mysterious Book": {
         "steam_id": 0,
@@ -131,19 +109,12 @@ GAME_DATABASE = {
         "backup_peak": 406
     },
     "Final Fantasy VII Rebirth": {
-        "steam_id": 0,  
+        "steam_id": 0,
         "metacritic_slug": "playstation-5/final-fantasy-vii-rebirth",
         "opencritic_id": 15136,
         "opencritic_slug": "final-fantasy-vii-rebirth",
         "backup_peak": 0,
         "release_date": "2026-06-03"
-    },
-    "The 7th Guest Remake": {
-        "steam_id": 2456960,  
-        "metacritic_slug": "pc/the-7th-guest-remake",
-        "opencritic_id": 8546,
-        "opencritic_slug": "the-7th-guest",
-        "backup_peak": 67
     },
     "Medic: Pacific War": {
         "steam_id": 1281640,
@@ -187,9 +158,6 @@ GAME_DATABASE = {
         "opencritic_slug": "",
         "backup_peak": 0
     },
-    # -------------------------------------------------------------------------
-    # NEW RELEASES & EXTENSIONS (ADDED JUNE 2026)
-    # -------------------------------------------------------------------------
     "Copa City": {
         "steam_id": 2210520,
         "metacritic_slug": "pc/copa-city",
@@ -219,7 +187,7 @@ GAME_DATABASE = {
         "backup_peak": 0
     },
     "EA Sports UFC 6": {
-        "steam_id": 0, # Console Exclusive Track (PS5 / Xbox Series X|S)
+        "steam_id": 0,
         "metacritic_slug": "playstation-5/ea-sports-ufc-6",
         "opencritic_id": 0,
         "opencritic_slug": "ea-sports-ufc-6",
@@ -234,7 +202,7 @@ GAME_DATABASE = {
         "backup_peak": 0
     },
     "Star Fox": {
-        "steam_id": 0, # Console Exclusive Track (Nintendo Switch 2)
+        "steam_id": 0,
         "metacritic_slug": "nintendo-switch-2/star-fox",
         "opencritic_id": 0,
         "opencritic_slug": "star-fox",
@@ -260,6 +228,81 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/type-or-die",
         "opencritic_id": 0,
         "opencritic_slug": "type-or-die",
+        "backup_peak": 0
+    },
+    # -------------------------------------------------------------------------
+    # NEW EXTENSIONS (ADDED JULY 2026)
+    # -------------------------------------------------------------------------
+    "Rhythm Heaven Groove": {
+        "steam_id": 0,  # Nintendo Switch Exclusive Track
+        "metacritic_slug": "switch/rhythm-heaven-groove",
+        "opencritic_id": 0,
+        "opencritic_slug": "rhythm-heaven-groove",
+        "backup_peak": 0,
+        "release_date": "2026-07-02"
+    },
+    "Avatar Legends: The Fighting Game": {
+        "steam_id": 2424420,
+        "metacritic_slug": "pc/avatar-legends-the-fighting-game",
+        "opencritic_id": 0,
+        "opencritic_slug": "avatar-legends-the-fighting-game",
+        "backup_peak": 0
+    },
+    "Esports Manager 2026": {
+        "steam_id": 2749950,
+        "metacritic_slug": "pc/esports-manager-2026",
+        "opencritic_id": 0,
+        "opencritic_slug": "esports-manager-2026",
+        "backup_peak": 0
+    },
+    "Doom: The Dark Ages – Revelations": {
+        "steam_id": 3698350,  # Premium Upgrade/DLC Specific Track
+        "metacritic_slug": "pc/doom-the-dark-ages-revelations",
+        "opencritic_id": 0,
+        "opencritic_slug": "doom-the-dark-ages-revelations",
+        "backup_peak": 0
+    },
+    "Moonlight Peaks": {
+        "steam_id": 2209900,
+        "metacritic_slug": "pc/moonlight-peaks",
+        "opencritic_id": 0,
+        "opencritic_slug": "moonlight-peaks",
+        "backup_peak": 0
+    },
+    "Assassin's Creed Black Flag Resynced": {
+        "steam_id": 3751950,
+        "metacritic_slug": "pc/assassins-creed-black-flag-resynced",
+        "opencritic_id": 0,
+        "opencritic_slug": "assassins-creed-black-flag-resynced",
+        "backup_peak": 0
+    },
+    "Echoes of Anicrad": {
+        "steam_id": 2244210,  # Mapped to 'Echoes of Aincrad' listing variant
+        "metacritic_slug": "pc/echoes-of-aincrad",
+        "opencritic_id": 0,
+        "opencritic_slug": "echoes-of-aincrad",
+        "backup_peak": 0
+    },
+    "Palworld": {
+        "steam_id": 1623730,
+        "metacritic_slug": "pc/palworld",
+        "opencritic_id": 0,
+        "opencritic_slug": "palworld",
+        "backup_peak": 0,
+        "release_date": "2024-01-19"
+    },
+    "Ascend to ZERO": {
+        "steam_id": 2697940,
+        "metacritic_slug": "pc/ascend-to-zero",
+        "opencritic_id": 0,
+        "opencritic_slug": "ascend-to-zero",
+        "backup_peak": 0
+    },
+    "Denshattack!": {
+        "steam_id": 2524850,
+        "metacritic_slug": "pc/denshattack",
+        "opencritic_id": 0,
+        "opencritic_slug": "denshattack",
         "backup_peak": 0
     }
 }
