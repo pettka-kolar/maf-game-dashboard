@@ -2,68 +2,19 @@
 # CONSTANTS & CONFIGURATION
 # -----------------------------------------------------------------------------
 GAME_DATABASE = {
-    "LEGO Batman: Legacy of the Dark Knight": {
-        "steam_id": 2215200,
-        "metacritic_slug": "pc/lego-batman-legacy-of-the-dark-knight",
-        "opencritic_id": 19919,
-        "opencritic_slug": "lego-batman-legacy-of-the-dark-knight",
-        "backup_peak": 33456
-    },
-    "Coffee Talk Tokyo": {
-        "steam_id": 3161220,
-        "metacritic_slug": "pc/coffee-talk-tokyo",
-        "opencritic_id": 20625,
-        "opencritic_slug": "coffee-talk-tokyo",
-        "backup_peak": 0
-    },
-    "Phonopolis": {
-        "steam_id": 1206070,
-        "metacritic_slug": "pc/phonopolis",
-        "opencritic_id": 20640,
-        "opencritic_slug": "phonopolis",
-        "backup_peak": 0
-    },
-    "007 First Light": {
-        "steam_id": 3768760,
-        "metacritic_slug": "pc/007-first-light",
-        "opencritic_id": 19224,
-        "opencritic_slug": "007-first-light",
-        "backup_peak": 71073
-    },
-    "Paralives (Early Access)": {
-        "steam_id": 1118520,
-        "metacritic_slug": "pc/paralives",
-        "opencritic_id": 18917,
-        "opencritic_slug": "paralives",
-        "backup_peak": 78603
-    },
-    "Luna Abyss": {
-        "steam_id": 1933000,
-        "metacritic_slug": "pc/luna-abyss",
-        "opencritic_id": 20556,
-        "opencritic_slug": "luna-abyss",
-        "backup_peak": 0
-    },
-    "Thick As Thieves": {
-        "steam_id": 3341000,
-        "metacritic_slug": "pc/thick-as-thieves",
-        "opencritic_id": 20633,
-        "opencritic_slug": "thick-as-thieves",
-        "backup_peak": 0
-    },
     "Deep Rock Galactic: Rogue Core (EA)": {
         "steam_id": 2605790,
         "metacritic_slug": "pc/deep-rock-galactic-rogue-core",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 0
+        "backup_peak": 5717
     },
     "Warhammer 40,000: Mechanicus II": {
         "steam_id": 2532480,
         "metacritic_slug": "pc/warhammer-40000-mechanicus-ii",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 0
+        "backup_peak": 1077
     },
     "Pit Panic": {
         "steam_id": 4600360,
@@ -77,36 +28,21 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/zero-parades-for-dead-spies",
         "opencritic_id": 20490,
         "opencritic_slug": "zero-parades-for-dead-spies",
-        "backup_peak": 0
-    },
-    "Yoshi and the Mysterious Book": {
-        "steam_id": 0,
-        "metacritic_slug": "switch/yoshi-and-the-mysterious-book",
-        "opencritic_id": 0,
-        "opencritic_slug": "",
-        "backup_peak": 0,
-        "release_date": "2026-05-21"
-    },
-    "Mina the Hollower": {
-        "steam_id": 1875580,
-        "metacritic_slug": "pc/mina-the-hollower",
-        "opencritic_id": 19213,
-        "opencritic_slug": "mina-the-hollower",
-        "backup_peak": 12916
+        "backup_peak": 1368
     },
     "Fatekeeper": {
         "steam_id": 2186990,
         "metacritic_slug": "pc/fatekeeper",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 6442
+        "backup_peak": 3574
     },
     "Battleship Command": {
         "steam_id": 3367430,
         "metacritic_slug": "pc/battleship-command",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 406
+        "backup_peak": 200
     },
     "Final Fantasy VII Rebirth": {
         "steam_id": 0,
@@ -135,35 +71,35 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/gothic-remake",
         "opencritic_id": 20135,
         "opencritic_slug": "gothic-1-remake",
-        "backup_peak": 0
+        "backup_peak": 77359
     },
     "Solarpunk": {
         "steam_id": 1805110,
         "metacritic_slug": "pc/solarpunk",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 0
+        "backup_peak": 10075
     },
     "Starseeker: Astroneer Expeditions": {
         "steam_id": 1454370,
         "metacritic_slug": "pc/starseeker-astroneer-expeditions",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 0
+        "backup_peak": 1782
     },
     "Beastro": {
         "steam_id": 2417470,
         "metacritic_slug": "pc/beastro",
         "opencritic_id": 0,
         "opencritic_slug": "",
-        "backup_peak": 0
+        "backup_peak": 657
     },
     "Copa City": {
         "steam_id": 2210520,
         "metacritic_slug": "pc/copa-city",
         "opencritic_id": 0,
         "opencritic_slug": "copa-city",
-        "backup_peak": 0
+        "backup_peak": 375
     },
     "Shift at Midnight": {
         "steam_id": 3722330,
@@ -177,14 +113,14 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/the-adventures-of-elliot-the-millennium-tales",
         "opencritic_id": 20344,
         "opencritic_slug": "the-adventures-of-elliot-the-millennium-tales",
-        "backup_peak": 0
+        "backup_peak": 7148
     },
     "R-Type Tactics I • II Cosmos": {
         "steam_id": 2169930,
         "metacritic_slug": "pc/r-type-tactics-i-and-ii-cosmos",
         "opencritic_id": 20853,
         "opencritic_slug": "r-type-tactics-i-ii-cosmos",
-        "backup_peak": 0
+        "backup_peak": 229
     },
     "EA Sports UFC 6": {
         "steam_id": 0,
@@ -221,7 +157,7 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/age-of-empires-mobile",
         "opencritic_id": 0,
         "opencritic_slug": "age-of-empires-mobile",
-        "backup_peak": 0
+        "backup_peak": 698
     },
     "Type or die": {
         "steam_id": 4252830,
@@ -230,11 +166,8 @@ GAME_DATABASE = {
         "opencritic_slug": "type-or-die",
         "backup_peak": 0
     },
-    # -------------------------------------------------------------------------
-    # NEW EXTENSIONS (ADDED JULY 2026)
-    # -------------------------------------------------------------------------
     "Rhythm Heaven Groove": {
-        "steam_id": 0,  # Nintendo Switch Exclusive Track
+        "steam_id": 0,
         "metacritic_slug": "switch/rhythm-heaven-groove",
         "opencritic_id": 0,
         "opencritic_slug": "rhythm-heaven-groove",
@@ -256,7 +189,7 @@ GAME_DATABASE = {
         "backup_peak": 0
     },
     "Doom: The Dark Ages – Revelations": {
-        "steam_id": 3698350,  # Premium Upgrade/DLC Specific Track
+        "steam_id": 3698350,
         "metacritic_slug": "pc/doom-the-dark-ages-revelations",
         "opencritic_id": 0,
         "opencritic_slug": "doom-the-dark-ages-revelations",
@@ -277,19 +210,11 @@ GAME_DATABASE = {
         "backup_peak": 0
     },
     "Echoes of Anicrad": {
-        "steam_id": 2244210,  # Mapped to 'Echoes of Aincrad' listing variant
+        "steam_id": 2244210,
         "metacritic_slug": "pc/echoes-of-aincrad",
         "opencritic_id": 0,
         "opencritic_slug": "echoes-of-aincrad",
         "backup_peak": 0
-    },
-    "Palworld": {
-        "steam_id": 1623730,
-        "metacritic_slug": "pc/palworld",
-        "opencritic_id": 0,
-        "opencritic_slug": "palworld",
-        "backup_peak": 0,
-        "release_date": "2024-01-19"
     },
     "Ascend to ZERO": {
         "steam_id": 2697940,
@@ -304,5 +229,152 @@ GAME_DATABASE = {
         "opencritic_id": 0,
         "opencritic_slug": "denshattack",
         "backup_peak": 0
+    },
+    # -------------------------------------------------------------------------
+    # NEW EXTENSIONS (ADDED BATCH - JULY 14, 2026)
+    # -------------------------------------------------------------------------
+    "Heave Ho 2": {
+        "steam_id": 2802740,
+        "metacritic_slug": "pc/heave-ho-2",
+        "opencritic_id": 0,
+        "opencritic_slug": "",
+        "backup_peak": 0,
+        "release_date": "2026-07-16"
+    },
+    "Moss: The Forgotten Relic": {
+        "steam_id": 3914860,
+        "metacritic_slug": "pc/moss-the-forgotten-relic",
+        "opencritic_id": 0,
+        "opencritic_slug": "",
+        "backup_peak": 0,
+        "release_date": "2026-07-16"
+    },
+    "Fogpiercer": {
+        "steam_id": 3219010,
+        "metacritic_slug": "",
+        "opencritic_id": 0,
+        "opencritic_slug": "",
+        "backup_peak": 0,
+        "release_date": "2026-07-17"
+    },
+    "Scarlet Deer Inn": {
+        "steam_id": 1553260,
+        "metacritic_slug": "pc/scarlet-deer-inn",
+        "opencritic_id": 0,
+        "opencritic_slug": "",
+        "backup_peak": 0,
+        "release_date": "2026-07-21"
+    },
+    "Tormentum II": {
+        "steam_id": 931060,
+        "metacritic_slug": "",
+        "opencritic_id": 0,
+        "opencritic_slug": "",
+        "backup_peak": 0,
+        "release_date": "2026-07-23"
+    },
+    "Dinoblade": {
+        "steam_id": 3440070,
+        "metacritic_slug": "",
+        "opencritic_id": 0,
+        "opencritic_slug": "",
+        "backup_peak": 0,
+        "release_date": "2026-07-23"
+    },
+    "Splatoon Raiders": {
+        "steam_id": 0,  # Nintendo Switch 2 Exclusive
+        "metacritic_slug": "nintendo-switch-2/splatoon-raiders",
+        "opencritic_id": 0,
+        "opencritic_slug": "",
+        "backup_peak": 0,
+        "release_date": "2026-07-23"
+    },
+    "Halo: Campaign Evolved": {
+        "steam_id": 2806050,
+        "metacritic_slug": "pc/halo-campaign-evolved",
+        "opencritic_id": 0,
+        "opencritic_slug": "",
+        "backup_peak": 0,
+        "release_date": "2026-07-28"
+    },
+    "Xenoblade Chronicles 2": {
+        "steam_id": 0,  # Nintendo Switch 2 Enhanced Port Edition
+        "metacritic_slug": "nintendo-switch-2/xenoblade-chronicles-2",
+        "opencritic_id": 4952,
+        "opencritic_slug": "xenoblade-chronicles-2",
+        "backup_peak": 0,
+        "release_date": "2026-07-30"
+    },
+    "Mistfall Hunter": {
+        "steam_id": 3282300,
+        "metacritic_slug": "pc/mistfall-hunter",
+        "opencritic_id": 0,
+        "opencritic_slug": "",
+        "backup_peak": 0,
+        "release_date": "2026-07-29"
+    },
+    "The Relic: First Guardian": {
+        "steam_id": 2827820,
+        "metacritic_slug": "",
+        "opencritic_id": 0,
+        "opencritic_slug": "",
+        "backup_peak": 0,
+        "release_date": "2026-07-31"
+    },
+    "ZeroSpace": {
+        "steam_id": 1605850,
+        "metacritic_slug": "",
+        "opencritic_id": 0,
+        "opencritic_slug": "",
+        "backup_peak": 0,
+        "release_date": "2026-07-20"
+    },
+    "Carnival Hunt": {
+        "steam_id": 1181550,
+        "metacritic_slug": "",
+        "opencritic_id": 0,
+        "opencritic_slug": "",
+        "backup_peak": 0,
+        "release_date": "2026-07-23"
+    },
+    "G-Rebels": {
+        "steam_id": 2445980,
+        "metacritic_slug": "",
+        "opencritic_id": 0,
+        "opencritic_slug": "",
+        "backup_peak": 0,
+        "release_date": "2026-07-20"
+    },
+    "Corsair Cove": {
+        "steam_id": 1368140,
+        "metacritic_slug": "",
+        "opencritic_id": 0,
+        "opencritic_slug": "",
+        "backup_peak": 0,
+        "release_date": "2026-07-31"
+    },
+    "Quarantine Zone: The Last Check": {
+        "steam_id": 3419520,
+        "metacritic_slug": "pc/quarantine-zone-the-last-check",
+        "opencritic_id": 0,
+        "opencritic_slug": "",
+        "backup_peak": 0,
+        "release_date": "2026-01-12"
+    },
+    "Planet Crafter": {
+        "steam_id": 0,  # Isolated to Console for the upcoming PS5/Xbox launch tracking node
+        "metacritic_slug": "playstation-5/the-planet-crafter",
+        "opencritic_id": 0,
+        "opencritic_slug": "",
+        "backup_peak": 0,
+        "release_date": "2026-07-21"
+    },
+    "Tears of Metal": {
+        "steam_id": 1913120,
+        "metacritic_slug": "pc/tears-of-metal",
+        "opencritic_id": 0,
+        "opencritic_slug": "",
+        "backup_peak": 0,
+        "release_date": "2026-07-22"
     }
 }
