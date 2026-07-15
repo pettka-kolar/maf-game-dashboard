@@ -16,7 +16,6 @@ BASE_HEADERS = {
     "Accept-Language": "en-US,en;q=0.9"
 }
 
-# 💡 NEW HELPER: Safely evaluate dates inside Python without installing external dependencies
 def parse_date(date_str):
     if not date_str or date_str == "2099-01-01":
         return None
@@ -51,7 +50,8 @@ def fetch_game_data(game_name, config, existing_data):
         "steam_rating": "N/A",
         "total_reviews": "N/A",
         "opencritic_score": "N/A",
-        "metacritic_score": "N/A"
+        "metacritic_score": "N/A",
+        "tags": "—"  # 💡 Added default tracker placeholder
     })
 
     # 1. Fetch Live CCU
@@ -72,8 +72,7 @@ def fetch_game_data(game_name, config, existing_data):
             game_record["all_time_peak"] = live_ccu
     game_record["live_ccu"] = live_ccu
 
-    # 💡 3. Fetch Storefront Release Date (ONLY IF UNRELEASED)
-    # Check if we already have a past release date (meaning it has launched)
+    # 3. Fetch Storefront Release Date (ONLY IF UNRELEASED)
     current_rd = config.get("release_date") or game_record.get("release_date", "2099-01-01")
     is_released = False
     if current_rd and current_rd != "2099-01-01":
@@ -94,6 +93,22 @@ def fetch_game_data(game_name, config, existing_data):
                     if new_rd_date != game_record["release_date"]:
                         print(f"  -> {game_name} release date shifted to: {new_rd_date}")
                         game_record["release_date"] = new_rd_date
+        except Exception:
+            pass
+
+    # 💡 3.5 Fetch Steam Community Tags (Cached Lookup Optimization)
+    # Only fetches from store if it hasn't been set yet to minimize network calls
+    if appid and game_record.get("tags", "—") in ("—", "N/A", ""):
+        url = f"https://store.steampowered.com/app/{appid}/"
+        try:
+            res = requests.get(url, headers=BASE_HEADERS, timeout=TIMEOUT)
+            if res.status_code == 200:
+                soup = BeautifulSoup(res.text, "html.parser")
+                tag_elements = soup.find_all("a", class_="app_tag")
+                # Parse text, filter out blanks, and grab the top 3 popular tags
+                tags_list = [t.get_text(strip=True) for t in tag_elements if t.get_text(strip=True)][:3]
+                if tags_list:
+                    game_record["tags"] = ", ".join(tags_list)
         except Exception:
             pass
 
