@@ -2,11 +2,11 @@ import streamlit as st
 import pandas as pd
 import json
 import os
-import importlib  # 💡 Added: Enables manual cache busting for imported files
+import importlib
 
 # Cross-reference database definitions to identify console vs steam tracks natively
 import game_database as gd
-importlib.reload(gd)  # 💡 Added: Forces Streamlit to always pull the newest game_database.py from disk
+importlib.reload(gd)
 
 METRICS_FILE = "metrics.json"
 
@@ -56,13 +56,22 @@ if not df.empty:
     fifteen_days_ago = current_time - pd.Timedelta(days=15)
     df = df[df["Release Date"] >= fifteen_days_ago]
 
-    # 💡 FIX: Turn datetime objects into standard strings and replace the placeholder date
+    # Convert datetime objects to standard ISO strings for clean output formatting
     df["Release Date"] = df["Release Date"].dt.strftime('%Y-%m-%d').replace("2099-01-01", "To be released")
 
     # Convert all numeric data columns cleanly
     numeric_columns = ["Live CCU (Steam)", "All-Time Peak", "Steam Rating %", "Total Steam Reviews", "OpenCritic Score", "Metacritic Score"]
     for col in numeric_columns:
         df[col] = pd.to_numeric(df[col], errors="coerce")
+
+    # 💡 NEW STYLE LOGIC: Set up dynamic bolding for already released titles
+    current_time_str = current_time.strftime('%Y-%m-%d')
+    
+    def highlight_released(row):
+        rel_date = row["Release Date"]
+        if rel_date == "To be released" or rel_date > current_time_str:
+            return [""] * len(row)  # Unreleased / TBD: Normal font styling
+        return ["font-weight: bold;"] * len(row)  # Released: Bold text row-wide
 
     # -------------------------------------------------------------------------
     # TABLE DIVISION 1: PC / STEAM TRACKS
@@ -75,13 +84,15 @@ if not df.empty:
         df_steam = df_steam.sort_values(by="Steam Rating %", ascending=False, na_position="last")
         df_steam = df_steam.drop(columns=["steam_id"])
         
+        # 💡 Apply styling to the final display frame
+        styled_steam = df_steam.style.apply(highlight_released, axis=1)
+        
         dynamic_height_steam = (len(df_steam) + 1) * 35 + 10
         
         st.dataframe(
-            df_steam,
+            styled_steam,
             column_config={
                 "Game Title": st.column_config.TextColumn(width="medium"),
-                # 💡 Updated: Changed from DateColumn to TextColumn to accept custom text strings cleanly
                 "Release Date": st.column_config.TextColumn(width="small"),
                 "Live CCU (Steam)": st.column_config.NumberColumn(format="%d"),
                 "All-Time Peak": st.column_config.NumberColumn(format="%d"),
@@ -89,7 +100,6 @@ if not df.empty:
                 "Total Steam Reviews": st.column_config.NumberColumn(format="%d"),
                 "OpenCritic Score": st.column_config.NumberColumn(format="%d"),
                 "Metacritic Score": st.column_config.NumberColumn(format="%d"),
-                # Render SteamDB URLs as an elegant clickable anchor link icon
                 "SteamDB": st.column_config.LinkColumn(display_text="🔗 Link"),
             },
             hide_index=True,
@@ -110,17 +120,17 @@ if not df.empty:
     if not df_console.empty:
         # Sort console tracks by OpenCritic values since Steam metrics don't apply
         df_console = df_console.sort_values(by="OpenCritic Score", ascending=False, na_position="last")
-        
-        # Isolate the viewport to show only console-relevant parameters
         df_console = df_console[["Game Title", "Release Date", "OpenCritic Score", "Metacritic Score"]]
+        
+        # 💡 Apply styling to the final display frame
+        styled_console = df_console.style.apply(highlight_released, axis=1)
         
         dynamic_height_console = (len(df_console) + 1) * 35 + 10
         
         st.dataframe(
-            df_console,
+            styled_console,
             column_config={
                 "Game Title": st.column_config.TextColumn(width="medium"),
-                # 💡 Updated: Changed from DateColumn to TextColumn here as well
                 "Release Date": st.column_config.TextColumn(width="small"),
                 "OpenCritic Score": st.column_config.NumberColumn(format="%d"),
                 "Metacritic Score": st.column_config.NumberColumn(format="%d"),

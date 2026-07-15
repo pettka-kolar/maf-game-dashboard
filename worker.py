@@ -2,6 +2,7 @@ import json
 import time
 import requests
 import os
+from datetime import datetime
 from bs4 import BeautifulSoup
 import game_database as gd
 
@@ -14,6 +15,17 @@ BASE_HEADERS = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9"
 }
+
+# 💡 NEW HELPER: Safely evaluate dates inside Python without installing external dependencies
+def parse_date(date_str):
+    if not date_str or date_str == "2099-01-01":
+        return None
+    for fmt in ("%Y-%m-%d", "%b %d, %Y", "%d %b, %Y", "%B %d, %Y", "%d %B, %Y"):
+        try:
+            return datetime.strptime(date_str, fmt)
+        except ValueError:
+            continue
+    return None
 
 def load_existing_metrics():
     if os.path.exists(METRICS_FILE):
@@ -60,8 +72,16 @@ def fetch_game_data(game_name, config, existing_data):
             game_record["all_time_peak"] = live_ccu
     game_record["live_ccu"] = live_ccu
 
-    # 3. Fetch Storefront Release Date
-    if appid:
+    # 💡 3. Fetch Storefront Release Date (ONLY IF UNRELEASED)
+    # Check if we already have a past release date (meaning it has launched)
+    current_rd = config.get("release_date") or game_record.get("release_date", "2099-01-01")
+    is_released = False
+    if current_rd and current_rd != "2099-01-01":
+        parsed_dt = parse_date(current_rd)
+        if parsed_dt and parsed_dt <= datetime.now():
+            is_released = True
+
+    if appid and not is_released:
         url = f"https://store.steampowered.com/api/appdetails?appids={appid}&l=english"
         try:
             res = requests.get(url, headers=BASE_HEADERS, timeout=TIMEOUT)
@@ -70,13 +90,16 @@ def fetch_game_data(game_name, config, existing_data):
                 if rd.get("coming_soon"):
                     game_record["release_date"] = "2099-01-01"
                 else:
-                    game_record["release_date"] = rd.get("date", game_record["release_date"])
+                    new_rd_date = rd.get("date", game_record["release_date"])
+                    if new_rd_date != game_record["release_date"]:
+                        print(f"  -> {game_name} release date shifted to: {new_rd_date}")
+                        game_record["release_date"] = new_rd_date
         except Exception:
             pass
 
     # 4. Fetch Steam Storefront Reviews
     if appid:
-        url = f"https://store.steampowered.com/appreviews/{appid}?json=1"
+        url = f"https://store.steampowered.com/appreviews/{appid}?json=1&language=all&purchase_type=all"
         try:
             res = requests.get(url, headers=BASE_HEADERS, timeout=TIMEOUT)
             if res.status_code == 200:
