@@ -51,7 +51,7 @@ def fetch_game_data(game_name, config, existing_data):
         "total_reviews": "N/A",
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
-        "tags": "—"  # 💡 Added default tracker placeholder
+        "tags": "—"
     })
 
     # 1. Fetch Live CCU
@@ -96,12 +96,25 @@ def fetch_game_data(game_name, config, existing_data):
         except Exception:
             pass
 
-    # 💡 3.5 Fetch Steam Community Tags (Cached Lookup Optimization)
-    # Only fetches from store if it hasn't been set yet to minimize network calls
+    # 💡 3.5 Fetch Steam Community Tags (Bypassing Mature Content Age Gates)
+    # Uses persistent browser bypass state parameters during execution loops
     if appid and game_record.get("tags", "—") in ("—", "N/A", ""):
         url = f"https://store.steampowered.com/app/{appid}/"
+        
+        # 💡 FIX: Injecting standard age-verification session markers
+        steam_age_bypass_cookies = {
+            "wants_mature_content": "1",
+            "lastagecheckage": "1-1-1990",
+            "birthtime": "631180801"
+        }
+        
         try:
-            res = requests.get(url, headers=BASE_HEADERS, timeout=TIMEOUT)
+            res = requests.get(
+                url, 
+                headers=BASE_HEADERS, 
+                cookies=steam_age_bypass_cookies, 
+                timeout=TIMEOUT
+            )
             if res.status_code == 200:
                 soup = BeautifulSoup(res.text, "html.parser")
                 tag_elements = soup.find_all("a", class_="app_tag")
