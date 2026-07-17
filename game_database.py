@@ -106,7 +106,8 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/shift-at-midnight",
         "opencritic_id": 0,
         "opencritic_slug": "shift-at-midnight",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-07-22"  
     },
     "The Adventures of Elliot: The Millennium Tales": {
         "steam_id": 3483510,
@@ -179,7 +180,8 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/avatar-legends-the-fighting-game",
         "opencritic_id": 0,
         "opencritic_slug": "avatar-legends-the-fighting-game",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-07-23"        
     },
     "Esports Manager 2026": {
         "steam_id": 2749950,
