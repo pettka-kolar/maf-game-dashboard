@@ -17,11 +17,11 @@ GAME_DATABASE = {
         "backup_peak": 1077
     },
     "Pit Panic": {
-        "steam_id": 4600360,
+        "steam_id": 2491490,
         "metacritic_slug": "pc/pit-panic",
         "opencritic_id": 0,
         "opencritic_slug": "pit-panic",
-        "backup_peak": 7
+        "backup_peak": 0
     },
     "Zero Parades: For Dead Spies": {
         "steam_id": 2863680,
