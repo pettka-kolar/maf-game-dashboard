@@ -12,7 +12,7 @@ GAME_DATABASE = {
     "Warhammer 40,000: Mechanicus II": {
         "steam_id": 2532480,
         "metacritic_slug": "pc/warhammer-40000-mechanicus-ii",
-        "opencritic_id": 0,
+        "opencritic_id": 20652,  # 💡 Updated: Active tracking ID added
         "opencritic_slug": "warhammer-40000-mechanicus-ii",
         "backup_peak": 1077
     },
@@ -76,7 +76,7 @@ GAME_DATABASE = {
     "Solarpunk": {
         "steam_id": 1805110,
         "metacritic_slug": "pc/solarpunk",
-        "opencritic_id": 0,
+        "opencritic_id": 20792,  # 💡 Updated: Active tracking ID added
         "opencritic_slug": "solarpunk",
         "backup_peak": 10075
     },
@@ -97,7 +97,7 @@ GAME_DATABASE = {
     "Copa City": {
         "steam_id": 2210520,
         "metacritic_slug": "pc/copa-city",
-        "opencritic_id": 0,
+        "opencritic_id": 19811,  # 💡 Updated: Active tracking ID added
         "opencritic_slug": "copa-city",
         "backup_peak": 375
     },
@@ -186,15 +186,15 @@ GAME_DATABASE = {
     "Esports Manager 2026": {
         "steam_id": 2749950,
         "metacritic_slug": "pc/esports-manager-2026",
-        "opencritic_id": 0,
+        "opencritic_id": 21015,  # 💡 Updated: Active tracking ID added
         "opencritic_slug": "esports-manager-2026",
         "backup_peak": 0
     },
     "Doom: The Dark Ages – Revelations": {
         "steam_id": 3698350,
         "metacritic_slug": "pc/doom-the-dark-ages-revelations",
-        "opencritic_id": 0,
-        "opencritic_slug": "doom-the-dark-ages-revelations",
+        "opencritic_id": 18023,  # 💡 Updated: Main entry tracking ID mapped
+        "opencritic_slug": "doom-the-dark-ages",
         "backup_peak": 0
     },
     "Moonlight Peaks": {
@@ -262,7 +262,7 @@ GAME_DATABASE = {
     "Scarlet Deer Inn": {
         "steam_id": 1553260,
         "metacritic_slug": "pc/scarlet-deer-inn",
-        "opencritic_id": 0,
+        "opencritic_id": 20972,  # 💡 Updated: Active tracking ID added
         "opencritic_slug": "scarlet-deer-inn",
         "backup_peak": 0,
         "release_date": "2026-07-21"
