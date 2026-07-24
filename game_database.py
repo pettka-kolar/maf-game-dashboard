@@ -12,7 +12,7 @@ GAME_DATABASE = {
     "Warhammer 40,000: Mechanicus II": {
         "steam_id": 2532480,
         "metacritic_slug": "pc/warhammer-40000-mechanicus-ii",
-        "opencritic_id": 20652,  # 💡 Updated: Active tracking ID added
+        "opencritic_id": 20652,
         "opencritic_slug": "warhammer-40000-mechanicus-ii",
         "backup_peak": 1077
     },
@@ -76,7 +76,7 @@ GAME_DATABASE = {
     "Solarpunk": {
         "steam_id": 1805110,
         "metacritic_slug": "pc/solarpunk",
-        "opencritic_id": 20792,  # 💡 Updated: Active tracking ID added
+        "opencritic_id": 20792,
         "opencritic_slug": "solarpunk",
         "backup_peak": 10075
     },
@@ -97,7 +97,7 @@ GAME_DATABASE = {
     "Copa City": {
         "steam_id": 2210520,
         "metacritic_slug": "pc/copa-city",
-        "opencritic_id": 19811,  # 💡 Updated: Active tracking ID added
+        "opencritic_id": 19811,
         "opencritic_slug": "copa-city",
         "backup_peak": 375
     },
@@ -170,7 +170,7 @@ GAME_DATABASE = {
     "Rhythm Heaven Groove": {
         "steam_id": 0,
         "metacritic_slug": "switch/rhythm-heaven-groove",
-        "opencritic_id": 0,
+        "opencritic_id": 20339,  # 💡 Updated: Active tracking node linked
         "opencritic_slug": "rhythm-heaven-groove",
         "backup_peak": 0,
         "release_date": "2026-07-02"
@@ -186,14 +186,14 @@ GAME_DATABASE = {
     "Esports Manager 2026": {
         "steam_id": 2749950,
         "metacritic_slug": "pc/esports-manager-2026",
-        "opencritic_id": 21015,  # 💡 Updated: Active tracking ID added
+        "opencritic_id": 21015,
         "opencritic_slug": "esports-manager-2026",
         "backup_peak": 0
     },
     "Doom: The Dark Ages – Revelations": {
         "steam_id": 3698350,
         "metacritic_slug": "pc/doom-the-dark-ages-revelations",
-        "opencritic_id": 18023,  # 💡 Updated: Main entry tracking ID mapped
+        "opencritic_id": 18023,
         "opencritic_slug": "doom-the-dark-ages",
         "backup_peak": 0
     },
@@ -207,14 +207,14 @@ GAME_DATABASE = {
     "Assassin's Creed Black Flag Resynced": {
         "steam_id": 3751950,
         "metacritic_slug": "pc/assassins-creed-black-flag-resynced",
-        "opencritic_id": 0,
+        "opencritic_id": 0, # Reviews roll up directly under main remake asset listings
         "opencritic_slug": "assassins-creed-black-flag-resynced",
         "backup_peak": 0
     },
     "Echoes of Anicrad": {
         "steam_id": 2244210,
         "metacritic_slug": "pc/echoes-of-aincrad",
-        "opencritic_id": 0,
+        "opencritic_id": 20207,  # 💡 Updated: Active tracking node linked
         "opencritic_slug": "echoes-of-aincrad",
         "backup_peak": 0
     },
@@ -228,17 +228,14 @@ GAME_DATABASE = {
     "Denshattack!": {
         "steam_id": 2524850,
         "metacritic_slug": "pc/denshattack",
-        "opencritic_id": 0,
+        "opencritic_id": 20193,  # 💡 Updated: Active tracking node linked
         "opencritic_slug": "denshattack",
         "backup_peak": 0
     },
-    # -------------------------------------------------------------------------
-    # NEW EXTENSIONS (ADDED BATCH - JULY 14, 2026)
-    # -------------------------------------------------------------------------
     "Heave Ho 2": {
         "steam_id": 2802740,
         "metacritic_slug": "pc/heave-ho-2",
-        "opencritic_id": 0,
+        "opencritic_id": 20999,  # 💡 Updated: Active tracking node linked
         "opencritic_slug": "heave-ho-2",
         "backup_peak": 0,
         "release_date": "2026-07-16"
@@ -246,7 +243,7 @@ GAME_DATABASE = {
     "Moss: The Forgotten Relic": {
         "steam_id": 3914860,
         "metacritic_slug": "pc/moss-the-forgotten-relic",
-        "opencritic_id": 0,
+        "opencritic_id": 20976,  # 💡 Updated: Active tracking node linked
         "opencritic_slug": "moss-the-forgotten-relic",
         "backup_peak": 0,
         "release_date": "2026-07-16"
@@ -262,7 +259,7 @@ GAME_DATABASE = {
     "Scarlet Deer Inn": {
         "steam_id": 1553260,
         "metacritic_slug": "pc/scarlet-deer-inn",
-        "opencritic_id": 20972,  # 💡 Updated: Active tracking ID added
+        "opencritic_id": 20972,
         "opencritic_slug": "scarlet-deer-inn",
         "backup_peak": 0,
         "release_date": "2026-07-21"
@@ -286,7 +283,7 @@ GAME_DATABASE = {
     "Splatoon Raiders": {
         "steam_id": 0,  
         "metacritic_slug": "nintendo-switch-2/splatoon-raiders",
-        "opencritic_id": 0,
+        "opencritic_id": 20454,  # 💡 Updated: Active tracking node linked
         "opencritic_slug": "splatoon-raiders",
         "backup_peak": 0,
         "release_date": "2026-07-23"
