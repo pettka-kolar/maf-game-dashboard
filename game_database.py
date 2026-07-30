@@ -2,142 +2,6 @@
 # CONSTANTS & CONFIGURATION
 # -----------------------------------------------------------------------------
 GAME_DATABASE = {
-    "Deep Rock Galactic: Rogue Core (EA)": {
-        "steam_id": 2605790,
-        "metacritic_slug": "pc/deep-rock-galactic-rogue-core",
-        "opencritic_id": 0,
-        "opencritic_slug": "deep-rock-galactic-rogue-core",
-        "backup_peak": 5717
-    },
-    "Warhammer 40,000: Mechanicus II": {
-        "steam_id": 2532480,
-        "metacritic_slug": "pc/warhammer-40000-mechanicus-ii",
-        "opencritic_id": 20652,
-        "opencritic_slug": "warhammer-40000-mechanicus-ii",
-        "backup_peak": 1077
-    },
-    "Pit Panic": {
-        "steam_id": 2491490,
-        "metacritic_slug": "pc/pit-panic",
-        "opencritic_id": 0,
-        "opencritic_slug": "pit-panic",
-        "backup_peak": 0
-    },
-    "Zero Parades: For Dead Spies": {
-        "steam_id": 2863680,
-        "metacritic_slug": "pc/zero-parades-for-dead-spies",
-        "opencritic_id": 20490,
-        "opencritic_slug": "zero-parades-for-dead-spies",
-        "backup_peak": 1368
-    },
-    "Fatekeeper": {
-        "steam_id": 2186990,
-        "metacritic_slug": "pc/fatekeeper",
-        "opencritic_id": 0,
-        "opencritic_slug": "fatekeeper",
-        "backup_peak": 3574
-    },
-    "Battleship Command": {
-        "steam_id": 3367430,
-        "metacritic_slug": "pc/battleship-command",
-        "opencritic_id": 0,
-        "opencritic_slug": "battleship-command",
-        "backup_peak": 200
-    },
-    "Final Fantasy VII Rebirth": {
-        "steam_id": 0,
-        "metacritic_slug": "playstation-5/final-fantasy-vii-rebirth",
-        "opencritic_id": 15136,
-        "opencritic_slug": "final-fantasy-vii-rebirth",
-        "backup_peak": 0,
-        "release_date": "2026-06-03"
-    },
-    "Medic: Pacific War": {
-        "steam_id": 1281640,
-        "metacritic_slug": "pc/medic-pacific-war",
-        "opencritic_id": 0,
-        "opencritic_slug": "medic-pacific-war",
-        "backup_peak": 150
-    },
-    "Swan Song": {
-        "steam_id": 3265290,
-        "metacritic_slug": "pc/swan-song",
-        "backup_peak": 31,
-        "opencritic_id": 20647,
-        "opencritic_slug": "swan-song",
-    },
-    "Gothic 1 Remake": {
-        "steam_id": 1297900,
-        "metacritic_slug": "pc/gothic-remake",
-        "opencritic_id": 20135,
-        "opencritic_slug": "gothic-1-remake",
-        "backup_peak": 77359
-    },
-    "Solarpunk": {
-        "steam_id": 1805110,
-        "metacritic_slug": "pc/solarpunk",
-        "opencritic_id": 20792,
-        "opencritic_slug": "solarpunk",
-        "backup_peak": 10075
-    },
-    "Starseeker: Astroneer Expeditions": {
-        "steam_id": 1454370,
-        "metacritic_slug": "pc/starseeker-astroneer-expeditions",
-        "opencritic_id": 0,
-        "opencritic_slug": "starseeker-astroneer-expeditions",
-        "backup_peak": 1782
-    },
-    "Beastro": {
-        "steam_id": 2417470,
-        "metacritic_slug": "pc/beastro",
-        "opencritic_id": 0,
-        "opencritic_slug": "beastro",
-        "backup_peak": 657
-    },
-    "Copa City": {
-        "steam_id": 2210520,
-        "metacritic_slug": "pc/copa-city",
-        "opencritic_id": 19811,
-        "opencritic_slug": "copa-city",
-        "backup_peak": 375
-    },
-    "Shift at Midnight": {
-        "steam_id": 3722330,
-        "metacritic_slug": "pc/shift-at-midnight",
-        "opencritic_id": 0,
-        "opencritic_slug": "shift-at-midnight",
-        "backup_peak": 0,
-        "release_date": "2026-07-22"  
-    },
-    "The Adventures of Elliot: The Millennium Tales": {
-        "steam_id": 3483510,
-        "metacritic_slug": "pc/the-adventures-of-elliot-the-millennium-tales",
-        "opencritic_id": 20344,
-        "opencritic_slug": "the-adventures-of-elliot-the-millennium-tales",
-        "backup_peak": 7148
-    },
-    "R-Type Tactics I • II Cosmos": {
-        "steam_id": 2169930,
-        "metacritic_slug": "pc/r-type-tactics-i-and-ii-cosmos",
-        "opencritic_id": 20853,
-        "opencritic_slug": "r-type-tactics-i-ii-cosmos",
-        "backup_peak": 229
-    },
-    "EA Sports UFC 6": {
-        "steam_id": 0,
-        "metacritic_slug": "playstation-5/ea-sports-ufc-6",
-        "opencritic_id": 0,
-        "opencritic_slug": "ea-sports-ufc-6",
-        "backup_peak": 0,
-        "release_date": "2026-06-19"
-    },
-    "DEAD OR ALIVE 6 Last Round": {
-        "steam_id": 4144680,
-        "metacritic_slug": "pc/dead-or-alive-6-last-round",
-        "opencritic_id": 0,
-        "opencritic_slug": "dead-or-alive-6-last-round",
-        "backup_peak": 0
-    },
     "Star Fox": {
         "steam_id": 0,
         "metacritic_slug": "nintendo-switch-2/star-fox",
@@ -146,27 +10,6 @@ GAME_DATABASE = {
         "backup_peak": 0,
         "release_date": "2026-06-30"
     },
-    "Monopoly: Star Wars™ Heroes vs. Villains": {
-        "steam_id": 3936610,
-        "metacritic_slug": "pc/monopoly-star-wars-heroes-vs-villains",
-        "opencritic_id": 0,
-        "opencritic_slug": "monopoly-star-wars-heroes-vs-villains",
-        "backup_peak": 0
-    },
-    "Age of Empires Mobile: PC Edition": {
-        "steam_id": 2783360,
-        "metacritic_slug": "pc/age-of-empires-mobile",
-        "opencritic_id": 0,
-        "opencritic_slug": "age-of-empires-mobile",
-        "backup_peak": 698
-    },
-    "Type or die": {
-        "steam_id": 4252830,
-        "metacritic_slug": "pc/type-or-die",
-        "opencritic_id": 0,
-        "opencritic_slug": "type-or-die",
-        "backup_peak": 0
-    },
     "Rhythm Heaven Groove": {
         "steam_id": 0,
         "metacritic_slug": "switch/rhythm-heaven-groove",
@@ -174,6 +17,13 @@ GAME_DATABASE = {
         "opencritic_slug": "rhythm-heaven-groove",
         "backup_peak": 0,
         "release_date": "2026-07-02"
+    },
+    "Pit Panic": {
+        "steam_id": 2491490,
+        "metacritic_slug": "pc/pit-panic",
+        "opencritic_id": 0,
+        "opencritic_slug": "pit-panic",
+        "backup_peak": 0
     },
     "Avatar Legends: The Fighting Game": {
         "steam_id": 2424420,
@@ -188,13 +38,6 @@ GAME_DATABASE = {
         "metacritic_slug": "pc/esports-manager-2026",
         "opencritic_id": 21015,
         "opencritic_slug": "esports-manager-2026",
-        "backup_peak": 0
-    },
-    "Doom: The Dark Ages – Revelations": {
-        "steam_id": 3698350,
-        "metacritic_slug": "pc/doom-the-dark-ages-revelations",
-        "opencritic_id": 18023,
-        "opencritic_slug": "doom-the-dark-ages",
         "backup_peak": 0
     },
     "Moonlight Peaks": {
@@ -255,6 +98,14 @@ GAME_DATABASE = {
         "opencritic_slug": "fogpiercer",
         "backup_peak": 0,
         "release_date": "2026-07-17"
+    },
+    "Shift at Midnight": {
+        "steam_id": 3722330,
+        "metacritic_slug": "pc/shift-at-midnight",
+        "opencritic_id": 0,
+        "opencritic_slug": "shift-at-midnight",
+        "backup_peak": 0,
+        "release_date": "2026-07-22"  
     },
     "Scarlet Deer Inn": {
         "steam_id": 1553260,
@@ -351,14 +202,6 @@ GAME_DATABASE = {
         "opencritic_slug": "corsair-cove",
         "backup_peak": 0,
         "release_date": "2026-07-31"
-    },
-    "Quarantine Zone: The Last Check": {
-        "steam_id": 3419520,
-        "metacritic_slug": "pc/quarantine-zone-the-last-check",
-        "opencritic_id": 0,
-        "opencritic_slug": "quarantine-zone-the-last-check",
-        "backup_peak": 0,
-        "release_date": "2026-01-12"
     },
     "Planet Crafter": {
         "steam_id": 0,  
