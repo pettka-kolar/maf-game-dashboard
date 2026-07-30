@@ -20,7 +20,7 @@
     "Pit Panic": {
         "all_time_peak": 14,
         "release_date": "Jul 21, 2026",
-        "live_ccu": 2,
+        "live_ccu": 1,
         "steam_rating": 100.0,
         "total_reviews": 20,
         "opencritic_score": "N/A",
@@ -30,9 +30,9 @@
     "Avatar Legends: The Fighting Game": {
         "all_time_peak": 12179,
         "release_date": "2099-01-01",
-        "live_ccu": 1568,
-        "steam_rating": 80.49,
-        "total_reviews": 2142,
+        "live_ccu": 1898,
+        "steam_rating": 80.5,
+        "total_reviews": 2144,
         "opencritic_score": "N/A",
         "metacritic_score": 77,
         "tags": "2D Fighter, Hand-drawn, Multiplayer"
@@ -40,9 +40,9 @@
     "Esports Manager 2026": {
         "all_time_peak": 10067,
         "release_date": "Jul 6, 2026",
-        "live_ccu": 2743,
-        "steam_rating": 74.13,
-        "total_reviews": 3181,
+        "live_ccu": 2859,
+        "steam_rating": 74.1,
+        "total_reviews": 3182,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "eSports, Management, Simulation"
@@ -50,9 +50,9 @@
     "Moonlight Peaks": {
         "all_time_peak": 8576,
         "release_date": "Jul 6, 2026",
-        "live_ccu": 2132,
-        "steam_rating": 89.84,
-        "total_reviews": 1575,
+        "live_ccu": 2352,
+        "steam_rating": 89.78,
+        "total_reviews": 1576,
         "opencritic_score": 79,
         "metacritic_score": 81,
         "tags": "Life Sim, Farming Sim, Vampires"
@@ -60,9 +60,9 @@
     "Assassin's Creed Black Flag Resynced": {
         "all_time_peak": 104642,
         "release_date": "9 Jul, 2026",
-        "live_ccu": 21774,
+        "live_ccu": 22811,
         "steam_rating": 78.94,
-        "total_reviews": 24585,
+        "total_reviews": 24602,
         "opencritic_score": "N/A",
         "metacritic_score": 84,
         "tags": "Action-Adventure, Pirates, Assassins"
@@ -70,7 +70,7 @@
     "Echoes of Anicrad": {
         "all_time_peak": 19787,
         "release_date": "Jul 9, 2026",
-        "live_ccu": 1723,
+        "live_ccu": 1646,
         "steam_rating": 49.48,
         "total_reviews": 4535,
         "opencritic_score": 64,
@@ -80,9 +80,9 @@
     "Ascend to ZERO": {
         "all_time_peak": 2412,
         "release_date": "Jul 13, 2026",
-        "live_ccu": 393,
-        "steam_rating": 83.78,
-        "total_reviews": 826,
+        "live_ccu": 361,
+        "steam_rating": 83.82,
+        "total_reviews": 828,
         "opencritic_score": "N/A",
         "metacritic_score": 82,
         "tags": "Action Roguelike, Bullet Hell, Hack and Slash"
@@ -90,9 +90,9 @@
     "Denshattack!": {
         "all_time_peak": 1311,
         "release_date": "15 Jul, 2026",
-        "live_ccu": 426,
-        "steam_rating": 98.31,
-        "total_reviews": 2195,
+        "live_ccu": 435,
+        "steam_rating": 98.32,
+        "total_reviews": 2200,
         "opencritic_score": 87,
         "metacritic_score": 88,
         "tags": "Arcade, 3D Platformer, Trains"
@@ -100,19 +100,19 @@
     "Heave Ho 2": {
         "all_time_peak": 145,
         "release_date": "2099-01-01",
-        "live_ccu": 58,
-        "steam_rating": 93.1,
-        "total_reviews": 87,
-        "opencritic_score": 83,
+        "live_ccu": 40,
+        "steam_rating": 93.18,
+        "total_reviews": 88,
+        "opencritic_score": 84,
         "metacritic_score": 83,
         "tags": "Casual, Party Game, 4 Player Local"
     },
     "Moss: The Forgotten Relic": {
         "all_time_peak": 308,
         "release_date": "2099-01-01",
-        "live_ccu": 84,
-        "steam_rating": 93.81,
-        "total_reviews": 210,
+        "live_ccu": 77,
+        "steam_rating": 93.84,
+        "total_reviews": 211,
         "opencritic_score": 80,
         "metacritic_score": 79,
         "tags": "Exploration, 3D Platformer, Puzzle Platformer"
@@ -120,9 +120,9 @@
     "Fogpiercer": {
         "all_time_peak": 1020,
         "release_date": "2099-01-01",
-        "live_ccu": 355,
-        "steam_rating": 83.45,
-        "total_reviews": 441,
+        "live_ccu": 342,
+        "steam_rating": 83.52,
+        "total_reviews": 443,
         "opencritic_score": "N/A",
         "metacritic_score": 73,
         "tags": "Strategy, Roguelike, Card Game"
@@ -130,9 +130,9 @@
     "Shift at Midnight": {
         "all_time_peak": 37143,
         "release_date": "2099-01-01",
-        "live_ccu": 27444,
-        "steam_rating": 89.07,
-        "total_reviews": 4975,
+        "live_ccu": 25876,
+        "steam_rating": 89.01,
+        "total_reviews": 4996,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Horror, Online Co-Op, Multiplayer"
@@ -140,9 +140,9 @@
     "Scarlet Deer Inn": {
         "all_time_peak": 110,
         "release_date": "2099-01-01",
-        "live_ccu": 20,
-        "steam_rating": 88.89,
-        "total_reviews": 225,
+        "live_ccu": 14,
+        "steam_rating": 88.6,
+        "total_reviews": 228,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Story Rich, Adventure, Platformer"
@@ -150,7 +150,7 @@
     "Tormentum II": {
         "all_time_peak": 110,
         "release_date": "2099-01-01",
-        "live_ccu": 33,
+        "live_ccu": 44,
         "steam_rating": 98.32,
         "total_reviews": 119,
         "opencritic_score": "N/A",
@@ -160,9 +160,9 @@
     "Dinoblade": {
         "all_time_peak": 2204,
         "release_date": "2099-01-01",
-        "live_ccu": 343,
-        "steam_rating": 90.42,
-        "total_reviews": 1764,
+        "live_ccu": 358,
+        "steam_rating": 90.44,
+        "total_reviews": 1768,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Dinosaurs, Souls-like, Action RPG"
@@ -179,9 +179,9 @@
     "Halo: Campaign Evolved": {
         "all_time_peak": 25211,
         "release_date": "2099-01-01",
-        "live_ccu": 5573,
-        "steam_rating": 66.2,
-        "total_reviews": 7938,
+        "live_ccu": 5941,
+        "steam_rating": 66.19,
+        "total_reviews": 7977,
         "opencritic_score": "N/A",
         "metacritic_score": 81,
         "tags": "Action, FPS, Singleplayer"
@@ -196,11 +196,11 @@
         "metacritic_score": 83
     },
     "Mistfall Hunter": {
-        "all_time_peak": 21882,
+        "all_time_peak": 23219,
         "release_date": "2099-01-01",
-        "live_ccu": 21882,
-        "steam_rating": 61.57,
-        "total_reviews": 1054,
+        "live_ccu": 23219,
+        "steam_rating": 62.5,
+        "total_reviews": 1152,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Extraction Shooter, Dark Fantasy, Action"
@@ -218,9 +218,9 @@
     "ZeroSpace": {
         "all_time_peak": 1357,
         "release_date": "2099-01-01",
-        "live_ccu": 443,
-        "steam_rating": 79.76,
-        "total_reviews": 899,
+        "live_ccu": 460,
+        "steam_rating": 79.78,
+        "total_reviews": 900,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Early Access, Action RTS, Wargame"
@@ -228,9 +228,9 @@
     "Carnival Hunt": {
         "all_time_peak": 2529,
         "release_date": "2099-01-01",
-        "live_ccu": 1201,
-        "steam_rating": 68.26,
-        "total_reviews": 1802,
+        "live_ccu": 1223,
+        "steam_rating": 68.4,
+        "total_reviews": 1804,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Horror, Multiplayer, Online Co-Op"
@@ -239,8 +239,8 @@
         "all_time_peak": 110,
         "release_date": "2099-01-01",
         "live_ccu": 13,
-        "steam_rating": 79.65,
-        "total_reviews": 172,
+        "steam_rating": 79.77,
+        "total_reviews": 173,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Early Access, Action, Flight"
@@ -267,9 +267,9 @@
     "Tears of Metal": {
         "all_time_peak": 6268,
         "release_date": "2099-01-01",
-        "live_ccu": 1970,
-        "steam_rating": 85.39,
-        "total_reviews": 1656,
+        "live_ccu": 2134,
+        "steam_rating": 85.41,
+        "total_reviews": 1659,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Early Access, Hack and Slash, Action Roguelike"
