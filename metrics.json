@@ -22,7 +22,7 @@
         "release_date": "Jul 21, 2026",
         "live_ccu": 2,
         "steam_rating": 100.0,
-        "total_reviews": 22,
+        "total_reviews": 23,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Platformer, Roguelike, Action Roguelike"
@@ -30,9 +30,9 @@
     "Avatar Legends: The Fighting Game": {
         "all_time_peak": 12179,
         "release_date": "2099-01-01",
-        "live_ccu": 719,
-        "steam_rating": 81.5,
-        "total_reviews": 2508,
+        "live_ccu": 780,
+        "steam_rating": 81.53,
+        "total_reviews": 2507,
         "opencritic_score": "N/A",
         "metacritic_score": 76,
         "tags": "2D Fighter, Hand-drawn, Multiplayer"
@@ -40,9 +40,9 @@
     "Esports Manager 2026": {
         "all_time_peak": 10067,
         "release_date": "Jul 6, 2026",
-        "live_ccu": 1861,
-        "steam_rating": 73.79,
-        "total_reviews": 3357,
+        "live_ccu": 1992,
+        "steam_rating": 73.8,
+        "total_reviews": 3359,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "eSports, Management, Simulation"
@@ -50,7 +50,7 @@
     "Moonlight Peaks": {
         "all_time_peak": 8576,
         "release_date": "Jul 6, 2026",
-        "live_ccu": 1397,
+        "live_ccu": 1552,
         "steam_rating": 89.67,
         "total_reviews": 1684,
         "opencritic_score": 79,
@@ -60,9 +60,9 @@
     "Assassin's Creed Black Flag Resynced": {
         "all_time_peak": 104642,
         "release_date": "9 Jul, 2026",
-        "live_ccu": 12458,
+        "live_ccu": 13845,
         "steam_rating": 79.33,
-        "total_reviews": 25840,
+        "total_reviews": 25848,
         "opencritic_score": "N/A",
         "metacritic_score": 84,
         "tags": "Action-Adventure, Pirates, Assassins"
@@ -70,9 +70,9 @@
     "Echoes of Anicrad": {
         "all_time_peak": 19787,
         "release_date": "Jul 9, 2026",
-        "live_ccu": 899,
-        "steam_rating": 49.04,
-        "total_reviews": 4704,
+        "live_ccu": 1057,
+        "steam_rating": 49.03,
+        "total_reviews": 4705,
         "opencritic_score": 64,
         "metacritic_score": 64,
         "tags": "Anime, JRPG, Singleplayer"
@@ -80,9 +80,9 @@
     "Ascend to ZERO": {
         "all_time_peak": 2412,
         "release_date": "Jul 13, 2026",
-        "live_ccu": 187,
-        "steam_rating": 83.51,
-        "total_reviews": 873,
+        "live_ccu": 220,
+        "steam_rating": 83.52,
+        "total_reviews": 874,
         "opencritic_score": "N/A",
         "metacritic_score": 82,
         "tags": "Action Roguelike, Bullet Hell, Hack and Slash"
@@ -90,7 +90,7 @@
     "Denshattack!": {
         "all_time_peak": 1311,
         "release_date": "15 Jul, 2026",
-        "live_ccu": 230,
+        "live_ccu": 252,
         "steam_rating": 98.25,
         "total_reviews": 2451,
         "opencritic_score": 87,
@@ -100,7 +100,7 @@
     "Heave Ho 2": {
         "all_time_peak": 145,
         "release_date": "2099-01-01",
-        "live_ccu": 9,
+        "live_ccu": 27,
         "steam_rating": 92.71,
         "total_reviews": 96,
         "opencritic_score": 84,
@@ -110,7 +110,7 @@
     "Moss: The Forgotten Relic": {
         "all_time_peak": 308,
         "release_date": "2099-01-01",
-        "live_ccu": 55,
+        "live_ccu": 58,
         "steam_rating": 93.22,
         "total_reviews": 236,
         "opencritic_score": 80,
@@ -120,9 +120,9 @@
     "Fogpiercer": {
         "all_time_peak": 1020,
         "release_date": "2099-01-01",
-        "live_ccu": 138,
-        "steam_rating": 83.03,
-        "total_reviews": 495,
+        "live_ccu": 146,
+        "steam_rating": 83.06,
+        "total_reviews": 496,
         "opencritic_score": "N/A",
         "metacritic_score": 73,
         "tags": "Strategy, Roguelike, Card Game"
@@ -130,9 +130,9 @@
     "Shift at Midnight": {
         "all_time_peak": 37143,
         "release_date": "2099-01-01",
-        "live_ccu": 9658,
-        "steam_rating": 88.51,
-        "total_reviews": 6760,
+        "live_ccu": 13458,
+        "steam_rating": 88.48,
+        "total_reviews": 6773,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Horror, Online Co-Op, Multiplayer"
@@ -140,7 +140,7 @@
     "Scarlet Deer Inn": {
         "all_time_peak": 110,
         "release_date": "2099-01-01",
-        "live_ccu": 10,
+        "live_ccu": 7,
         "steam_rating": 89.21,
         "total_reviews": 278,
         "opencritic_score": "N/A",
@@ -150,9 +150,9 @@
     "Tormentum II": {
         "all_time_peak": 110,
         "release_date": "2099-01-01",
-        "live_ccu": 18,
-        "steam_rating": 95.03,
-        "total_reviews": 161,
+        "live_ccu": 17,
+        "steam_rating": 95.06,
+        "total_reviews": 162,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Point & Click, Dark Fantasy, Adventure"
@@ -160,7 +160,7 @@
     "Dinoblade": {
         "all_time_peak": 2204,
         "release_date": "2099-01-01",
-        "live_ccu": 136,
+        "live_ccu": 146,
         "steam_rating": 90.21,
         "total_reviews": 2074,
         "opencritic_score": "N/A",
@@ -179,9 +179,9 @@
     "Halo: Campaign Evolved": {
         "all_time_peak": 25211,
         "release_date": "2099-01-01",
-        "live_ccu": 2323,
-        "steam_rating": 63.58,
-        "total_reviews": 10706,
+        "live_ccu": 2282,
+        "steam_rating": 63.56,
+        "total_reviews": 10711,
         "opencritic_score": "N/A",
         "metacritic_score": 80,
         "tags": "Action, FPS, Singleplayer"
@@ -198,9 +198,9 @@
     "Mistfall Hunter": {
         "all_time_peak": 44201,
         "release_date": "2099-01-01",
-        "live_ccu": 22913,
+        "live_ccu": 26224,
         "steam_rating": 65.57,
-        "total_reviews": 6928,
+        "total_reviews": 6948,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Extraction Shooter, Dark Fantasy, Action"
@@ -208,7 +208,7 @@
     "The Relic: First Guardian": {
         "all_time_peak": 141,
         "release_date": "2099-01-01",
-        "live_ccu": 42,
+        "live_ccu": 54,
         "steam_rating": 41.1,
         "total_reviews": 146,
         "opencritic_score": "N/A",
@@ -218,7 +218,7 @@
     "ZeroSpace": {
         "all_time_peak": 1357,
         "release_date": "2099-01-01",
-        "live_ccu": 269,
+        "live_ccu": 299,
         "steam_rating": 80.06,
         "total_reviews": 1033,
         "opencritic_score": "N/A",
@@ -228,9 +228,9 @@
     "Carnival Hunt": {
         "all_time_peak": 2529,
         "release_date": "2099-01-01",
-        "live_ccu": 688,
-        "steam_rating": 67.11,
-        "total_reviews": 2104,
+        "live_ccu": 837,
+        "steam_rating": 67.17,
+        "total_reviews": 2105,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Horror, Multiplayer, Online Co-Op"
@@ -238,7 +238,7 @@
     "G-Rebels": {
         "all_time_peak": 110,
         "release_date": "2099-01-01",
-        "live_ccu": 19,
+        "live_ccu": 13,
         "steam_rating": 79.79,
         "total_reviews": 188,
         "opencritic_score": "N/A",
@@ -248,9 +248,9 @@
     "Corsair Cove": {
         "all_time_peak": 12651,
         "release_date": "2099-01-01",
-        "live_ccu": 7146,
-        "steam_rating": 87.44,
-        "total_reviews": 1298,
+        "live_ccu": 7739,
+        "steam_rating": 87.59,
+        "total_reviews": 1305,
         "opencritic_score": "N/A",
         "metacritic_score": 79,
         "tags": "Strategy, City Builder, Simulation"
@@ -267,19 +267,19 @@
     "Tears of Metal": {
         "all_time_peak": 6268,
         "release_date": "2099-01-01",
-        "live_ccu": 1028,
-        "steam_rating": 85.99,
-        "total_reviews": 1948,
+        "live_ccu": 1042,
+        "steam_rating": 85.96,
+        "total_reviews": 1952,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Early Access, Hack and Slash, Action Roguelike"
     },
     "Beast of Reincarnation (Game Pass)": {
-        "all_time_peak": 12615,
+        "all_time_peak": 13001,
         "release_date": "Aug 3, 2026",
-        "live_ccu": 11144,
-        "steam_rating": 56.03,
-        "total_reviews": 1144,
+        "live_ccu": 13001,
+        "steam_rating": 54.91,
+        "total_reviews": 1211,
         "opencritic_score": "N/A",
         "metacritic_score": 73,
         "tags": "Dogs, Action RPG, Adventure"
