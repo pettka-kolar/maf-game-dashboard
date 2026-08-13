@@ -28,7 +28,7 @@ GAME_DATABASE = {
     "Avatar Legends: The Fighting Game": {
         "steam_id": 2424420,
         "metacritic_slug": "pc/avatar-legends-the-fighting-game",
-        "opencritic_id": 0,
+        "opencritic_id": 21042,
         "opencritic_slug": "avatar-legends-the-fighting-game",
         "backup_peak": 0,
         "release_date": "2026-07-23"        
@@ -220,7 +220,7 @@ GAME_DATABASE = {
         "release_date": "2026-07-22"
     },
     # -------------------------------------------------------------------------
-    # UPCOMING RELEASES (ADDED LATE JULY 2026)
+    # UPCOMING RELEASES (ADDED LATE JULY / AUGUST 2026)
     # -------------------------------------------------------------------------
     "Beast of Reincarnation (Game Pass)": {
         "steam_id": 2001760,
@@ -232,7 +232,7 @@ GAME_DATABASE = {
     "Big Walk": {
         "steam_id": 1478500,
         "metacritic_slug": "pc/big-walk",
-        "opencritic_id": 0,
+        "opencritic_id": 21088,
         "opencritic_slug": "big-walk",
         "backup_peak": 0,
         "release_date": "2026-08-04"
@@ -264,7 +264,7 @@ GAME_DATABASE = {
     "Agent 64: Spies Never Die": {
         "steam_id": 1574480,
         "metacritic_slug": "pc/agent-64-spies-never-die",
-        "opencritic_id": 0,
+        "opencritic_id": 21102,
         "opencritic_slug": "agent-64-spies-never-die",
         "backup_peak": 0,
         "release_date": "2026-08-11"
@@ -335,7 +335,7 @@ GAME_DATABASE = {
     "Expeditions: Samurai": {
         "steam_id": 2212910,
         "metacritic_slug": "pc/expeditions-samurai",
-        "opencritic_id": 0,
+        "opencritic_id": 21095,
         "opencritic_slug": "expeditions-samurai",
         "backup_peak": 0,
         "release_date": "2026-08-07"
