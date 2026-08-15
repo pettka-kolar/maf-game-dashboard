@@ -2,79 +2,9 @@
 # CONSTANTS & CONFIGURATION
 # -----------------------------------------------------------------------------
 GAME_DATABASE = {
-    "Star Fox": {
-        "steam_id": 0,
-        "metacritic_slug": "nintendo-switch-2/star-fox",
-        "opencritic_id": 0,
-        "opencritic_slug": "star-fox",
-        "backup_peak": 0,
-        "release_date": "2026-06-30"
-    },
-    "Rhythm Heaven Groove": {
-        "steam_id": 0,
-        "metacritic_slug": "switch/rhythm-heaven-groove",
-        "opencritic_id": 20339,
-        "opencritic_slug": "rhythm-heaven-groove",
-        "backup_peak": 0,
-        "release_date": "2026-07-02"
-    },
-    "Pit Panic": {
-        "steam_id": 2491490,
-        "metacritic_slug": "pc/pit-panic",
-        "opencritic_id": 0,
-        "opencritic_slug": "pit-panic",
-        "backup_peak": 0
-    },
-    "Avatar Legends: The Fighting Game": {
-        "steam_id": 2424420,
-        "metacritic_slug": "pc/avatar-legends-the-fighting-game",
-        "opencritic_id": 21042,
-        "opencritic_slug": "avatar-legends-the-fighting-game",
-        "backup_peak": 0,
-        "release_date": "2026-07-23"        
-    },
-    "Esports Manager 2026": {
-        "steam_id": 2749950,
-        "metacritic_slug": "pc/esports-manager-2026",
-        "opencritic_id": 21015,
-        "opencritic_slug": "esports-manager-2026",
-        "backup_peak": 0
-    },
-    "Moonlight Peaks": {
-        "steam_id": 2209900,
-        "metacritic_slug": "pc/moonlight-peaks",
-        "opencritic_id": 20950,
-        "opencritic_slug": "moonlight-peaks",
-        "backup_peak": 0
-    },
-    "Assassin's Creed Black Flag Resynced": {
-        "steam_id": 3751950,
-        "metacritic_slug": "pc/assassins-creed-black-flag-resynced",
-        "opencritic_id": 0,
-        "opencritic_slug": "assassins-creed-black-flag-resynced",
-        "backup_peak": 0
-    },
-    "Echoes of Anicrad": {
-        "steam_id": 2244210,
-        "metacritic_slug": "pc/echoes-of-aincrad",
-        "opencritic_id": 20207,
-        "opencritic_slug": "echoes-of-aincrad",
-        "backup_peak": 0
-    },
-    "Ascend to ZERO": {
-        "steam_id": 2697940,
-        "metacritic_slug": "pc/ascend-to-zero",
-        "opencritic_id": 0,
-        "opencritic_slug": "ascend-to-zero",
-        "backup_peak": 0
-    },
-    "Denshattack!": {
-        "steam_id": 2524850,
-        "metacritic_slug": "pc/denshattack",
-        "opencritic_id": 20193,
-        "opencritic_slug": "denshattack",
-        "backup_peak": 0
-    },
+    # -------------------------------------------------------------------------
+    # MID-TO-LATE JULY 2026 RELEASES (ACTIVE WINDOW)
+    # -------------------------------------------------------------------------
     "Heave Ho 2": {
         "steam_id": 2802740,
         "metacritic_slug": "pc/heave-ho-2",
@@ -99,13 +29,21 @@ GAME_DATABASE = {
         "backup_peak": 0,
         "release_date": "2026-07-17"
     },
-    "Shift at Midnight": {
-        "steam_id": 3722330,
-        "metacritic_slug": "pc/shift-at-midnight",
+    "ZeroSpace": {
+        "steam_id": 1605850,
+        "metacritic_slug": "pc/zerospace",
         "opencritic_id": 0,
-        "opencritic_slug": "shift-at-midnight",
+        "opencritic_slug": "zerospace",
         "backup_peak": 0,
-        "release_date": "2026-07-22"  
+        "release_date": "2026-07-20"
+    },
+    "G-Rebels": {
+        "steam_id": 2445980,
+        "metacritic_slug": "pc/g-rebels",
+        "opencritic_id": 0,
+        "opencritic_slug": "g-rebels",
+        "backup_peak": 0,
+        "release_date": "2026-07-20"
     },
     "Scarlet Deer Inn": {
         "steam_id": 1553260,
@@ -114,6 +52,38 @@ GAME_DATABASE = {
         "opencritic_slug": "scarlet-deer-inn",
         "backup_peak": 0,
         "release_date": "2026-07-21"
+    },
+    "Planet Crafter": {
+        "steam_id": 0,  
+        "metacritic_slug": "playstation-5/the-planet-crafter",
+        "opencritic_id": 16555,
+        "opencritic_slug": "the-planet-crafter",
+        "backup_peak": 0,
+        "release_date": "2026-07-21"
+    },
+    "Shift at Midnight": {
+        "steam_id": 3722330,
+        "metacritic_slug": "pc/shift-at-midnight",
+        "opencritic_id": 0,
+        "opencritic_slug": "shift-at-midnight",
+        "backup_peak": 0,
+        "release_date": "2026-07-22"  
+    },
+    "Tears of Metal": {
+        "steam_id": 1913120,
+        "metacritic_slug": "pc/tears-of-metal",
+        "opencritic_id": 0,
+        "opencritic_slug": "tears-of-metal",
+        "backup_peak": 0,
+        "release_date": "2026-07-22"
+    },
+    "Avatar Legends: The Fighting Game": {
+        "steam_id": 2424420,
+        "metacritic_slug": "pc/avatar-legends-the-fighting-game",
+        "opencritic_id": 21042,
+        "opencritic_slug": "avatar-legends-the-fighting-game",
+        "backup_peak": 0,
+        "release_date": "2026-07-23"        
     },
     "Tormentum II": {
         "steam_id": 931060,
@@ -139,6 +109,14 @@ GAME_DATABASE = {
         "backup_peak": 0,
         "release_date": "2026-07-23"
     },
+    "Carnival Hunt": {
+        "steam_id": 1181550,
+        "metacritic_slug": "pc/carnival-hunt",
+        "opencritic_id": 0,
+        "opencritic_slug": "carnival-hunt",
+        "backup_peak": 0,
+        "release_date": "2026-07-23"
+    },
     "Halo: Campaign Evolved": {
         "steam_id": 2806050,
         "metacritic_slug": "pc/halo-campaign-evolved",
@@ -146,14 +124,6 @@ GAME_DATABASE = {
         "opencritic_slug": "halo-campaign-evolved",
         "backup_peak": 0,
         "release_date": "2026-07-28"
-    },
-    "Xenoblade Chronicles 2": {
-        "steam_id": 0,  
-        "metacritic_slug": "nintendo-switch-2/xenoblade-chronicles-2",
-        "opencritic_id": 4952,
-        "opencritic_slug": "xenoblade-chronicles-2",
-        "backup_peak": 0,
-        "release_date": "2026-07-30"
     },
     "Mistfall Hunter": {
         "steam_id": 3282300,
@@ -163,6 +133,14 @@ GAME_DATABASE = {
         "backup_peak": 0,
         "release_date": "2026-07-29"
     },
+    "Xenoblade Chronicles 2": {
+        "steam_id": 0,  
+        "metacritic_slug": "nintendo-switch-2/xenoblade-chronicles-2",
+        "opencritic_id": 4952,
+        "opencritic_slug": "xenoblade-chronicles-2",
+        "backup_peak": 0,
+        "release_date": "2026-07-30"
+    },
     "The Relic: First Guardian": {
         "steam_id": 2827820,
         "metacritic_slug": "pc/the-relic-first-guardian",
@@ -170,30 +148,6 @@ GAME_DATABASE = {
         "opencritic_slug": "the-relic-first-guardian",
         "backup_peak": 0,
         "release_date": "2026-07-31"
-    },
-    "ZeroSpace": {
-        "steam_id": 1605850,
-        "metacritic_slug": "pc/zerospace",
-        "opencritic_id": 0,
-        "opencritic_slug": "zerospace",
-        "backup_peak": 0,
-        "release_date": "2026-07-20"
-    },
-    "Carnival Hunt": {
-        "steam_id": 1181550,
-        "metacritic_slug": "pc/carnival-hunt",
-        "opencritic_id": 0,
-        "opencritic_slug": "carnival-hunt",
-        "backup_peak": 0,
-        "release_date": "2026-07-23"
-    },
-    "G-Rebels": {
-        "steam_id": 2445980,
-        "metacritic_slug": "pc/g-rebels",
-        "opencritic_id": 0,
-        "opencritic_slug": "g-rebels",
-        "backup_peak": 0,
-        "release_date": "2026-07-20"
     },
     "Corsair Cove": {
         "steam_id": 1368140,
@@ -203,24 +157,9 @@ GAME_DATABASE = {
         "backup_peak": 0,
         "release_date": "2026-07-31"
     },
-    "Planet Crafter": {
-        "steam_id": 0,  
-        "metacritic_slug": "playstation-5/the-planet-crafter",
-        "opencritic_id": 16555,
-        "opencritic_slug": "the-planet-crafter",
-        "backup_peak": 0,
-        "release_date": "2026-07-21"
-    },
-    "Tears of Metal": {
-        "steam_id": 1913120,
-        "metacritic_slug": "pc/tears-of-metal",
-        "opencritic_id": 0,
-        "opencritic_slug": "tears-of-metal",
-        "backup_peak": 0,
-        "release_date": "2026-07-22"
-    },
+
     # -------------------------------------------------------------------------
-    # UPCOMING RELEASES (ADDED LATE JULY / AUGUST 2026)
+    # AUGUST 2026 RELEASES & TRACKS
     # -------------------------------------------------------------------------
     "Beast of Reincarnation (Game Pass)": {
         "steam_id": 2001760,
@@ -261,6 +200,22 @@ GAME_DATABASE = {
         "backup_peak": 0,
         "release_date": "2026-08-06"
     },
+    "Expeditions: Samurai": {
+        "steam_id": 2212910,
+        "metacritic_slug": "pc/expeditions-samurai",
+        "opencritic_id": 21095,
+        "opencritic_slug": "expeditions-samurai",
+        "backup_peak": 0,
+        "release_date": "2026-08-07"
+    },
+    "Pax Autocratica (Early Access)": {
+        "steam_id": 1067360,
+        "metacritic_slug": "pc/pax-autocratica",
+        "opencritic_id": 0,
+        "opencritic_slug": "pax-autocratica",
+        "backup_peak": 0,
+        "release_date": "2026-08-10"
+    },
     "Agent 64: Spies Never Die": {
         "steam_id": 1574480,
         "metacritic_slug": "pc/agent-64-spies-never-die",
@@ -277,6 +232,14 @@ GAME_DATABASE = {
         "backup_peak": 0,
         "release_date": "2026-08-11"
     },
+    "Grounded 2 (PS5)": {
+        "steam_id": 0,
+        "metacritic_slug": "playstation-5/grounded-2",
+        "opencritic_id": 0,
+        "opencritic_slug": "grounded-2",
+        "backup_peak": 0,
+        "release_date": "2026-08-11"
+    },
     "Security 51": {
         "steam_id": 4246860,
         "metacritic_slug": "pc/security-51",
@@ -284,13 +247,13 @@ GAME_DATABASE = {
         "opencritic_slug": "security-51",
         "backup_peak": 0
     },
-    "Pax Autocratica (Early Access)": {
-        "steam_id": 1067360,
-        "metacritic_slug": "pc/pax-autocratica",
+    "Agefield High: Rock the School": {
+        "steam_id": 3562580,
+        "metacritic_slug": "pc/agefield-high-rock-the-school",
         "opencritic_id": 0,
-        "opencritic_slug": "pax-autocratica",
+        "opencritic_slug": "agefield-high-rock-the-school",
         "backup_peak": 0,
-        "release_date": "2026-08-10"
+        "release_date": "2026-08-12"
     },
     "Duskfade": {
         "steam_id": 2542020,
@@ -308,14 +271,6 @@ GAME_DATABASE = {
         "backup_peak": 0,
         "release_date": "2026-08-13"
     },
-    "Agefield High: Rock the School": {
-        "steam_id": 3562580,
-        "metacritic_slug": "pc/agefield-high-rock-the-school",
-        "opencritic_id": 0,
-        "opencritic_slug": "agefield-high-rock-the-school",
-        "backup_peak": 0,
-        "release_date": "2026-08-12"
-    },
     "Sandustry (Game Pass)": {
         "steam_id": 2764460,
         "metacritic_slug": "pc/sandustry",
@@ -323,30 +278,6 @@ GAME_DATABASE = {
         "opencritic_slug": "sandustry",
         "backup_peak": 0,
         "release_date": "2026-08-13"
-    },
-    "Mafia: Muž cti DLC": {
-        "steam_id": 0,
-        "metacritic_slug": "pc/mafia-the-old-country-man-of-honor",
-        "opencritic_id": 0,
-        "opencritic_slug": "mafia-the-old-country-man-of-honor",
-        "backup_peak": 0,
-        "release_date": "2026-08-14"
-    },
-    "Expeditions: Samurai": {
-        "steam_id": 2212910,
-        "metacritic_slug": "pc/expeditions-samurai",
-        "opencritic_id": 21095,
-        "opencritic_slug": "expeditions-samurai",
-        "backup_peak": 0,
-        "release_date": "2026-08-07"
-    },
-    "Grounded 2 (PS5)": {
-        "steam_id": 0,
-        "metacritic_slug": "playstation-5/grounded-2",
-        "opencritic_id": 0,
-        "opencritic_slug": "grounded-2",
-        "backup_peak": 0,
-        "release_date": "2026-08-11"
     },
     "Defender of the Crown: The Legend Returns": {
         "steam_id": 4208140,
@@ -363,5 +294,108 @@ GAME_DATABASE = {
         "opencritic_slug": "hell-let-loose-vietnam",
         "backup_peak": 0,
         "release_date": "2026-08-13"
+    },
+    "Mafia: Muž cti DLC": {
+        "steam_id": 0,
+        "metacritic_slug": "pc/mafia-the-old-country-man-of-honor",
+        "opencritic_id": 0,
+        "opencritic_slug": "mafia-the-old-country-man-of-honor",
+        "backup_peak": 0,
+        "release_date": "2026-08-14"
+    },
+
+    # -------------------------------------------------------------------------
+    # NEW EXTENSIONS (ADDED MID-AUGUST 2026)
+    # -------------------------------------------------------------------------
+    "The Sinking City 2": {
+        "steam_id": 2453880,
+        "metacritic_slug": "pc/the-sinking-city-2",
+        "opencritic_id": 0,
+        "opencritic_slug": "the-sinking-city-2",
+        "backup_peak": 0
+    },
+    "Twisted Tower": {
+        "steam_id": 1575990,
+        "metacritic_slug": "pc/twisted-tower",
+        "opencritic_id": 0,
+        "opencritic_slug": "twisted-tower",
+        "backup_peak": 0
+    },
+    "Feed the Scorchpot": {
+        "steam_id": 3491840,
+        "metacritic_slug": "pc/feed-the-scorchpot",
+        "opencritic_id": 0,
+        "opencritic_slug": "feed-the-scorchpot",
+        "backup_peak": 0
+    },
+    "Mortal Shell II": {
+        "steam_id": 2841660,
+        "metacritic_slug": "pc/mortal-shell-ii",
+        "opencritic_id": 0,
+        "opencritic_slug": "mortal-shell-ii",
+        "backup_peak": 0
+    },
+    "1666: Amsterdam": {
+        "steam_id": 0,
+        "metacritic_slug": "pc/1666-amsterdam",
+        "opencritic_id": 0,
+        "opencritic_slug": "1666-amsterdam",
+        "backup_peak": 0
+    },
+    "Once Human": {
+        "steam_id": 2139460,
+        "metacritic_slug": "pc/once-human",
+        "opencritic_id": 16930,
+        "opencritic_slug": "once-human",
+        "backup_peak": 0
+    },
+    "Aliens: Fireteam Elite 2": {
+        "steam_id": 2967110,
+        "metacritic_slug": "pc/aliens-fireteam-elite-2",
+        "opencritic_id": 0,
+        "opencritic_slug": "aliens-fireteam-elite-2",
+        "backup_peak": 0
+    },
+    "Brigandine Abyss": {
+        "steam_id": 0,
+        "metacritic_slug": "switch/brigandine-abyss",
+        "opencritic_id": 0,
+        "opencritic_slug": "brigandine-abyss",
+        "backup_peak": 0
+    },
+    "Metal Gear Solid: Master Collection Vol. 2": {
+        "steam_id": 2878900,
+        "metacritic_slug": "pc/metal-gear-solid-master-collection-vol-2",
+        "opencritic_id": 0,
+        "opencritic_slug": "metal-gear-solid-master-collection-vol-2",
+        "backup_peak": 0
+    },
+    "Resonance: A Plague Tale Legacy": {
+        "steam_id": 3105420,
+        "metacritic_slug": "pc/resonance-a-plague-tale-legacy",
+        "opencritic_id": 0,
+        "opencritic_slug": "resonance-a-plague-tale-legacy",
+        "backup_peak": 0
+    },
+    "Star Wars Zero Company": {
+        "steam_id": 3556780,
+        "metacritic_slug": "pc/star-wars-zero-company",
+        "opencritic_id": 0,
+        "opencritic_slug": "star-wars-zero-company",
+        "backup_peak": 0
+    },
+    "Elden Ring: Tarnished Edition": {
+        "steam_id": 0,
+        "metacritic_slug": "playstation-5/elden-ring-tarnished-edition",
+        "opencritic_id": 0,
+        "opencritic_slug": "elden-ring-tarnished-edition",
+        "backup_peak": 0
+    },
+    "Serious Sam: Shatterverse": {
+        "steam_id": 2984120,
+        "metacritic_slug": "pc/serious-sam-shatterverse",
+        "opencritic_id": 0,
+        "opencritic_slug": "serious-sam-shatterverse",
+        "backup_peak": 0
     }
 }
