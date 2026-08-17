@@ -3,7 +3,7 @@
 # -----------------------------------------------------------------------------
 GAME_DATABASE = {
     # -------------------------------------------------------------------------
-    # MID-TO-LATE JULY 2026 RELEASES (ACTIVE WINDOW)
+    # MID-TO-LATE JULY 2026 RELEASES (ACTIVE ROLLING WINDOW)
     # -------------------------------------------------------------------------
     "Heave Ho 2": {
         "steam_id": 2802740,
@@ -54,7 +54,7 @@ GAME_DATABASE = {
         "release_date": "2026-07-21"
     },
     "Planet Crafter": {
-        "steam_id": 0,  # Dedicated PS5 Console Tracking
+        "steam_id": 0,  # PS5 Console Tracking
         "metacritic_slug": "playstation-5/the-planet-crafter",
         "opencritic_id": 16555,
         "opencritic_slug": "the-planet-crafter",
@@ -102,7 +102,7 @@ GAME_DATABASE = {
         "release_date": "2026-07-23"
     },
     "Splatoon Raiders": {
-        "steam_id": 0,  # Nintendo Switch 2 Exclusive
+        "steam_id": 0,  # Switch 2 Exclusive
         "metacritic_slug": "nintendo-switch-2/splatoon-raiders",
         "opencritic_id": 20454,
         "opencritic_slug": "splatoon-raiders",
@@ -134,7 +134,7 @@ GAME_DATABASE = {
         "release_date": "2026-07-29"
     },
     "Xenoblade Chronicles 2": {
-        "steam_id": 0,  # Nintendo Switch 2 Enhanced Port
+        "steam_id": 0,  # Switch 2 Port
         "metacritic_slug": "nintendo-switch-2/xenoblade-chronicles-2",
         "opencritic_id": 4952,
         "opencritic_slug": "xenoblade-chronicles-2",
@@ -185,7 +185,7 @@ GAME_DATABASE = {
         "release_date": "2026-08-05"
     },
     "Marvel Tokon: Fighting Souls": {
-        "steam_id": 0,  # PlayStation 5 Track
+        "steam_id": 0,  # PS5 Exclusive Track
         "metacritic_slug": "playstation-5/marvel-tokon-fighting-souls",
         "opencritic_id": 0,
         "opencritic_slug": "marvel-tokon-fighting-souls",
@@ -233,7 +233,7 @@ GAME_DATABASE = {
         "release_date": "2026-08-11"
     },
     "Grounded 2 (PS5)": {
-        "steam_id": 0,  # PlayStation 5 Track
+        "steam_id": 0,  # PS5 Console Port
         "metacritic_slug": "playstation-5/grounded-2",
         "opencritic_id": 0,
         "opencritic_slug": "grounded-2",
@@ -296,7 +296,7 @@ GAME_DATABASE = {
         "release_date": "2026-08-13"
     },
     "Mafia: Muž cti DLC": {
-        "steam_id": 0,  # DLC Expansion Track
+        "steam_id": 0,  # DLC Expansion Tracker
         "metacritic_slug": "pc/mafia-the-old-country-man-of-honor",
         "opencritic_id": 0,
         "opencritic_slug": "mafia-the-old-country-man-of-honor",
@@ -305,35 +305,39 @@ GAME_DATABASE = {
     },
 
     # -------------------------------------------------------------------------
-    # NEW EXTENSIONS (ADDED MID-AUGUST 2026)
+    # MID-TO-LATE AUGUST 2026 RELEASES & TRACKS
     # -------------------------------------------------------------------------
     "The Sinking City 2": {
-        "steam_id": 2453880,
+        "steam_id": 2825860,
         "metacritic_slug": "pc/the-sinking-city-2",
         "opencritic_id": 0,
         "opencritic_slug": "the-sinking-city-2",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-08-18"
     },
     "Twisted Tower": {
         "steam_id": 1575990,
         "metacritic_slug": "pc/twisted-tower",
         "opencritic_id": 0,
         "opencritic_slug": "twisted-tower",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-08-18"
     },
     "Feed the Scorchpot": {
-        "steam_id": 3491840,
+        "steam_id": 3966510,
         "metacritic_slug": "pc/feed-the-scorchpot",
         "opencritic_id": 0,
         "opencritic_slug": "feed-the-scorchpot",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-08-20"
     },
     "Mortal Shell II": {
-        "steam_id": 2841660,
+        "steam_id": 2584270,
         "metacritic_slug": "pc/mortal-shell-ii",
         "opencritic_id": 0,
         "opencritic_slug": "mortal-shell-ii",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-08-20"
     },
     "1666: Amsterdam": {
         "steam_id": 3949550,
@@ -351,49 +355,55 @@ GAME_DATABASE = {
         "backup_peak": 0
     },
     "Aliens: Fireteam Elite 2": {
-        "steam_id": 2967110,
+        "steam_id": 3448650,
         "metacritic_slug": "pc/aliens-fireteam-elite-2",
         "opencritic_id": 0,
         "opencritic_slug": "aliens-fireteam-elite-2",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-08-25"
     },
     "Brigandine Abyss": {
-        "steam_id": 0,  # Nintendo Switch Track
-        "metacritic_slug": "switch/brigandine-abyss",
+        "steam_id": 3211430,
+        "metacritic_slug": "pc/brigandine-abyss",
         "opencritic_id": 0,
         "opencritic_slug": "brigandine-abyss",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-08-26"
     },
     "Metal Gear Solid: Master Collection Vol. 2": {
-        "steam_id": 2878900,
+        "steam_id": 3859630,
         "metacritic_slug": "pc/metal-gear-solid-master-collection-vol-2",
         "opencritic_id": 0,
         "opencritic_slug": "metal-gear-solid-master-collection-vol-2",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-08-27"
     },
     "Resonance: A Plague Tale Legacy": {
-        "steam_id": 3105420,
+        "steam_id": 2713000,
         "metacritic_slug": "pc/resonance-a-plague-tale-legacy",
         "opencritic_id": 0,
         "opencritic_slug": "resonance-a-plague-tale-legacy",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-08-27"
     },
     "Star Wars Zero Company": {
-        "steam_id": 3556780,
+        "steam_id": 2075800,
         "metacritic_slug": "pc/star-wars-zero-company",
         "opencritic_id": 0,
         "opencritic_slug": "star-wars-zero-company",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-08-27"
     },
     "Elden Ring: Tarnished Edition": {
-        "steam_id": 0,  # PlayStation 5 Track
+        "steam_id": 0,  # Switch 2 / Console Edition
         "metacritic_slug": "playstation-5/elden-ring-tarnished-edition",
         "opencritic_id": 0,
         "opencritic_slug": "elden-ring-tarnished-edition",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-08-28"
     },
     "Serious Sam: Shatterverse": {
-        "steam_id": 2984120,
+        "steam_id": 2067210,
         "metacritic_slug": "pc/serious-sam-shatterverse",
         "opencritic_id": 0,
         "opencritic_slug": "serious-sam-shatterverse",
