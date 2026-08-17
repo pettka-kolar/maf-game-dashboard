@@ -54,7 +54,7 @@ GAME_DATABASE = {
         "release_date": "2026-07-21"
     },
     "Planet Crafter": {
-        "steam_id": 0,  
+        "steam_id": 0,  # Dedicated PS5 Console Tracking
         "metacritic_slug": "playstation-5/the-planet-crafter",
         "opencritic_id": 16555,
         "opencritic_slug": "the-planet-crafter",
@@ -102,7 +102,7 @@ GAME_DATABASE = {
         "release_date": "2026-07-23"
     },
     "Splatoon Raiders": {
-        "steam_id": 0,  
+        "steam_id": 0,  # Nintendo Switch 2 Exclusive
         "metacritic_slug": "nintendo-switch-2/splatoon-raiders",
         "opencritic_id": 20454,
         "opencritic_slug": "splatoon-raiders",
@@ -134,7 +134,7 @@ GAME_DATABASE = {
         "release_date": "2026-07-29"
     },
     "Xenoblade Chronicles 2": {
-        "steam_id": 0,  
+        "steam_id": 0,  # Nintendo Switch 2 Enhanced Port
         "metacritic_slug": "nintendo-switch-2/xenoblade-chronicles-2",
         "opencritic_id": 4952,
         "opencritic_slug": "xenoblade-chronicles-2",
@@ -185,7 +185,7 @@ GAME_DATABASE = {
         "release_date": "2026-08-05"
     },
     "Marvel Tokon: Fighting Souls": {
-        "steam_id": 0,
+        "steam_id": 0,  # PlayStation 5 Track
         "metacritic_slug": "playstation-5/marvel-tokon-fighting-souls",
         "opencritic_id": 0,
         "opencritic_slug": "marvel-tokon-fighting-souls",
@@ -233,7 +233,7 @@ GAME_DATABASE = {
         "release_date": "2026-08-11"
     },
     "Grounded 2 (PS5)": {
-        "steam_id": 0,
+        "steam_id": 0,  # PlayStation 5 Track
         "metacritic_slug": "playstation-5/grounded-2",
         "opencritic_id": 0,
         "opencritic_slug": "grounded-2",
@@ -296,7 +296,7 @@ GAME_DATABASE = {
         "release_date": "2026-08-13"
     },
     "Mafia: Muž cti DLC": {
-        "steam_id": 0,
+        "steam_id": 0,  # DLC Expansion Track
         "metacritic_slug": "pc/mafia-the-old-country-man-of-honor",
         "opencritic_id": 0,
         "opencritic_slug": "mafia-the-old-country-man-of-honor",
@@ -336,11 +336,12 @@ GAME_DATABASE = {
         "backup_peak": 0
     },
     "1666: Amsterdam": {
-        "steam_id": 0,
+        "steam_id": 3949550,
         "metacritic_slug": "pc/1666-amsterdam",
         "opencritic_id": 0,
         "opencritic_slug": "1666-amsterdam",
-        "backup_peak": 0
+        "backup_peak": 0,
+        "release_date": "2026-08-25"
     },
     "Once Human": {
         "steam_id": 2139460,
@@ -357,7 +358,7 @@ GAME_DATABASE = {
         "backup_peak": 0
     },
     "Brigandine Abyss": {
-        "steam_id": 0,
+        "steam_id": 0,  # Nintendo Switch Track
         "metacritic_slug": "switch/brigandine-abyss",
         "opencritic_id": 0,
         "opencritic_slug": "brigandine-abyss",
@@ -385,7 +386,7 @@ GAME_DATABASE = {
         "backup_peak": 0
     },
     "Elden Ring: Tarnished Edition": {
-        "steam_id": 0,
+        "steam_id": 0,  # PlayStation 5 Track
         "metacritic_slug": "playstation-5/elden-ring-tarnished-edition",
         "opencritic_id": 0,
         "opencritic_slug": "elden-ring-tarnished-edition",
