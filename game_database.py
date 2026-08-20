@@ -380,6 +380,22 @@ GAME_DATABASE = {
         "release_date": "2026-08-20",
         "origin": None
     },
+    "Polylithic": {
+        "steam_id": 1839060,
+        "metacritic_slug": "pc/polylithic",
+        "opencritic_id": 0,
+        "opencritic_slug": "polylithic",
+        "backup_peak": 0,
+        "origin": "CZ"
+    },
+    "DayZ": {
+        "steam_id": 0,
+        "metacritic_slug": "nintendo-switch-2/dayz",
+        "opencritic_id": 0,
+        "opencritic_slug": "dayz",
+        "backup_peak": 0,
+        "origin": "CZ"
+    },
     "1666: Amsterdam": {
         "steam_id": 3949550,
         "metacritic_slug": "pc/1666-amsterdam",
