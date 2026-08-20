@@ -386,6 +386,7 @@ GAME_DATABASE = {
         "opencritic_id": 0,
         "opencritic_slug": "polylithic",
         "backup_peak": 0,
+        "release_date": "2026-08-25",
         "origin": "CZ"
     },
     "DayZ": {
@@ -393,6 +394,7 @@ GAME_DATABASE = {
         "metacritic_slug": "nintendo-switch-2/dayz",
         "opencritic_id": 0,
         "opencritic_slug": "dayz",
+        "release_date": "2026-08-20",
         "backup_peak": 0,
         "origin": "CZ"
     },
