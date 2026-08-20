@@ -27,14 +27,16 @@ else:
         # Look up the game configuration profile dynamically
         game_config = gd.GAME_DATABASE.get(game_name, {})
         steam_id = game_config.get("steam_id", 0)
+        origin = game_config.get("origin")
         
         # Prioritize manual date from game_database.py. If missing, fall back to metrics.json
         release_date = game_config.get("release_date") or metrics.get("release_date")
         
         rows.append({
             "Game Title": game_name,
-            "Tags": metrics.get("tags", "—"),  # 💡 Added: Pulls the scraped community tags
-            "steam_id": steam_id,  # Retained temporarily for dataframe filtering splits
+            "Origin": origin if origin else "—",
+            "Tags": metrics.get("tags", "—"),
+            "steam_id": steam_id,
             "Release Date": release_date,
             "Live CCU (Steam)": metrics.get("live_ccu"),
             "All-Time Peak": metrics.get("all_time_peak"),
@@ -42,7 +44,6 @@ else:
             "Total Steam Reviews": metrics.get("total_reviews"),
             "OpenCritic Score": metrics.get("opencritic_score"),
             "Metacritic Score": metrics.get("metacritic_score"),
-            # Automatically build the link parameter if it's a valid Steam entity
             "SteamDB": f"https://steamdb.info/app/{steam_id}/" if steam_id != 0 else None
         })
     df = pd.DataFrame(rows)
@@ -65,14 +66,24 @@ if not df.empty:
     for col in numeric_columns:
         df[col] = pd.to_numeric(df[col], errors="coerce")
 
-    # Set up dynamic bolding for already released titles
+    # Set up combined row styling (bolding for released titles + soft blue tint for local CZ/SK titles)
     current_time_str = current_time.strftime('%Y-%m-%d')
     
-    def highlight_released(row):
-        rel_date = row["Release Date"]
-        if rel_date == "To be released" or rel_date > current_time_str:
-            return [""] * len(row)
-        return ["font-weight: bold;"] * len(row)
+    def style_rows(row):
+        rel_date = row.get("Release Date", "")
+        origin = row.get("Origin", "")
+        
+        is_released = (rel_date != "To be released" and rel_date <= current_time_str)
+        is_local = origin in ("CZ", "SK")
+        
+        style_rules = []
+        if is_released:
+            style_rules.append("font-weight: bold;")
+        if is_local:
+            style_rules.append("background-color: rgba(66, 133, 244, 0.12);")
+            
+        style_str = " ".join(style_rules)
+        return [style_str] * len(row)
 
     # -------------------------------------------------------------------------
     # TABLE DIVISION 1: PC / STEAM TRACKS
@@ -85,16 +96,16 @@ if not df.empty:
         df_steam = df_steam.sort_values(by="Steam Rating %", ascending=False, na_position="last")
         df_steam = df_steam.drop(columns=["steam_id"])
         
-        # 💡 Explicitly order the columns so 'Tags' sits as the 2nd column
+        # Explicit column ordering with Origin placed beside Game Title
         column_order = [
-            "Game Title", "Tags", "Release Date", "Live CCU (Steam)", 
+            "Game Title", "Origin", "Tags", "Release Date", "Live CCU (Steam)", 
             "All-Time Peak", "Steam Rating %", "Total Steam Reviews", 
             "OpenCritic Score", "Metacritic Score", "SteamDB"
         ]
         df_steam = df_steam[column_order]
         
-        # Apply styling to the final display frame
-        styled_steam = df_steam.style.apply(highlight_released, axis=1)
+        # Apply combined styling to the final display frame
+        styled_steam = df_steam.style.apply(style_rows, axis=1)
         
         dynamic_height_steam = (len(df_steam) + 1) * 35 + 10
         
@@ -102,7 +113,8 @@ if not df.empty:
             styled_steam,
             column_config={
                 "Game Title": st.column_config.TextColumn(width="medium"),
-                "Tags": st.column_config.TextColumn(width="medium", help="Top popular user tags from Steam"),  # 💡 Styled Tags Column
+                "Origin": st.column_config.TextColumn(width="small", help="Country of origin (CZ / SK)"),
+                "Tags": st.column_config.TextColumn(width="medium", help="Top popular user tags from Steam"),
                 "Release Date": st.column_config.TextColumn(width="small"),
                 "Live CCU (Steam)": st.column_config.NumberColumn(format="%d"),
                 "All-Time Peak": st.column_config.NumberColumn(format="%d"),
@@ -129,11 +141,11 @@ if not df.empty:
     df_console = df[df["steam_id"] == 0].copy()
     if not df_console.empty:
         df_console = df_console.sort_values(by="OpenCritic Score", ascending=False, na_position="last")
-        # Isolate the viewport to show only console-relevant parameters (completely drops tags)
-        df_console = df_console[["Game Title", "Release Date", "OpenCritic Score", "Metacritic Score"]]
+        # Isolate the viewport to show console-relevant parameters and origin
+        df_console = df_console[["Game Title", "Origin", "Release Date", "OpenCritic Score", "Metacritic Score"]]
         
-        # Apply styling to the final display frame
-        styled_console = df_console.style.apply(highlight_released, axis=1)
+        # Apply combined styling to the final display frame
+        styled_console = df_console.style.apply(style_rows, axis=1)
         
         dynamic_height_console = (len(df_console) + 1) * 35 + 10
         
@@ -141,6 +153,7 @@ if not df.empty:
             styled_console,
             column_config={
                 "Game Title": st.column_config.TextColumn(width="medium"),
+                "Origin": st.column_config.TextColumn(width="small", help="Country of origin (CZ / SK)"),
                 "Release Date": st.column_config.TextColumn(width="small"),
                 "OpenCritic Score": st.column_config.NumberColumn(format="%d"),
                 "Metacritic Score": st.column_config.NumberColumn(format="%d"),
