@@ -369,7 +369,7 @@ GAME_DATABASE = {
         "opencritic_slug": "feed-the-scorchpot",
         "backup_peak": 0,
         "release_date": "2026-08-20",
-        "origin": None
+        "origin": "CZ"
     },
     "Mortal Shell II": {
         "steam_id": 2584270,
