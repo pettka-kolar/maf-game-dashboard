@@ -2,7 +2,7 @@
     "Heave Ho 2": {
         "all_time_peak": 145,
         "release_date": "2099-01-01",
-        "live_ccu": 24,
+        "live_ccu": 23,
         "steam_rating": 90.83,
         "total_reviews": 120,
         "opencritic_score": 83,
@@ -12,7 +12,7 @@
     "Moss: The Forgotten Relic": {
         "all_time_peak": 308,
         "release_date": "2099-01-01",
-        "live_ccu": 46,
+        "live_ccu": 42,
         "steam_rating": 92.23,
         "total_reviews": 309,
         "opencritic_score": 80,
@@ -22,7 +22,7 @@
     "Fogpiercer": {
         "all_time_peak": 1020,
         "release_date": "2099-01-01",
-        "live_ccu": 74,
+        "live_ccu": 76,
         "steam_rating": 84.71,
         "total_reviews": 582,
         "opencritic_score": "N/A",
@@ -32,9 +32,9 @@
     "ZeroSpace": {
         "all_time_peak": 1357,
         "release_date": "2099-01-01",
-        "live_ccu": 122,
-        "steam_rating": 81.27,
-        "total_reviews": 1308,
+        "live_ccu": 111,
+        "steam_rating": 81.28,
+        "total_reviews": 1309,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Early Access, Action RTS, Wargame"
@@ -42,7 +42,7 @@
     "G-Rebels": {
         "all_time_peak": 110,
         "release_date": "2099-01-01",
-        "live_ccu": 7,
+        "live_ccu": 8,
         "steam_rating": 79.22,
         "total_reviews": 231,
         "opencritic_score": "N/A",
@@ -52,7 +52,7 @@
     "Scarlet Deer Inn": {
         "all_time_peak": 110,
         "release_date": "2099-01-01",
-        "live_ccu": 6,
+        "live_ccu": 4,
         "steam_rating": 89.02,
         "total_reviews": 337,
         "opencritic_score": "N/A",
@@ -71,9 +71,9 @@
     "Shift at Midnight": {
         "all_time_peak": 37143,
         "release_date": "2099-01-01",
-        "live_ccu": 4449,
+        "live_ccu": 3763,
         "steam_rating": 87.95,
-        "total_reviews": 10405,
+        "total_reviews": 10410,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Horror, Online Co-Op, Multiplayer"
@@ -81,7 +81,7 @@
     "Tears of Metal": {
         "all_time_peak": 6268,
         "release_date": "2099-01-01",
-        "live_ccu": 576,
+        "live_ccu": 526,
         "steam_rating": 85.93,
         "total_reviews": 2416,
         "opencritic_score": "N/A",
@@ -91,7 +91,7 @@
     "Avatar Legends: The Fighting Game": {
         "all_time_peak": 12179,
         "release_date": "2099-01-01",
-        "live_ccu": 945,
+        "live_ccu": 946,
         "steam_rating": 84.36,
         "total_reviews": 3196,
         "opencritic_score": "N/A",
@@ -101,7 +101,7 @@
     "Tormentum II": {
         "all_time_peak": 110,
         "release_date": "2099-01-01",
-        "live_ccu": 9,
+        "live_ccu": 6,
         "steam_rating": 94.81,
         "total_reviews": 231,
         "opencritic_score": "N/A",
@@ -111,9 +111,9 @@
     "Dinoblade": {
         "all_time_peak": 2204,
         "release_date": "2099-01-01",
-        "live_ccu": 55,
-        "steam_rating": 90.14,
-        "total_reviews": 2465,
+        "live_ccu": 58,
+        "steam_rating": 90.15,
+        "total_reviews": 2467,
         "opencritic_score": "N/A",
         "metacritic_score": 75,
         "tags": "Dinosaurs, Souls-like, Action RPG"
@@ -130,7 +130,7 @@
     "Carnival Hunt": {
         "all_time_peak": 2529,
         "release_date": "2099-01-01",
-        "live_ccu": 295,
+        "live_ccu": 279,
         "steam_rating": 65.25,
         "total_reviews": 2524,
         "opencritic_score": "N/A",
@@ -140,9 +140,9 @@
     "Halo: Campaign Evolved": {
         "all_time_peak": 25211,
         "release_date": "2099-01-01",
-        "live_ccu": 880,
+        "live_ccu": 919,
         "steam_rating": 61.86,
-        "total_reviews": 13194,
+        "total_reviews": 13195,
         "opencritic_score": "N/A",
         "metacritic_score": 80,
         "tags": "Action, FPS, Singleplayer"
@@ -150,9 +150,9 @@
     "Mistfall Hunter": {
         "all_time_peak": 44201,
         "release_date": "2099-01-01",
-        "live_ccu": 11596,
-        "steam_rating": 55.36,
-        "total_reviews": 15949,
+        "live_ccu": 10895,
+        "steam_rating": 55.34,
+        "total_reviews": 15953,
         "opencritic_score": 72,
         "metacritic_score": 70,
         "tags": "Extraction Shooter, Dark Fantasy, Action"
@@ -169,7 +169,7 @@
     "The Relic: First Guardian": {
         "all_time_peak": 141,
         "release_date": "2099-01-01",
-        "live_ccu": 4,
+        "live_ccu": 5,
         "steam_rating": 47.6,
         "total_reviews": 208,
         "opencritic_score": "N/A",
@@ -179,7 +179,7 @@
     "Corsair Cove": {
         "all_time_peak": 12651,
         "release_date": "2099-01-01",
-        "live_ccu": 1256,
+        "live_ccu": 1108,
         "steam_rating": 85.81,
         "total_reviews": 3136,
         "opencritic_score": "N/A",
@@ -189,9 +189,9 @@
     "Beast of Reincarnation (Game Pass)": {
         "all_time_peak": 14860,
         "release_date": "Aug 3, 2026",
-        "live_ccu": 386,
-        "steam_rating": 58.32,
-        "total_reviews": 5785,
+        "live_ccu": 347,
+        "steam_rating": 58.34,
+        "total_reviews": 5787,
         "opencritic_score": "N/A",
         "metacritic_score": 72,
         "tags": "Dogs, Action RPG, Adventure"
@@ -199,9 +199,9 @@
     "Big Walk": {
         "all_time_peak": 46345,
         "release_date": "2099-01-01",
-        "live_ccu": 12119,
-        "steam_rating": 95.17,
-        "total_reviews": 27659,
+        "live_ccu": 9836,
+        "steam_rating": 95.18,
+        "total_reviews": 27701,
         "opencritic_score": "N/A",
         "metacritic_score": 91,
         "tags": "Adventure, Open World, Co-op Campaign"
@@ -209,7 +209,7 @@
     "Akatori": {
         "all_time_peak": 177,
         "release_date": "2099-01-01",
-        "live_ccu": 9,
+        "live_ccu": 4,
         "steam_rating": 70.37,
         "total_reviews": 270,
         "opencritic_score": "N/A",
@@ -229,9 +229,9 @@
     "Iron Nest: Heavy Turest Simulator": {
         "all_time_peak": 17495,
         "release_date": "2099-01-01",
-        "live_ccu": 1839,
+        "live_ccu": 1494,
         "steam_rating": 97.9,
-        "total_reviews": 12701,
+        "total_reviews": 12705,
         "opencritic_score": "N/A",
         "metacritic_score": 90,
         "tags": "Military, Simulation, Realistic"
@@ -239,7 +239,7 @@
     "Expeditions: Samurai": {
         "all_time_peak": 661,
         "release_date": "2099-01-01",
-        "live_ccu": 5,
+        "live_ccu": 4,
         "steam_rating": 62.12,
         "total_reviews": 264,
         "opencritic_score": "N/A",
@@ -249,9 +249,9 @@
     "Pax Autocratica (Early Access)": {
         "all_time_peak": 6123,
         "release_date": "2099-01-01",
-        "live_ccu": 1131,
+        "live_ccu": 1045,
         "steam_rating": 91.9,
-        "total_reviews": 3011,
+        "total_reviews": 3012,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Early Access, Colony Sim, Action Roguelike"
@@ -259,7 +259,7 @@
     "Agent 64: Spies Never Die": {
         "all_time_peak": 772,
         "release_date": "2099-01-01",
-        "live_ccu": 70,
+        "live_ccu": 75,
         "steam_rating": 87.5,
         "total_reviews": 840,
         "opencritic_score": "N/A",
@@ -269,7 +269,7 @@
     "Riftstorm (Early Access)": {
         "all_time_peak": 713,
         "release_date": "2099-01-01",
-        "live_ccu": 80,
+        "live_ccu": 62,
         "steam_rating": 69.92,
         "total_reviews": 635,
         "opencritic_score": "N/A",
@@ -289,7 +289,7 @@
     "Security 51": {
         "all_time_peak": 1251,
         "release_date": "Aug 12, 2026",
-        "live_ccu": 118,
+        "live_ccu": 96,
         "steam_rating": 71.69,
         "total_reviews": 431,
         "opencritic_score": "N/A",
@@ -299,7 +299,7 @@
     "Agefield High: Rock the School": {
         "all_time_peak": 2413,
         "release_date": "2099-01-01",
-        "live_ccu": 62,
+        "live_ccu": 53,
         "steam_rating": 36.33,
         "total_reviews": 900,
         "opencritic_score": "N/A",
@@ -309,9 +309,9 @@
     "Duskfade": {
         "all_time_peak": 964,
         "release_date": "2099-01-01",
-        "live_ccu": 252,
-        "steam_rating": 91.58,
-        "total_reviews": 760,
+        "live_ccu": 212,
+        "steam_rating": 91.59,
+        "total_reviews": 761,
         "opencritic_score": "N/A",
         "metacritic_score": 78,
         "tags": "Action-Adventure, 3D Platformer, Action"
@@ -319,9 +319,9 @@
     "Madden NFL 27": {
         "all_time_peak": 4906,
         "release_date": "2099-01-01",
-        "live_ccu": 2327,
-        "steam_rating": 33.22,
-        "total_reviews": 593,
+        "live_ccu": 2490,
+        "steam_rating": 33.33,
+        "total_reviews": 594,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Simulation, Sports, Football (American)"
@@ -329,9 +329,9 @@
     "Sandustry (Game Pass)": {
         "all_time_peak": 12550,
         "release_date": "2099-01-01",
-        "live_ccu": 7125,
-        "steam_rating": 97.26,
-        "total_reviews": 3866,
+        "live_ccu": 6546,
+        "steam_rating": 97.24,
+        "total_reviews": 3875,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Open World Survival Craft, Survival, PvE"
@@ -339,7 +339,7 @@
     "Defender of the Crown: The Legend Returns": {
         "all_time_peak": 337,
         "release_date": "2099-01-01",
-        "live_ccu": 25,
+        "live_ccu": 20,
         "steam_rating": 67.3,
         "total_reviews": 211,
         "opencritic_score": "N/A",
@@ -349,9 +349,9 @@
     "Hell let loose - Vietnam": {
         "all_time_peak": 30448,
         "release_date": "2099-01-01",
-        "live_ccu": 9004,
+        "live_ccu": 8545,
         "steam_rating": 60.97,
-        "total_reviews": 10353,
+        "total_reviews": 10357,
         "opencritic_score": "N/A",
         "metacritic_score": 74,
         "tags": "Action, Simulation, Strategy"
@@ -369,9 +369,9 @@
     "The Sinking City 2": {
         "all_time_peak": 1896,
         "release_date": "2099-01-01",
-        "live_ccu": 490,
-        "steam_rating": 83.14,
-        "total_reviews": 1287,
+        "live_ccu": 447,
+        "steam_rating": 83.24,
+        "total_reviews": 1289,
         "opencritic_score": "N/A",
         "metacritic_score": 79,
         "tags": "Lovecraftian, Action, Third-Person Shooter"
@@ -379,9 +379,9 @@
     "Twisted Tower": {
         "all_time_peak": 826,
         "release_date": "2099-01-01",
-        "live_ccu": 211,
-        "steam_rating": 94.15,
-        "total_reviews": 1538,
+        "live_ccu": 202,
+        "steam_rating": 94.09,
+        "total_reviews": 1541,
         "opencritic_score": "N/A",
         "metacritic_score": 77,
         "tags": "Shooter, First-Person, Horror"
@@ -389,7 +389,7 @@
     "Feed the Scorchpot": {
         "all_time_peak": 998,
         "release_date": "2099-01-01",
-        "live_ccu": 332,
+        "live_ccu": 322,
         "steam_rating": 89.36,
         "total_reviews": 282,
         "opencritic_score": "N/A",
@@ -399,9 +399,9 @@
     "Mortal Shell II": {
         "all_time_peak": 44435,
         "release_date": "2099-01-01",
-        "live_ccu": 20311,
-        "steam_rating": 73.86,
-        "total_reviews": 13147,
+        "live_ccu": 18554,
+        "steam_rating": 73.88,
+        "total_reviews": 13179,
         "opencritic_score": "N/A",
         "metacritic_score": 83,
         "tags": "Souls-like, Dark Fantasy, Violent"
@@ -409,9 +409,9 @@
     "Polylithic": {
         "all_time_peak": 147,
         "release_date": "Nov 9, 2023",
-        "live_ccu": 114,
-        "steam_rating": 68.36,
-        "total_reviews": 256,
+        "live_ccu": 79,
+        "steam_rating": 68.48,
+        "total_reviews": 257,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Early Access, Survival, Open World"
@@ -429,9 +429,9 @@
     "1666: Amsterdam": {
         "all_time_peak": 2069,
         "release_date": "2099-01-01",
-        "live_ccu": 658,
-        "steam_rating": 66.12,
-        "total_reviews": 546,
+        "live_ccu": 544,
+        "steam_rating": 66.24,
+        "total_reviews": 548,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Female Protagonist, Action-Adventure, Third Person"
@@ -439,9 +439,9 @@
     "Once Human": {
         "all_time_peak": 23375,
         "release_date": "Jul 9, 2024",
-        "live_ccu": 20400,
+        "live_ccu": 19715,
         "steam_rating": 78.57,
-        "total_reviews": 183304,
+        "total_reviews": 183320,
         "opencritic_score": 82,
         "metacritic_score": 71,
         "tags": "Open World, Survival, Multiplayer"
@@ -449,9 +449,9 @@
     "Aliens: Fireteam Elite 2": {
         "all_time_peak": 7724,
         "release_date": "2099-01-01",
-        "live_ccu": 4860,
-        "steam_rating": 62.57,
-        "total_reviews": 2375,
+        "live_ccu": 4803,
+        "steam_rating": 62.45,
+        "total_reviews": 2381,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "tags": "Casual, Platformer, 2D Platformer"
@@ -459,7 +459,7 @@
     "Brigandine Abyss": {
         "all_time_peak": 661,
         "release_date": "2099-01-01",
-        "live_ccu": 240,
+        "live_ccu": 235,
         "steam_rating": 34.31,
         "total_reviews": 137,
         "opencritic_score": "N/A",
@@ -469,9 +469,9 @@
     "Metal Gear Solid: Master Collection Vol. 2": {
         "all_time_peak": 284,
         "release_date": "2099-01-01",
-        "live_ccu": 59,
-        "steam_rating": 66.67,
-        "total_reviews": 39,
+        "live_ccu": 67,
+        "steam_rating": 67.5,
+        "total_reviews": 40,
         "opencritic_score": "N/A",
         "metacritic_score": 85,
         "tags": "Action, Adventure, Stealth"
@@ -479,9 +479,9 @@
     "Resonance: A Plague Tale Legacy": {
         "all_time_peak": 4806,
         "release_date": "2099-01-01",
-        "live_ccu": 3953,
-        "steam_rating": 93.09,
-        "total_reviews": 637,
+        "live_ccu": 3373,
+        "steam_rating": 93.48,
+        "total_reviews": 660,
         "opencritic_score": "N/A",
         "metacritic_score": 79,
         "tags": "Puzzle Platformer, Action, 2D Platformer"
@@ -489,9 +489,9 @@
     "Star Wars Zero Company": {
         "all_time_peak": 68966,
         "release_date": "2099-01-01",
-        "live_ccu": 67387,
-        "steam_rating": 77.8,
-        "total_reviews": 4990,
+        "live_ccu": 64941,
+        "steam_rating": 77.78,
+        "total_reviews": 5118,
         "opencritic_score": "N/A",
         "metacritic_score": 85,
         "tags": "Turn-Based Tactics, Turn-Based Strategy, Sci-fi"
