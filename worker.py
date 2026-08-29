@@ -136,48 +136,50 @@ def fetch_game_data(game_name, config, existing_data):
         except Exception:
             pass
 
-    # 5. Fetch OpenCritic Scores (Dual Strategy: API + SSR Fallback)
+    # 5. Fetch OpenCritic Scores (Multi-Target HTML & Metadata Parser)
     oc_id = config.get("opencritic_id")
     oc_slug = config.get("opencritic_slug")
     if oc_id and oc_id != 0:
-        score_found = False
+        score_val = None
         
-        # Strategy A: Direct JSON Endpoint
-        url_api = f"https://api.opencritic.com/api/game/{oc_id}"
-        oc_headers = {
-            "User-Agent": BASE_HEADERS["User-Agent"],
-            "Accept": "application/json, text/plain, */*",
-            "Origin": "https://opencritic.com",
-            "Referer": "https://opencritic.com/"
-        }
-        try:
-            res = requests.get(url_api, headers=oc_headers, timeout=TIMEOUT)
-            if res.status_code == 200:
-                data = res.json()
-                score = data.get("topCriticScore")
-                if score is None or score <= 0:
-                    score = data.get("medianScore")
-                if score and score > 0:
-                    game_record["opencritic_score"] = int(round(score))
-                    score_found = True
-        except Exception:
-            pass
+        # Build target URLs (prioritize full slug, fallback to ID root)
+        urls_to_try = []
+        if oc_slug:
+            urls_to_try.append(f"https://opencritic.com/game/{oc_id}/{oc_slug}")
+        urls_to_try.append(f"https://opencritic.com/game/{oc_id}")
 
-        # Strategy B: HTML State Scraper Fallback
-        if not score_found and oc_slug:
-            url_web = f"https://opencritic.com/game/{oc_id}/{oc_slug}"
+        for target_url in urls_to_try:
             try:
-                res = requests.get(url_web, headers=BASE_HEADERS, timeout=TIMEOUT)
+                res = requests.get(target_url, headers=BASE_HEADERS, timeout=TIMEOUT)
                 if res.status_code == 200:
-                    match = re.search(r'"topCriticScore"\s*:\s*([0-9]+(?:\.[0-9]+)?)', res.text)
-                    if not match:
-                        match = re.search(r'"medianScore"\s*:\s*([0-9]+(?:\.[0-9]+)?)', res.text)
-                    if match:
-                        val = float(match.group(1))
-                        if val > 0:
-                            game_record["opencritic_score"] = int(round(val))
-            except Exception:
-                pass
+                    soup = BeautifulSoup(res.text, "html.parser")
+
+                    # Pattern 1: OpenCritic score orb / inner orb containers
+                    orb_elem = soup.find(class_=re.compile(r"inner-orb|score-orb|score-number"))
+                    if orb_elem and orb_elem.get_text(strip=True).isdigit():
+                        score_val = int(orb_elem.get_text(strip=True))
+                        break
+
+                    # Pattern 2: Text matching directly preceding "Top Critic Average"
+                    text_content = soup.get_text()
+                    match_text = re.search(r'([0-9]{1,3})\s*(?:\.?|\s*)\s*Top Critic Average', text_content, re.IGNORECASE)
+                    if match_text:
+                        score_val = int(match_text.group(1))
+                        break
+
+                    # Pattern 3: Meta description summary tag
+                    meta_desc = soup.find("meta", property="og:description") or soup.find("meta", attrs={"name": "description"})
+                    if meta_desc and meta_desc.get("content"):
+                        match_meta = re.search(r'top critic average of\s*([0-9]{1,3})', meta_desc["content"], re.IGNORECASE)
+                        if match_meta:
+                            score_val = int(match_meta.group(1))
+                            break
+            except Exception as e:
+                print(f"  [!] OpenCritic scraper exception for {game_name}: {e}")
+
+        if score_val and score_val > 0:
+            game_record["opencritic_score"] = score_val
+            print(f"  -> {game_name} OpenCritic score: {score_val}")
 
     # 6. Fetch Metacritic Scores
     if config.get("metacritic_slug"):
