@@ -144,16 +144,26 @@ def fetch_game_data(game_name, config, existing_data):
     oc_id = config.get("opencritic_id")
     if oc_id and oc_id != 0:
         url = f"https://api.opencritic.com/api/game/{oc_id}"
+        oc_headers = {
+            "User-Agent": BASE_HEADERS["User-Agent"],
+            "Accept": "application/json, text/plain, */*",
+            "Origin": "https://opencritic.com",
+            "Referer": "https://opencritic.com/"
+        }
         try:
-            res = requests.get(url, headers=BASE_HEADERS, timeout=TIMEOUT)
+            res = requests.get(url, headers=oc_headers, timeout=TIMEOUT)
             if res.status_code == 200:
                 data = res.json()
-                # OpenCritic provides topCriticScore as an int/float
                 score = data.get("topCriticScore")
+                # Fall back to medianScore if topCriticScore is missing or unindexed
+                if score is None or score <= 0:
+                    score = data.get("medianScore")
                 if score and score > 0:
                     game_record["opencritic_score"] = int(round(score))
-        except Exception:
-            pass
+            else:
+                print(f"  [!] OpenCritic error for {game_name} (ID: {oc_id}): HTTP {res.status_code}")
+        except Exception as e:
+            print(f"  [!] OpenCritic exception for {game_name}: {e}")
 
     # 6. Fetch Metacritic Scores
     if config.get("metacritic_slug"):
