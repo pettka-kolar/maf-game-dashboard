@@ -183,7 +183,7 @@ GAME_DATABASE = {
     "Beast of Reincarnation (Game Pass)": {
         "steam_id": 2001760,
         "metacritic_slug": "pc/beast-of-reincarnation",
-        "opencritic_id": 0,
+        "opencritic_id": 20099,
         "opencritic_slug": "beast-of-reincarnation",
         "backup_peak": 0,
         "origin": None
@@ -191,7 +191,7 @@ GAME_DATABASE = {
     "Big Walk": {
         "steam_id": 1478500,
         "metacritic_slug": "pc/big-walk",
-        "opencritic_id": 21088,
+        "opencritic_id": 20855,
         "opencritic_slug": "big-walk",
         "backup_peak": 0,
         "release_date": "2026-08-04",
@@ -200,7 +200,7 @@ GAME_DATABASE = {
     "Akatori": {
         "steam_id": 1442520,
         "metacritic_slug": "pc/akatori",
-        "opencritic_id": 0,
+        "opencritic_id": 21156,
         "opencritic_slug": "akatori",
         "backup_peak": 0,
         "release_date": "2026-08-05",
@@ -209,7 +209,7 @@ GAME_DATABASE = {
     "Marvel Tokon: Fighting Souls": {
         "steam_id": 0,
         "metacritic_slug": "playstation-5/marvel-tokon-fighting-souls",
-        "opencritic_id": 0,
+        "opencritic_id": 20101,
         "opencritic_slug": "marvel-tokon-fighting-souls",
         "backup_peak": 0,
         "release_date": "2026-08-06",
@@ -218,7 +218,7 @@ GAME_DATABASE = {
     "Iron Nest: Heavy Turest Simulator": {
         "steam_id": 2950790,
         "metacritic_slug": "pc/iron-nest-heavy-turret-simulator",
-        "opencritic_id": 0,
+        "opencritic_id": 21129,
         "opencritic_slug": "iron-nest-heavy-turret-simulator",
         "backup_peak": 0,
         "release_date": "2026-08-06",
@@ -245,7 +245,7 @@ GAME_DATABASE = {
     "Agent 64: Spies Never Die": {
         "steam_id": 1574480,
         "metacritic_slug": "pc/agent-64-spies-never-die",
-        "opencritic_id": 21102,
+        "opencritic_id": 21130,
         "opencritic_slug": "agent-64-spies-never-die",
         "backup_peak": 0,
         "release_date": "2026-08-11",
@@ -272,7 +272,7 @@ GAME_DATABASE = {
     "Security 51": {
         "steam_id": 4246860,
         "metacritic_slug": "pc/security-51",
-        "opencritic_id": 0,
+        "opencritic_id": 21158,
         "opencritic_slug": "security-51",
         "backup_peak": 0,
         "origin": None
@@ -280,7 +280,7 @@ GAME_DATABASE = {
     "Agefield High: Rock the School": {
         "steam_id": 3562580,
         "metacritic_slug": "pc/agefield-high-rock-the-school",
-        "opencritic_id": 0,
+        "opencritic_id": 21159,
         "opencritic_slug": "agefield-high-rock-the-school",
         "backup_peak": 0,
         "release_date": "2026-08-12",
@@ -289,7 +289,7 @@ GAME_DATABASE = {
     "Duskfade": {
         "steam_id": 2542020,
         "metacritic_slug": "pc/duskfade",
-        "opencritic_id": 0,
+        "opencritic_id": 20919,
         "opencritic_slug": "duskfade",
         "backup_peak": 0,
         "release_date": "2026-08-13",
@@ -298,7 +298,7 @@ GAME_DATABASE = {
     "Madden NFL 27": {
         "steam_id": 3940610,
         "metacritic_slug": "pc/ea-sports-madden-nfl-27",
-        "opencritic_id": 0,
+        "opencritic_id": 20883,
         "opencritic_slug": "madden-nfl-27",
         "backup_peak": 0,
         "release_date": "2026-08-13",
@@ -307,7 +307,7 @@ GAME_DATABASE = {
     "Sandustry (Game Pass)": {
         "steam_id": 2764460,
         "metacritic_slug": "pc/sandustry",
-        "opencritic_id": 0,
+        "opencritic_id": 21185,
         "opencritic_slug": "sandustry",
         "backup_peak": 0,
         "release_date": "2026-08-13",
@@ -316,7 +316,7 @@ GAME_DATABASE = {
     "Defender of the Crown: The Legend Returns": {
         "steam_id": 4208140,
         "metacritic_slug": "pc/defender-of-the-crown-the-legend-returns",
-        "opencritic_id": 0,
+        "opencritic_id": 21128,
         "opencritic_slug": "defender-of-the-crown-the-legend-returns",
         "backup_peak": 0,
         "release_date": "2026-08-13",
@@ -325,7 +325,7 @@ GAME_DATABASE = {
     "Hell let loose - Vietnam": {
         "steam_id": 3079210,
         "metacritic_slug": "pc/hell-let-loose-vietnam",
-        "opencritic_id": 0,
+        "opencritic_id": 20628,
         "opencritic_slug": "hell-let-loose-vietnam",
         "backup_peak": 0,
         "release_date": "2026-08-13",
@@ -347,7 +347,7 @@ GAME_DATABASE = {
     "The Sinking City 2": {
         "steam_id": 2825860,
         "metacritic_slug": "pc/the-sinking-city-2",
-        "opencritic_id": 0,
+        "opencritic_id": 20806,
         "opencritic_slug": "the-sinking-city-2",
         "backup_peak": 0,
         "release_date": "2026-08-18",
@@ -356,7 +356,7 @@ GAME_DATABASE = {
     "Twisted Tower": {
         "steam_id": 1575990,
         "metacritic_slug": "pc/twisted-tower",
-        "opencritic_id": 0,
+        "opencritic_id": 21210,
         "opencritic_slug": "twisted-tower",
         "backup_peak": 0,
         "release_date": "2026-08-18",
@@ -365,7 +365,7 @@ GAME_DATABASE = {
     "Feed the Scorchpot": {
         "steam_id": 3966510,
         "metacritic_slug": "pc/feed-the-scorchpot",
-        "opencritic_id": 0,
+        "opencritic_id": 21217,
         "opencritic_slug": "feed-the-scorchpot",
         "backup_peak": 0,
         "release_date": "2026-08-20",
@@ -374,7 +374,7 @@ GAME_DATABASE = {
     "Mortal Shell II": {
         "steam_id": 2584270,
         "metacritic_slug": "pc/mortal-shell-ii",
-        "opencritic_id": 0,
+        "opencritic_id": 20988,
         "opencritic_slug": "mortal-shell-ii",
         "backup_peak": 0,
         "release_date": "2026-08-20",
@@ -392,7 +392,7 @@ GAME_DATABASE = {
     "DayZ": {
         "steam_id": 0,
         "metacritic_slug": "nintendo-switch-2/dayz",
-        "opencritic_id": 0,
+        "opencritic_id": 1736,
         "opencritic_slug": "dayz",
         "backup_peak": 0,
         "release_date": "2026-08-20",
@@ -410,7 +410,7 @@ GAME_DATABASE = {
     "Once Human": {
         "steam_id": 2139460,
         "metacritic_slug": "pc/once-human",
-        "opencritic_id": 16930,
+        "opencritic_id": 16998,
         "opencritic_slug": "once-human",
         "backup_peak": 0,
         "origin": None
@@ -418,7 +418,7 @@ GAME_DATABASE = {
     "Aliens: Fireteam Elite 2": {
         "steam_id": 3448650,
         "metacritic_slug": "pc/aliens-fireteam-elite-2",
-        "opencritic_id": 0,
+        "opencritic_id": 21142,
         "opencritic_slug": "aliens-fireteam-elite-2",
         "backup_peak": 0,
         "release_date": "2026-08-25",
@@ -427,7 +427,7 @@ GAME_DATABASE = {
     "Brigandine Abyss": {
         "steam_id": 3211430,
         "metacritic_slug": "pc/brigandine-abyss",
-        "opencritic_id": 0,
+        "opencritic_id": 20917,
         "opencritic_slug": "brigandine-abyss",
         "backup_peak": 0,
         "release_date": "2026-08-26",
@@ -436,7 +436,7 @@ GAME_DATABASE = {
     "Metal Gear Solid: Master Collection Vol. 2": {
         "steam_id": 3859630,
         "metacritic_slug": "pc/metal-gear-solid-master-collection-vol-2",
-        "opencritic_id": 0,
+        "opencritic_id": 20107,
         "opencritic_slug": "metal-gear-solid-master-collection-vol-2",
         "backup_peak": 0,
         "release_date": "2026-08-27",
@@ -445,7 +445,7 @@ GAME_DATABASE = {
     "Resonance: A Plague Tale Legacy": {
         "steam_id": 2713000,
         "metacritic_slug": "pc/resonance-a-plague-tale-legacy",
-        "opencritic_id": 0,
+        "opencritic_id": 20803,
         "opencritic_slug": "resonance-a-plague-tale-legacy",
         "backup_peak": 0,
         "release_date": "2026-08-27",
@@ -454,7 +454,7 @@ GAME_DATABASE = {
     "Star Wars Zero Company": {
         "steam_id": 2075800,
         "metacritic_slug": "pc/star-wars-zero-company",
-        "opencritic_id": 0,
+        "opencritic_id": 20795,
         "opencritic_slug": "star-wars-zero-company",
         "backup_peak": 0,
         "release_date": "2026-08-27",
@@ -463,7 +463,7 @@ GAME_DATABASE = {
     "Elden Ring: Tarnished Edition": {
         "steam_id": 0,
         "metacritic_slug": "playstation-5/elden-ring-tarnished-edition",
-        "opencritic_id": 0,
+        "opencritic_id": 20779,
         "opencritic_slug": "elden-ring-tarnished-edition",
         "backup_peak": 0,
         "release_date": "2026-08-28",
