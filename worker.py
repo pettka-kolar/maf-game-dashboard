@@ -140,23 +140,18 @@ def fetch_game_data(game_name, config, existing_data):
         except Exception:
             pass
 
-    # 5. Fetch OpenCritic Scores
-    if config.get("opencritic_id"):
-        url = f"https://opencritic.com/game/{config['opencritic_id']}/{config['opencritic_slug']}"
+    # 5. Fetch OpenCritic Scores (Direct REST Endpoint)
+    oc_id = config.get("opencritic_id")
+    if oc_id and oc_id != 0:
+        url = f"https://api.opencritic.com/api/game/{oc_id}"
         try:
             res = requests.get(url, headers=BASE_HEADERS, timeout=TIMEOUT)
             if res.status_code == 200:
-                soup = BeautifulSoup(res.text, "html.parser")
-                for tag in soup.find_all("script", type="application/ld+json"):
-                    try:
-                        data = json.loads(tag.string)
-                        obj = data[0] if isinstance(data, list) else data
-                        rating = obj.get("aggregateRating", {}).get("ratingValue")
-                        if rating:
-                            game_record["opencritic_score"] = int(float(rating))
-                            break
-                    except Exception:
-                        continue
+                data = res.json()
+                # OpenCritic provides topCriticScore as an int/float
+                score = data.get("topCriticScore")
+                if score and score > 0:
+                    game_record["opencritic_score"] = int(round(score))
         except Exception:
             pass
 
