@@ -2,6 +2,7 @@ import json
 import time
 import requests
 import os
+import re
 from datetime import datetime
 from bs4 import BeautifulSoup
 import game_database as gd
@@ -96,18 +97,14 @@ def fetch_game_data(game_name, config, existing_data):
         except Exception:
             pass
 
-    # 💡 3.5 Fetch Steam Community Tags (Bypassing Mature Content Age Gates)
-    # Uses persistent browser bypass state parameters during execution loops
+    # 3.5 Fetch Steam Community Tags
     if appid and game_record.get("tags", "—") in ("—", "N/A", ""):
         url = f"https://store.steampowered.com/app/{appid}/"
-        
-        # 💡 FIX: Injecting standard age-verification session markers
         steam_age_bypass_cookies = {
             "wants_mature_content": "1",
             "lastagecheckage": "1-1-1990",
             "birthtime": "631180801"
         }
-        
         try:
             res = requests.get(
                 url, 
@@ -118,7 +115,6 @@ def fetch_game_data(game_name, config, existing_data):
             if res.status_code == 200:
                 soup = BeautifulSoup(res.text, "html.parser")
                 tag_elements = soup.find_all("a", class_="app_tag")
-                # Parse text, filter out blanks, and grab the top 3 popular tags
                 tags_list = [t.get_text(strip=True) for t in tag_elements if t.get_text(strip=True)][:3]
                 if tags_list:
                     game_record["tags"] = ", ".join(tags_list)
@@ -140,10 +136,14 @@ def fetch_game_data(game_name, config, existing_data):
         except Exception:
             pass
 
-    # 5. Fetch OpenCritic Scores (Direct REST Endpoint)
+    # 5. Fetch OpenCritic Scores (Dual Strategy: API + SSR Fallback)
     oc_id = config.get("opencritic_id")
+    oc_slug = config.get("opencritic_slug")
     if oc_id and oc_id != 0:
-        url = f"https://api.opencritic.com/api/game/{oc_id}"
+        score_found = False
+        
+        # Strategy A: Direct JSON Endpoint
+        url_api = f"https://api.opencritic.com/api/game/{oc_id}"
         oc_headers = {
             "User-Agent": BASE_HEADERS["User-Agent"],
             "Accept": "application/json, text/plain, */*",
@@ -151,19 +151,33 @@ def fetch_game_data(game_name, config, existing_data):
             "Referer": "https://opencritic.com/"
         }
         try:
-            res = requests.get(url, headers=oc_headers, timeout=TIMEOUT)
+            res = requests.get(url_api, headers=oc_headers, timeout=TIMEOUT)
             if res.status_code == 200:
                 data = res.json()
                 score = data.get("topCriticScore")
-                # Fall back to medianScore if topCriticScore is missing or unindexed
                 if score is None or score <= 0:
                     score = data.get("medianScore")
                 if score and score > 0:
                     game_record["opencritic_score"] = int(round(score))
-            else:
-                print(f"  [!] OpenCritic error for {game_name} (ID: {oc_id}): HTTP {res.status_code}")
-        except Exception as e:
-            print(f"  [!] OpenCritic exception for {game_name}: {e}")
+                    score_found = True
+        except Exception:
+            pass
+
+        # Strategy B: HTML State Scraper Fallback
+        if not score_found and oc_slug:
+            url_web = f"https://opencritic.com/game/{oc_id}/{oc_slug}"
+            try:
+                res = requests.get(url_web, headers=BASE_HEADERS, timeout=TIMEOUT)
+                if res.status_code == 200:
+                    match = re.search(r'"topCriticScore"\s*:\s*([0-9]+(?:\.[0-9]+)?)', res.text)
+                    if not match:
+                        match = re.search(r'"medianScore"\s*:\s*([0-9]+(?:\.[0-9]+)?)', res.text)
+                    if match:
+                        val = float(match.group(1))
+                        if val > 0:
+                            game_record["opencritic_score"] = int(round(val))
+            except Exception:
+                pass
 
     # 6. Fetch Metacritic Scores
     if config.get("metacritic_slug"):
