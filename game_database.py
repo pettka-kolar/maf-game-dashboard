@@ -394,8 +394,8 @@ GAME_DATABASE = {
         "metacritic_slug": "nintendo-switch-2/dayz",
         "opencritic_id": 0,
         "opencritic_slug": "dayz",
-        "release_date": "2026-08-20",
         "backup_peak": 0,
+        "release_date": "2026-08-20",
         "origin": "CZ"
     },
     "1666: Amsterdam": {
@@ -476,5 +476,13 @@ GAME_DATABASE = {
         "opencritic_slug": "serious-sam-shatterverse",
         "backup_peak": 0,
         "origin": None
+    },
+    "Fake Snake": {
+        "steam_id": 4922800,
+        "metacritic_slug": "pc/fake-snake",
+        "opencritic_id": 0,
+        "opencritic_slug": "fake-snake",
+        "backup_peak": 2,
+        "origin": "CZ"
     }
 }
