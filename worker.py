@@ -43,22 +43,21 @@ def save_metrics(data):
 def fetch_game_data(game_name, config, existing_data):
     appid = config["steam_id"]
     
-    # Pre-populate defaults or retain previous state
-    game_record = existing_data.get(game_name, {
-        "all_time_peak": config["backup_peak"],
-        "release_date": "2099-01-01",
-        "live_ccu": "N/A",
-        "steam_rating": "N/A",
-        "total_reviews": "N/A",
-        "opencritic_score": "N/A",
-        "metacritic_score": "N/A",
-        "price_eur": "N/A",
-        "discount_pct": 0,
-        "followers_initial": "N/A",
-        "followers_release": "N/A",
-        "followers_current": "N/A",
-        "tags": "—"
-    })
+    # Pre-populate defaults and guarantee all keys exist even for existing records
+    game_record = existing_data.get(game_name, {})
+    game_record.setdefault("all_time_peak", config["backup_peak"])
+    game_record.setdefault("release_date", "2099-01-01")
+    game_record.setdefault("live_ccu", "N/A")
+    game_record.setdefault("steam_rating", "N/A")
+    game_record.setdefault("total_reviews", "N/A")
+    game_record.setdefault("opencritic_score", "N/A")
+    game_record.setdefault("metacritic_score", "N/A")
+    game_record.setdefault("price_eur", "N/A")
+    game_record.setdefault("discount_pct", 0)
+    game_record.setdefault("followers_initial", "N/A")
+    game_record.setdefault("followers_release", "N/A")
+    game_record.setdefault("followers_current", "N/A")
+    game_record.setdefault("tags", "—")
 
     # 1. Fetch Live CCU
     live_ccu = "N/A"
@@ -74,7 +73,10 @@ def fetch_game_data(game_name, config, existing_data):
     # 2. Local State Tracker for Peaks
     if isinstance(live_ccu, int):
         current_peak = game_record.get("all_time_peak", config["backup_peak"])
-        if live_ccu > current_peak:
+        if isinstance(current_peak, int):
+            if live_ccu > current_peak:
+                game_record["all_time_peak"] = live_ccu
+        else:
             game_record["all_time_peak"] = live_ccu
     game_record["live_ccu"] = live_ccu
 
@@ -88,7 +90,6 @@ def fetch_game_data(game_name, config, existing_data):
 
     # 4. Fetch Storefront Details (Price in EUR, Release Date, & Discount)
     if appid:
-        # Using cc=DE to enforce Euro pricing
         url = f"https://store.steampowered.com/api/appdetails?appids={appid}&cc=DE&l=english"
         try:
             res = requests.get(url, headers=BASE_HEADERS, timeout=TIMEOUT)
@@ -117,26 +118,47 @@ def fetch_game_data(game_name, config, existing_data):
         except Exception:
             pass
 
-    # 5. Fetch Steam Followers (Initial, Release Date, Current)
+    # 5. Fetch Steam Followers (Dual-Strategy XML & Hub HTML Parser)
     if appid:
-        url = f"https://steamcommunity.com/games/{appid}/memberslistxml/?xml=1"
+        followers_count = None
+        
+        # Strategy A: Community Group XML Endpoint (strips commas)
+        xml_url = f"https://steamcommunity.com/games/{appid}/memberslistxml/?xml=1"
         try:
-            res = requests.get(url, headers=BASE_HEADERS, timeout=TIMEOUT)
+            res = requests.get(xml_url, headers=BASE_HEADERS, timeout=TIMEOUT)
             if res.status_code == 200:
-                match = re.search(r'<memberCount>(\d+)</memberCount>', res.text)
+                match = re.search(r'<memberCount>([0-9,]+)</memberCount>', res.text)
                 if match:
-                    current_followers = int(match.group(1))
-                    game_record["followers_current"] = current_followers
-                    
-                    # 1. First time gathered (Initial)
-                    if game_record.get("followers_initial") in (None, "N/A", 0, "—"):
-                        game_record["followers_initial"] = current_followers
-                        
-                    # 2. Release date snapshot (frozen once game is released)
-                    if is_released and game_record.get("followers_release") in (None, "N/A", 0, "—"):
-                        game_record["followers_release"] = current_followers
+                    followers_count = int(match.group(1).replace(",", ""))
         except Exception:
             pass
+
+        # Strategy B: Community Hub HTML Fallback
+        if followers_count is None:
+            hub_url = f"https://steamcommunity.com/app/{appid}"
+            try:
+                res = requests.get(hub_url, headers=BASE_HEADERS, timeout=TIMEOUT)
+                if res.status_code == 200:
+                    soup = BeautifulSoup(res.text, "html.parser")
+                    elem = soup.find(class_=re.compile(r"apphub_NumInGroup|apphub_NumMembers"))
+                    if elem:
+                        match = re.search(r'([0-9,]+)', elem.get_text())
+                        if match:
+                            followers_count = int(match.group(1).replace(",", ""))
+            except Exception:
+                pass
+
+        # Record follower milestones
+        if followers_count is not None:
+            game_record["followers_current"] = followers_count
+            
+            # Initial tracker: store first-seen baseline
+            if game_record.get("followers_initial") in (None, "N/A", 0, "—"):
+                game_record["followers_initial"] = followers_count
+                
+            # Release tracker: lock in count if title is currently released
+            if is_released and game_record.get("followers_release") in (None, "N/A", 0, "—"):
+                game_record["followers_release"] = followers_count
 
     # 6. Fetch Steam Community Tags
     if appid and game_record.get("tags", "—") in ("—", "N/A", ""):
