@@ -52,6 +52,11 @@ def fetch_game_data(game_name, config, existing_data):
         "total_reviews": "N/A",
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
+        "price_eur": "N/A",
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
         "tags": "—"
     })
 
@@ -73,7 +78,7 @@ def fetch_game_data(game_name, config, existing_data):
             game_record["all_time_peak"] = live_ccu
     game_record["live_ccu"] = live_ccu
 
-    # 3. Fetch Storefront Release Date (ONLY IF UNRELEASED)
+    # 3. Determine Release Status
     current_rd = config.get("release_date") or game_record.get("release_date", "2099-01-01")
     is_released = False
     if current_rd and current_rd != "2099-01-01":
@@ -81,23 +86,59 @@ def fetch_game_data(game_name, config, existing_data):
         if parsed_dt and parsed_dt <= datetime.now():
             is_released = True
 
-    if appid and not is_released:
-        url = f"https://store.steampowered.com/api/appdetails?appids={appid}&l=english"
+    # 4. Fetch Storefront Details (Price in EUR, Release Date, & Discount)
+    if appid:
+        # Using cc=DE to enforce Euro pricing
+        url = f"https://store.steampowered.com/api/appdetails?appids={appid}&cc=DE&l=english"
         try:
             res = requests.get(url, headers=BASE_HEADERS, timeout=TIMEOUT)
             if res.status_code == 200 and res.json().get(str(appid), {}).get("success"):
-                rd = res.json()[str(appid)]["data"]["release_date"]
-                if rd.get("coming_soon"):
-                    game_record["release_date"] = "2099-01-01"
-                else:
-                    new_rd_date = rd.get("date", game_record["release_date"])
-                    if new_rd_date != game_record["release_date"]:
-                        print(f"  -> {game_name} release date shifted to: {new_rd_date}")
-                        game_record["release_date"] = new_rd_date
+                app_data = res.json()[str(appid)]["data"]
+                
+                # Parse Pricing & Discounts
+                if app_data.get("is_free"):
+                    game_record["price_eur"] = 0.0
+                    game_record["discount_pct"] = 0
+                elif "price_overview" in app_data:
+                    po = app_data["price_overview"]
+                    game_record["price_eur"] = round(po.get("final", 0) / 100.0, 2)
+                    game_record["discount_pct"] = po.get("discount_percent", 0)
+
+                # Update release date if unreleased
+                if not is_released:
+                    rd = app_data.get("release_date", {})
+                    if rd.get("coming_soon"):
+                        game_record["release_date"] = "2099-01-01"
+                    else:
+                        new_rd_date = rd.get("date", game_record["release_date"])
+                        if new_rd_date != game_record["release_date"]:
+                            print(f"  -> {game_name} release date shifted to: {new_rd_date}")
+                            game_record["release_date"] = new_rd_date
         except Exception:
             pass
 
-    # 3.5 Fetch Steam Community Tags
+    # 5. Fetch Steam Followers (Initial, Release Date, Current)
+    if appid:
+        url = f"https://steamcommunity.com/games/{appid}/memberslistxml/?xml=1"
+        try:
+            res = requests.get(url, headers=BASE_HEADERS, timeout=TIMEOUT)
+            if res.status_code == 200:
+                match = re.search(r'<memberCount>(\d+)</memberCount>', res.text)
+                if match:
+                    current_followers = int(match.group(1))
+                    game_record["followers_current"] = current_followers
+                    
+                    # 1. First time gathered (Initial)
+                    if game_record.get("followers_initial") in (None, "N/A", 0, "—"):
+                        game_record["followers_initial"] = current_followers
+                        
+                    # 2. Release date snapshot (frozen once game is released)
+                    if is_released and game_record.get("followers_release") in (None, "N/A", 0, "—"):
+                        game_record["followers_release"] = current_followers
+        except Exception:
+            pass
+
+    # 6. Fetch Steam Community Tags
     if appid and game_record.get("tags", "—") in ("—", "N/A", ""):
         url = f"https://store.steampowered.com/app/{appid}/"
         steam_age_bypass_cookies = {
@@ -121,7 +162,7 @@ def fetch_game_data(game_name, config, existing_data):
         except Exception:
             pass
 
-    # 4. Fetch Steam Storefront Reviews
+    # 7. Fetch Steam Storefront Reviews
     if appid:
         url = f"https://store.steampowered.com/appreviews/{appid}?json=1&language=all&purchase_type=all"
         try:
@@ -136,13 +177,11 @@ def fetch_game_data(game_name, config, existing_data):
         except Exception:
             pass
 
-    # 5. Fetch OpenCritic Scores (Multi-Target HTML & Metadata Parser)
+    # 8. Fetch OpenCritic Scores
     oc_id = config.get("opencritic_id")
     oc_slug = config.get("opencritic_slug")
     if oc_id and oc_id != 0:
         score_val = None
-        
-        # Build target URLs (prioritize full slug, fallback to ID root)
         urls_to_try = []
         if oc_slug:
             urls_to_try.append(f"https://opencritic.com/game/{oc_id}/{oc_slug}")
@@ -153,35 +192,30 @@ def fetch_game_data(game_name, config, existing_data):
                 res = requests.get(target_url, headers=BASE_HEADERS, timeout=TIMEOUT)
                 if res.status_code == 200:
                     soup = BeautifulSoup(res.text, "html.parser")
-
-                    # Pattern 1: OpenCritic score orb / inner orb containers
                     orb_elem = soup.find(class_=re.compile(r"inner-orb|score-orb|score-number"))
                     if orb_elem and orb_elem.get_text(strip=True).isdigit():
                         score_val = int(orb_elem.get_text(strip=True))
                         break
 
-                    # Pattern 2: Text matching directly preceding "Top Critic Average"
                     text_content = soup.get_text()
                     match_text = re.search(r'([0-9]{1,3})\s*(?:\.?|\s*)\s*Top Critic Average', text_content, re.IGNORECASE)
                     if match_text:
                         score_val = int(match_text.group(1))
                         break
 
-                    # Pattern 3: Meta description summary tag
                     meta_desc = soup.find("meta", property="og:description") or soup.find("meta", attrs={"name": "description"})
                     if meta_desc and meta_desc.get("content"):
                         match_meta = re.search(r'top critic average of\s*([0-9]{1,3})', meta_desc["content"], re.IGNORECASE)
                         if match_meta:
                             score_val = int(match_meta.group(1))
                             break
-            except Exception as e:
-                print(f"  [!] OpenCritic scraper exception for {game_name}: {e}")
+            except Exception:
+                pass
 
         if score_val and score_val > 0:
             game_record["opencritic_score"] = score_val
-            print(f"  -> {game_name} OpenCritic score: {score_val}")
 
-    # 6. Fetch Metacritic Scores
+    # 9. Fetch Metacritic Scores
     if config.get("metacritic_slug"):
         url = f"https://www.metacritic.com/game/{config['metacritic_slug']}/"
         try:

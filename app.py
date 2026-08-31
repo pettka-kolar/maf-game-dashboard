@@ -38,6 +38,11 @@ else:
             "Tags": metrics.get("tags", "—"),
             "steam_id": steam_id,
             "Release Date": release_date,
+            "Price (EUR)": metrics.get("price_eur"),
+            "Discount %": metrics.get("discount_pct"),
+            "Followers (Initial)": metrics.get("followers_initial"),
+            "Followers (Release)": metrics.get("followers_release"),
+            "Followers (Current)": metrics.get("followers_current"),
             "Live CCU (Steam)": metrics.get("live_ccu"),
             "All-Time Peak": metrics.get("all_time_peak"),
             "Steam Rating %": metrics.get("steam_rating"),
@@ -49,7 +54,7 @@ else:
     df = pd.DataFrame(rows)
 
 if not df.empty:
-    # Add format="mixed" to correctly parse heterogeneous date formats seamlessly
+    # Correctly parse heterogeneous date formats seamlessly
     df["Release Date"] = pd.to_datetime(df["Release Date"], errors="coerce", format="mixed")
     df["Release Date"] = df["Release Date"].fillna(pd.to_datetime("2099-01-01"))
 
@@ -62,7 +67,12 @@ if not df.empty:
     df["Release Date"] = df["Release Date"].dt.strftime('%Y-%m-%d').replace("2099-01-01", "To be released")
 
     # Convert all numeric data columns cleanly
-    numeric_columns = ["Live CCU (Steam)", "All-Time Peak", "Steam Rating %", "Total Steam Reviews", "OpenCritic Score", "Metacritic Score"]
+    numeric_columns = [
+        "Price (EUR)", "Discount %", 
+        "Followers (Initial)", "Followers (Release)", "Followers (Current)",
+        "Live CCU (Steam)", "All-Time Peak", "Steam Rating %", 
+        "Total Steam Reviews", "OpenCritic Score", "Metacritic Score"
+    ]
     for col in numeric_columns:
         df[col] = pd.to_numeric(df[col], errors="coerce")
 
@@ -92,21 +102,20 @@ if not df.empty:
     
     df_steam = df[df["steam_id"] != 0].copy()
     if not df_steam.empty:
-        # Sort PC tracks by their Steam review scores
         df_steam = df_steam.sort_values(by="Steam Rating %", ascending=False, na_position="last")
         df_steam = df_steam.drop(columns=["steam_id"])
         
-        # Explicit column ordering with Origin placed beside Game Title
+        # Explicit column ordering
         column_order = [
-            "Game Title", "Origin", "Tags", "Release Date", "Live CCU (Steam)", 
-            "All-Time Peak", "Steam Rating %", "Total Steam Reviews", 
-            "OpenCritic Score", "Metacritic Score", "SteamDB"
+            "Game Title", "Origin", "Tags", "Release Date", 
+            "Price (EUR)", "Discount %",
+            "Followers (Initial)", "Followers (Release)", "Followers (Current)",
+            "Live CCU (Steam)", "All-Time Peak", "Steam Rating %", 
+            "Total Steam Reviews", "OpenCritic Score", "Metacritic Score", "SteamDB"
         ]
         df_steam = df_steam[column_order]
         
-        # Apply combined styling to the final display frame
         styled_steam = df_steam.style.apply(style_rows, axis=1)
-        
         dynamic_height_steam = (len(df_steam) + 1) * 35 + 10
         
         st.dataframe(
@@ -116,6 +125,11 @@ if not df.empty:
                 "Origin": st.column_config.TextColumn(width="small", help="Country of origin (CZ / SK)"),
                 "Tags": st.column_config.TextColumn(width="medium", help="Top popular user tags from Steam"),
                 "Release Date": st.column_config.TextColumn(width="small"),
+                "Price (EUR)": st.column_config.NumberColumn(format="€%.2f", help="Price in EUR"),
+                "Discount %": st.column_config.NumberColumn(format="-%d%%", help="Launch / Current discount"),
+                "Followers (Initial)": st.column_config.NumberColumn(format="%d", help="Follower count when first tracked"),
+                "Followers (Release)": st.column_config.NumberColumn(format="%d", help="Follower count at release date"),
+                "Followers (Current)": st.column_config.NumberColumn(format="%d", help="Current live Steam follower count"),
                 "Live CCU (Steam)": st.column_config.NumberColumn(format="%d"),
                 "All-Time Peak": st.column_config.NumberColumn(format="%d"),
                 "Steam Rating %": st.column_config.NumberColumn(format="%.2f%%"),
@@ -141,12 +155,9 @@ if not df.empty:
     df_console = df[df["steam_id"] == 0].copy()
     if not df_console.empty:
         df_console = df_console.sort_values(by="OpenCritic Score", ascending=False, na_position="last")
-        # Isolate the viewport to show console-relevant parameters and origin
         df_console = df_console[["Game Title", "Origin", "Release Date", "OpenCritic Score", "Metacritic Score"]]
         
-        # Apply combined styling to the final display frame
         styled_console = df_console.style.apply(style_rows, axis=1)
-        
         dynamic_height_console = (len(df_console) + 1) * 35 + 10
         
         st.dataframe(
