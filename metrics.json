@@ -2,22 +2,26 @@
     "Beast of Reincarnation (Game Pass)": {
         "all_time_peak": 14860,
         "release_date": "Aug 3, 2026",
-        "live_ccu": 354,
+        "live_ccu": 325,
         "steam_rating": 58.43,
         "total_reviews": 5879,
         "opencritic_score": 72,
         "metacritic_score": 72,
-        "tags": "Dogs, Action RPG, Adventure"
+        "tags": "Dogs, Action RPG, Adventure",
+        "price_eur": 54.99,
+        "discount_pct": 0
     },
     "Big Walk": {
         "all_time_peak": 46345,
         "release_date": "2099-01-01",
-        "live_ccu": 12310,
+        "live_ccu": 10205,
         "steam_rating": 95.34,
-        "total_reviews": 29883,
+        "total_reviews": 29912,
         "opencritic_score": 89,
         "metacritic_score": 91,
-        "tags": "Adventure, Open World, Co-op Campaign"
+        "tags": "Adventure, Open World, Co-op Campaign",
+        "price_eur": 18.99,
+        "discount_pct": 0
     },
     "Akatori": {
         "all_time_peak": 177,
@@ -27,7 +31,9 @@
         "total_reviews": 276,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
-        "tags": "Exploration, Action, Adventure"
+        "tags": "Exploration, Action, Adventure",
+        "price_eur": 14.99,
+        "discount_pct": 0
     },
     "Marvel Tokon: Fighting Souls": {
         "all_time_peak": 0,
@@ -37,57 +43,67 @@
         "total_reviews": "N/A",
         "opencritic_score": 86,
         "metacritic_score": 85,
-        "tags": "—"
+        "tags": "\u2014"
     },
     "Iron Nest: Heavy Turest Simulator": {
         "all_time_peak": 17495,
         "release_date": "2099-01-01",
-        "live_ccu": 1634,
-        "steam_rating": 97.87,
-        "total_reviews": 12983,
+        "live_ccu": 1404,
+        "steam_rating": 97.88,
+        "total_reviews": 12990,
         "opencritic_score": "N/A",
         "metacritic_score": 90,
-        "tags": "Military, Simulation, Realistic"
+        "tags": "Military, Simulation, Realistic",
+        "price_eur": 19.99,
+        "discount_pct": 0
     },
     "Expeditions: Samurai": {
         "all_time_peak": 661,
         "release_date": "2099-01-01",
-        "live_ccu": 3,
+        "live_ccu": 4,
         "steam_rating": 61.62,
         "total_reviews": 271,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
-        "tags": "CRPG, Party-Based RPG, Story Rich"
+        "tags": "CRPG, Party-Based RPG, Story Rich",
+        "price_eur": 29.99,
+        "discount_pct": 0
     },
     "Pax Autocratica (Early Access)": {
         "all_time_peak": 6123,
         "release_date": "2099-01-01",
-        "live_ccu": 964,
+        "live_ccu": 881,
         "steam_rating": 92.09,
         "total_reviews": 3123,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
-        "tags": "Early Access, Colony Sim, Action Roguelike"
+        "tags": "Early Access, Colony Sim, Action Roguelike",
+        "price_eur": 29.99,
+        "discount_pct": 0
     },
     "Agent 64: Spies Never Die": {
         "all_time_peak": 772,
         "release_date": "2099-01-01",
-        "live_ccu": 56,
+        "live_ccu": 64,
         "steam_rating": 87.05,
         "total_reviews": 865,
         "opencritic_score": 73,
         "metacritic_score": 72,
-        "tags": "FPS, Retro, Exploration"
+        "tags": "FPS, Retro, Exploration",
+        "price_eur": 21.64,
+        "discount_pct": 0
     },
     "Riftstorm (Early Access)": {
         "all_time_peak": 713,
         "release_date": "2099-01-01",
-        "live_ccu": 55,
-        "steam_rating": 69.97,
-        "total_reviews": 656,
+        "live_ccu": 35,
+        "steam_rating": 69.86,
+        "total_reviews": 657,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
-        "tags": "Action RPG, PvE, Online Co-Op"
+        "tags": "Action RPG, PvE, Online Co-Op",
+        "price_eur": 15.49,
+        "discount_pct": 0
     },
     "Grounded 2 (PS5)": {
         "all_time_peak": 0,
@@ -97,79 +113,93 @@
         "total_reviews": "N/A",
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
-        "tags": "—"
+        "tags": "\u2014"
     },
     "Security 51": {
         "all_time_peak": 1251,
         "release_date": "Aug 12, 2026",
-        "live_ccu": 122,
-        "steam_rating": 71.59,
-        "total_reviews": 447,
+        "live_ccu": 99,
+        "steam_rating": 71.43,
+        "total_reviews": 448,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
-        "tags": "Simulation, Point & Click, Choices Matter"
+        "tags": "Simulation, Point & Click, Choices Matter",
+        "price_eur": 9.99,
+        "discount_pct": 0
     },
     "Agefield High: Rock the School": {
         "all_time_peak": 2413,
         "release_date": "2099-01-01",
-        "live_ccu": 51,
+        "live_ccu": 41,
         "steam_rating": 36.3,
         "total_reviews": 920,
         "opencritic_score": 37,
         "metacritic_score": 31,
-        "tags": "Adventure, Open World, Action"
+        "tags": "Adventure, Open World, Action",
+        "price_eur": 29.99,
+        "discount_pct": 0
     },
     "Duskfade": {
         "all_time_peak": 964,
         "release_date": "2099-01-01",
-        "live_ccu": 223,
-        "steam_rating": 91.85,
-        "total_reviews": 822,
+        "live_ccu": 214,
+        "steam_rating": 91.86,
+        "total_reviews": 823,
         "opencritic_score": 79,
         "metacritic_score": 78,
-        "tags": "Action-Adventure, 3D Platformer, Action"
+        "tags": "Action-Adventure, 3D Platformer, Action",
+        "price_eur": 29.99,
+        "discount_pct": 0
     },
     "Madden NFL 27": {
         "all_time_peak": 4906,
         "release_date": "2099-01-01",
-        "live_ccu": 2177,
+        "live_ccu": 2373,
         "steam_rating": 34.66,
         "total_reviews": 655,
         "opencritic_score": 76,
         "metacritic_score": "N/A",
-        "tags": "Simulation, Sports, Football (American)"
+        "tags": "Simulation, Sports, Football (American)",
+        "price_eur": 69.99,
+        "discount_pct": 0
     },
     "Sandustry (Game Pass)": {
         "all_time_peak": 12550,
         "release_date": "2099-01-01",
-        "live_ccu": 6033,
-        "steam_rating": 97.17,
-        "total_reviews": 4279,
+        "live_ccu": 5372,
+        "steam_rating": 97.18,
+        "total_reviews": 4287,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
-        "tags": "Open World Survival Craft, Survival, PvE"
+        "tags": "Open World Survival Craft, Survival, PvE",
+        "price_eur": 14.99,
+        "discount_pct": 0
     },
     "Defender of the Crown: The Legend Returns": {
         "all_time_peak": 337,
         "release_date": "2099-01-01",
-        "live_ccu": 30,
+        "live_ccu": 17,
         "steam_rating": 67.45,
         "total_reviews": 212,
         "opencritic_score": 73,
         "metacritic_score": 70,
-        "tags": "RPG, Strategy, Simulation"
+        "tags": "RPG, Strategy, Simulation",
+        "price_eur": 19.99,
+        "discount_pct": 0
     },
     "Hell let loose - Vietnam": {
         "all_time_peak": 30448,
         "release_date": "2099-01-01",
-        "live_ccu": 6857,
-        "steam_rating": 61.04,
-        "total_reviews": 10892,
+        "live_ccu": 6625,
+        "steam_rating": 61.02,
+        "total_reviews": 10896,
         "opencritic_score": 71,
         "metacritic_score": 74,
-        "tags": "Action, Simulation, Strategy"
+        "tags": "Action, Simulation, Strategy",
+        "price_eur": 39.99,
+        "discount_pct": 0
     },
-    "Mafia: Muž cti DLC": {
+    "Mafia: Mu\u017e cti DLC": {
         "all_time_peak": 0,
         "release_date": "2099-01-01",
         "live_ccu": "N/A",
@@ -177,57 +207,67 @@
         "total_reviews": "N/A",
         "opencritic_score": "N/A",
         "metacritic_score": 73,
-        "tags": "—"
+        "tags": "\u2014"
     },
     "The Sinking City 2": {
         "all_time_peak": 1896,
         "release_date": "2099-01-01",
-        "live_ccu": 434,
-        "steam_rating": 82.77,
-        "total_reviews": 1416,
+        "live_ccu": 407,
+        "steam_rating": 82.8,
+        "total_reviews": 1419,
         "opencritic_score": 80,
         "metacritic_score": 79,
-        "tags": "Lovecraftian, Action, Third-Person Shooter"
+        "tags": "Lovecraftian, Action, Third-Person Shooter",
+        "price_eur": 49.99,
+        "discount_pct": 0
     },
     "Twisted Tower": {
         "all_time_peak": 826,
         "release_date": "2099-01-01",
-        "live_ccu": 158,
-        "steam_rating": 93.77,
-        "total_reviews": 1685,
+        "live_ccu": 149,
+        "steam_rating": 93.78,
+        "total_reviews": 1687,
         "opencritic_score": 87,
-        "metacritic_score": 77,
-        "tags": "Shooter, First-Person, Horror"
+        "metacritic_score": 78,
+        "tags": "Shooter, First-Person, Horror",
+        "price_eur": 13.49,
+        "discount_pct": 10
     },
     "Feed the Scorchpot": {
         "all_time_peak": 998,
         "release_date": "2099-01-01",
-        "live_ccu": 352,
+        "live_ccu": 287,
         "steam_rating": 89.12,
         "total_reviews": 331,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
-        "tags": "Roguelite, Casual, Turn-Based"
+        "tags": "Roguelite, Casual, Turn-Based",
+        "price_eur": 14.99,
+        "discount_pct": 0
     },
     "Mortal Shell II": {
         "all_time_peak": 44435,
         "release_date": "2099-01-01",
-        "live_ccu": 18333,
-        "steam_rating": 75.84,
-        "total_reviews": 15551,
+        "live_ccu": 16210,
+        "steam_rating": 75.86,
+        "total_reviews": 15577,
         "opencritic_score": 85,
         "metacritic_score": 83,
-        "tags": "Souls-like, Dark Fantasy, Violent"
+        "tags": "Souls-like, Dark Fantasy, Violent",
+        "price_eur": 49.99,
+        "discount_pct": 0
     },
     "Polylithic": {
         "all_time_peak": 186,
         "release_date": "Nov 9, 2023",
-        "live_ccu": 100,
+        "live_ccu": 96,
         "steam_rating": 68.51,
         "total_reviews": 289,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
-        "tags": "Early Access, Survival, Open World"
+        "tags": "Early Access, Survival, Open World",
+        "price_eur": 9.09,
+        "discount_pct": 35
     },
     "DayZ": {
         "all_time_peak": 0,
@@ -237,77 +277,91 @@
         "total_reviews": "N/A",
         "opencritic_score": 41,
         "metacritic_score": 31,
-        "tags": "—"
+        "tags": "\u2014"
     },
     "1666: Amsterdam": {
         "all_time_peak": 2069,
         "release_date": "2099-01-01",
-        "live_ccu": 456,
+        "live_ccu": 371,
         "steam_rating": 66.71,
-        "total_reviews": 706,
+        "total_reviews": 709,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
-        "tags": "Female Protagonist, Action-Adventure, Third Person"
+        "tags": "Female Protagonist, Action-Adventure, Third Person",
+        "price_eur": 26.99,
+        "discount_pct": 10
     },
     "Once Human": {
         "all_time_peak": 32169,
         "release_date": "Jul 9, 2024",
-        "live_ccu": 25627,
+        "live_ccu": 24321,
         "steam_rating": 78.66,
-        "total_reviews": 184361,
+        "total_reviews": 184374,
         "opencritic_score": 74,
         "metacritic_score": 71,
-        "tags": "Open World, Survival, Multiplayer"
+        "tags": "Open World, Survival, Multiplayer",
+        "price_eur": 0.0,
+        "discount_pct": 0
     },
     "Aliens: Fireteam Elite 2": {
         "all_time_peak": 7724,
         "release_date": "2099-01-01",
-        "live_ccu": 3600,
-        "steam_rating": 62.92,
-        "total_reviews": 2942,
+        "live_ccu": 3510,
+        "steam_rating": 62.96,
+        "total_reviews": 2948,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
-        "tags": "Casual, Platformer, 2D Platformer"
+        "tags": "Casual, Platformer, 2D Platformer",
+        "price_eur": 49.99,
+        "discount_pct": 0
     },
     "Brigandine Abyss": {
         "all_time_peak": 661,
         "release_date": "2099-01-01",
-        "live_ccu": 162,
+        "live_ccu": 129,
         "steam_rating": 36.41,
         "total_reviews": 195,
         "opencritic_score": 73,
-        "metacritic_score": 71,
-        "tags": "Turn-Based Strategy, Strategy, Fantasy"
+        "metacritic_score": 68,
+        "tags": "Turn-Based Strategy, Strategy, Fantasy",
+        "price_eur": 49.99,
+        "discount_pct": 0
     },
     "Metal Gear Solid: Master Collection Vol. 2": {
         "all_time_peak": 284,
         "release_date": "2099-01-01",
-        "live_ccu": 17,
+        "live_ccu": 18,
         "steam_rating": 61.82,
         "total_reviews": 55,
         "opencritic_score": 83,
         "metacritic_score": 85,
-        "tags": "Action, Adventure, Stealth"
+        "tags": "Action, Adventure, Stealth",
+        "price_eur": 49.99,
+        "discount_pct": 0
     },
     "Resonance: A Plague Tale Legacy": {
         "all_time_peak": 5450,
         "release_date": "2099-01-01",
-        "live_ccu": 3029,
-        "steam_rating": 92.75,
-        "total_reviews": 2277,
+        "live_ccu": 2472,
+        "steam_rating": 92.86,
+        "total_reviews": 2296,
         "opencritic_score": 82,
         "metacritic_score": 78,
-        "tags": "Puzzle Platformer, Action, 2D Platformer"
+        "tags": "Puzzle Platformer, Action, 2D Platformer",
+        "price_eur": 49.99,
+        "discount_pct": 0
     },
     "Star Wars Zero Company": {
         "all_time_peak": 77586,
         "release_date": "2099-01-01",
-        "live_ccu": 52777,
-        "steam_rating": 78.56,
-        "total_reviews": 10344,
+        "live_ccu": 51204,
+        "steam_rating": 78.66,
+        "total_reviews": 10423,
         "opencritic_score": 87,
         "metacritic_score": 85,
-        "tags": "Turn-Based Tactics, Turn-Based Strategy, Sci-fi"
+        "tags": "Turn-Based Tactics, Turn-Based Strategy, Sci-fi",
+        "price_eur": 49.99,
+        "discount_pct": 0
     },
     "Elden Ring: Tarnished Edition": {
         "all_time_peak": 0,
@@ -316,18 +370,20 @@
         "steam_rating": "N/A",
         "total_reviews": "N/A",
         "opencritic_score": 89,
-        "metacritic_score": 91,
-        "tags": "—"
+        "metacritic_score": 90,
+        "tags": "\u2014"
     },
     "Serious Sam: Shatterverse": {
         "all_time_peak": 1451,
         "release_date": "Aug 31, 2026",
-        "live_ccu": 959,
-        "steam_rating": 42.22,
-        "total_reviews": 135,
+        "live_ccu": 693,
+        "steam_rating": 43.6,
+        "total_reviews": 172,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
-        "tags": "Action, Adventure, Roguelike"
+        "tags": "Action, Adventure, Roguelike",
+        "price_eur": 17.99,
+        "discount_pct": 10
     },
     "Fake Snake": {
         "all_time_peak": 2,
@@ -337,6 +393,263 @@
         "total_reviews": 1,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
-        "tags": "Casual, Sokoban, Puzzle"
+        "tags": "Casual, Sokoban, Puzzle",
+        "price_eur": 3.82,
+        "discount_pct": 15
+    },
+    "Crimson Moon": {
+        "all_time_peak": 0,
+        "release_date": "2099-01-01",
+        "live_ccu": "N/A",
+        "steam_rating": "N/A",
+        "total_reviews": "N/A",
+        "opencritic_score": "N/A",
+        "metacritic_score": "N/A",
+        "price_eur": "N/A",
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
+        "tags": "Action RPG, Online Co-Op, Action"
+    },
+    "WheelMates": {
+        "all_time_peak": 0,
+        "release_date": "2099-01-01",
+        "live_ccu": "N/A",
+        "steam_rating": "N/A",
+        "total_reviews": "N/A",
+        "opencritic_score": "N/A",
+        "metacritic_score": "N/A",
+        "price_eur": "N/A",
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
+        "tags": "Adventure, Co-op, Split Screen"
+    },
+    "Withering Realms": {
+        "all_time_peak": 0,
+        "release_date": "2099-01-01",
+        "live_ccu": "N/A",
+        "steam_rating": "N/A",
+        "total_reviews": "N/A",
+        "opencritic_score": "N/A",
+        "metacritic_score": "N/A",
+        "price_eur": "N/A",
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
+        "tags": "RPG, Action, Horror"
+    },
+    "The Blood of Dawnwalker": {
+        "all_time_peak": 0,
+        "release_date": "2099-01-01",
+        "live_ccu": "N/A",
+        "steam_rating": "N/A",
+        "total_reviews": "N/A",
+        "opencritic_score": "N/A",
+        "metacritic_score": 83,
+        "price_eur": 69.99,
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
+        "tags": "RPG, Open World, Dark Fantasy"
+    },
+    "Cosmo Tales": {
+        "all_time_peak": 0,
+        "release_date": "2099-01-01",
+        "live_ccu": "N/A",
+        "steam_rating": "N/A",
+        "total_reviews": "N/A",
+        "opencritic_score": "N/A",
+        "metacritic_score": "N/A",
+        "price_eur": "N/A",
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
+        "tags": "Early Access, Action Roguelike, Flight"
+    },
+    "Orbitals": {
+        "all_time_peak": 0,
+        "release_date": "2099-01-01",
+        "live_ccu": "N/A",
+        "steam_rating": "N/A",
+        "total_reviews": "N/A",
+        "opencritic_score": "N/A",
+        "metacritic_score": "N/A",
+        "price_eur": "N/A",
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
+        "tags": "\u2014"
+    },
+    "SpeedRunners 2: King of Speed (Game Pass)": {
+        "all_time_peak": 0,
+        "release_date": "2099-01-01",
+        "live_ccu": "N/A",
+        "steam_rating": "N/A",
+        "total_reviews": "N/A",
+        "opencritic_score": "N/A",
+        "metacritic_score": "N/A",
+        "price_eur": "N/A",
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
+        "tags": "Multiplayer, Racing, Fast-Paced"
+    },
+    "Onimusha: Way of the Sword": {
+        "all_time_peak": 0,
+        "release_date": "2099-01-01",
+        "live_ccu": "N/A",
+        "steam_rating": "N/A",
+        "total_reviews": "N/A",
+        "opencritic_score": "N/A",
+        "metacritic_score": 85,
+        "price_eur": 69.99,
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
+        "tags": "Action, Action-Adventure, Singleplayer"
+    },
+    "NBA 2K27": {
+        "all_time_peak": 0,
+        "release_date": "2099-01-01",
+        "live_ccu": "N/A",
+        "steam_rating": 49.79,
+        "total_reviews": 715,
+        "opencritic_score": "N/A",
+        "metacritic_score": "N/A",
+        "price_eur": 69.99,
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
+        "tags": "Sports, Simulation, 3D"
+    },
+    "Mewgenics consoles": {
+        "all_time_peak": 0,
+        "release_date": "2099-01-01",
+        "live_ccu": "N/A",
+        "steam_rating": "N/A",
+        "total_reviews": "N/A",
+        "opencritic_score": "N/A",
+        "metacritic_score": 88,
+        "price_eur": "N/A",
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
+        "tags": "\u2014"
+    },
+    "Wanderburg (Early Access)": {
+        "all_time_peak": 0,
+        "release_date": "2099-01-01",
+        "live_ccu": "N/A",
+        "steam_rating": "N/A",
+        "total_reviews": "N/A",
+        "opencritic_score": "N/A",
+        "metacritic_score": "N/A",
+        "price_eur": "N/A",
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
+        "tags": "Early Access, Medieval, Action Roguelike"
+    },
+    "Moonlighter 2": {
+        "all_time_peak": 284,
+        "release_date": "19 Nov, 2025",
+        "live_ccu": 284,
+        "steam_rating": 85.06,
+        "total_reviews": 3112,
+        "opencritic_score": "N/A",
+        "metacritic_score": 76,
+        "price_eur": 29.99,
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
+        "tags": "Early Access, Shop Keeper, RPG"
+    },
+    "Valheim 1.0": {
+        "all_time_peak": 19747,
+        "release_date": "2 Feb, 2021",
+        "live_ccu": 19747,
+        "steam_rating": 93.99,
+        "total_reviews": 541115,
+        "opencritic_score": 81,
+        "metacritic_score": "N/A",
+        "price_eur": 29.99,
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
+        "tags": "Open World Survival Craft, Survival, Online Co-Op"
+    },
+    "Wardogs (Early Access)": {
+        "all_time_peak": 0,
+        "release_date": "2099-01-01",
+        "live_ccu": "N/A",
+        "steam_rating": "N/A",
+        "total_reviews": "N/A",
+        "opencritic_score": "N/A",
+        "metacritic_score": "N/A",
+        "price_eur": 39.99,
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
+        "tags": "Early Access, Action, FPS"
+    },
+    "NHL 27": {
+        "all_time_peak": 0,
+        "release_date": "2099-01-01",
+        "live_ccu": "N/A",
+        "steam_rating": "N/A",
+        "total_reviews": "N/A",
+        "opencritic_score": "N/A",
+        "metacritic_score": "N/A",
+        "price_eur": "N/A",
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
+        "tags": "\u2014"
+    },
+    "Active Matter": {
+        "all_time_peak": 0,
+        "release_date": "2099-01-01",
+        "live_ccu": "N/A",
+        "steam_rating": "N/A",
+        "total_reviews": "N/A",
+        "opencritic_score": "N/A",
+        "metacritic_score": "N/A",
+        "price_eur": "N/A",
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
+        "tags": "Action, Horror, Multiplayer"
+    },
+    "Marvel's Wolverine": {
+        "all_time_peak": 0,
+        "release_date": "2099-01-01",
+        "live_ccu": "N/A",
+        "steam_rating": "N/A",
+        "total_reviews": "N/A",
+        "opencritic_score": "N/A",
+        "metacritic_score": "N/A",
+        "price_eur": "N/A",
+        "discount_pct": 0,
+        "followers_initial": "N/A",
+        "followers_release": "N/A",
+        "followers_current": "N/A",
+        "tags": "\u2014"
     }
 }
