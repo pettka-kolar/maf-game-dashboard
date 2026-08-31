@@ -3,182 +3,7 @@
 # -----------------------------------------------------------------------------
 GAME_DATABASE = {
     # -------------------------------------------------------------------------
-    # MID-TO-LATE JULY 2026 RELEASES (ACTIVE ROLLING WINDOW)
-    # -------------------------------------------------------------------------
-    "Heave Ho 2": {
-        "steam_id": 2802740,
-        "metacritic_slug": "pc/heave-ho-2",
-        "opencritic_id": 20999,
-        "opencritic_slug": "heave-ho-2",
-        "backup_peak": 0,
-        "release_date": "2026-07-16",
-        "origin": None
-    },
-    "Moss: The Forgotten Relic": {
-        "steam_id": 3914860,
-        "metacritic_slug": "pc/moss-the-forgotten-relic",
-        "opencritic_id": 20976,
-        "opencritic_slug": "moss-the-forgotten-relic",
-        "backup_peak": 0,
-        "release_date": "2026-07-16",
-        "origin": None
-    },
-    "Fogpiercer": {
-        "steam_id": 3219010,
-        "metacritic_slug": "pc/fogpiercer",
-        "opencritic_id": 0,
-        "opencritic_slug": "fogpiercer",
-        "backup_peak": 0,
-        "release_date": "2026-07-17",
-        "origin": None
-    },
-    "ZeroSpace": {
-        "steam_id": 1605850,
-        "metacritic_slug": "pc/zerospace",
-        "opencritic_id": 0,
-        "opencritic_slug": "zerospace",
-        "backup_peak": 0,
-        "release_date": "2026-07-20",
-        "origin": None
-    },
-    "G-Rebels": {
-        "steam_id": 2445980,
-        "metacritic_slug": "pc/g-rebels",
-        "opencritic_id": 0,
-        "opencritic_slug": "g-rebels",
-        "backup_peak": 0,
-        "release_date": "2026-07-20",
-        "origin": None
-    },
-    "Scarlet Deer Inn": {
-        "steam_id": 1553260,
-        "metacritic_slug": "pc/scarlet-deer-inn",
-        "opencritic_id": 20972,
-        "opencritic_slug": "scarlet-deer-inn",
-        "backup_peak": 0,
-        "release_date": "2026-07-21",
-        "origin": "CZ"
-    },
-    "Planet Crafter": {
-        "steam_id": 0,
-        "metacritic_slug": "playstation-5/the-planet-crafter",
-        "opencritic_id": 16555,
-        "opencritic_slug": "the-planet-crafter",
-        "backup_peak": 0,
-        "release_date": "2026-07-21",
-        "origin": None
-    },
-    "Shift at Midnight": {
-        "steam_id": 3722330,
-        "metacritic_slug": "pc/shift-at-midnight",
-        "opencritic_id": 0,
-        "opencritic_slug": "shift-at-midnight",
-        "backup_peak": 0,
-        "release_date": "2026-07-22",
-        "origin": None
-    },
-    "Tears of Metal": {
-        "steam_id": 1913120,
-        "metacritic_slug": "pc/tears-of-metal",
-        "opencritic_id": 0,
-        "opencritic_slug": "tears-of-metal",
-        "backup_peak": 0,
-        "release_date": "2026-07-22",
-        "origin": None
-    },
-    "Avatar Legends: The Fighting Game": {
-        "steam_id": 2424420,
-        "metacritic_slug": "pc/avatar-legends-the-fighting-game",
-        "opencritic_id": 21042,
-        "opencritic_slug": "avatar-legends-the-fighting-game",
-        "backup_peak": 0,
-        "release_date": "2026-07-23",
-        "origin": None
-    },
-    "Tormentum II": {
-        "steam_id": 931060,
-        "metacritic_slug": "pc/tormentum-ii",
-        "opencritic_id": 0,
-        "opencritic_slug": "tormentum-ii",
-        "backup_peak": 0,
-        "release_date": "2026-07-23",
-        "origin": None
-    },
-    "Dinoblade": {
-        "steam_id": 3440070,
-        "metacritic_slug": "pc/dinoblade",
-        "opencritic_id": 0,
-        "opencritic_slug": "dinoblade",
-        "backup_peak": 0,
-        "release_date": "2026-07-23",
-        "origin": None
-    },
-    "Splatoon Raiders": {
-        "steam_id": 0,
-        "metacritic_slug": "nintendo-switch-2/splatoon-raiders",
-        "opencritic_id": 20454,
-        "opencritic_slug": "splatoon-raiders",
-        "backup_peak": 0,
-        "release_date": "2026-07-23",
-        "origin": None
-    },
-    "Carnival Hunt": {
-        "steam_id": 1181550,
-        "metacritic_slug": "pc/carnival-hunt",
-        "opencritic_id": 0,
-        "opencritic_slug": "carnival-hunt",
-        "backup_peak": 0,
-        "release_date": "2026-07-23",
-        "origin": None
-    },
-    "Halo: Campaign Evolved": {
-        "steam_id": 2806050,
-        "metacritic_slug": "pc/halo-campaign-evolved",
-        "opencritic_id": 0,
-        "opencritic_slug": "halo-campaign-evolved",
-        "backup_peak": 0,
-        "release_date": "2026-07-28",
-        "origin": None
-    },
-    "Mistfall Hunter": {
-        "steam_id": 3282300,
-        "metacritic_slug": "pc/mistfall-hunter",
-        "opencritic_id": 20798,
-        "opencritic_slug": "mistfall-hunter",
-        "backup_peak": 0,
-        "release_date": "2026-07-29",
-        "origin": None
-    },
-    "Xenoblade Chronicles 2": {
-        "steam_id": 0,
-        "metacritic_slug": "nintendo-switch-2/xenoblade-chronicles-2",
-        "opencritic_id": 4952,
-        "opencritic_slug": "xenoblade-chronicles-2",
-        "backup_peak": 0,
-        "release_date": "2026-07-30",
-        "origin": None
-    },
-    "The Relic: First Guardian": {
-        "steam_id": 2827820,
-        "metacritic_slug": "pc/the-relic-first-guardian",
-        "opencritic_id": 0,
-        "opencritic_slug": "the-relic-first-guardian",
-        "backup_peak": 0,
-        "release_date": "2026-07-31",
-        "origin": None
-    },
-    "Corsair Cove": {
-        "steam_id": 1368140,
-        "metacritic_slug": "pc/corsair-cove",
-        "opencritic_id": 0,
-        "opencritic_slug": "corsair-cove",
-        "backup_peak": 0,
-        "release_date": "2026-07-31",
-        "origin": None
-    },
-
-    # -------------------------------------------------------------------------
-    # AUGUST 2026 RELEASES & TRACKS
+    # AUGUST 2026 RELEASES & ACTIVE TRACKS
     # -------------------------------------------------------------------------
     "Beast of Reincarnation (Game Pass)": {
         "steam_id": 2001760,
@@ -340,10 +165,6 @@ GAME_DATABASE = {
         "release_date": "2026-08-14",
         "origin": "CZ"
     },
-
-    # -------------------------------------------------------------------------
-    # MID-TO-LATE AUGUST 2026 RELEASES & TRACKS
-    # -------------------------------------------------------------------------
     "The Sinking City 2": {
         "steam_id": 2825860,
         "metacritic_slug": "pc/the-sinking-city-2",
@@ -483,6 +304,163 @@ GAME_DATABASE = {
         "opencritic_id": 0,
         "opencritic_slug": "fake-snake",
         "backup_peak": 2,
+        "release_date": "2026-08-28",
         "origin": "CZ"
+    },
+
+    # -------------------------------------------------------------------------
+    # SEPTEMBER 2026 RELEASES & UPCOMING TRACKS
+    # -------------------------------------------------------------------------
+    "Crimson Moon": {
+        "steam_id": 4317690,
+        "metacritic_slug": "pc/crimson-moon",
+        "opencritic_id": 0,
+        "opencritic_slug": "crimson-moon",
+        "backup_peak": 0,
+        "release_date": "2026-09-01",
+        "origin": None
+    },
+    "WheelMates": {
+        "steam_id": 3905450,
+        "metacritic_slug": "pc/wheelmates",
+        "opencritic_id": 0,
+        "opencritic_slug": "wheelmates",
+        "backup_peak": 0,
+        "release_date": "2026-09-01",
+        "origin": None
+    },
+    "Withering Realms": {
+        "steam_id": 3441990,
+        "metacritic_slug": "pc/withering-realms",
+        "opencritic_id": 0,
+        "opencritic_slug": "withering-realms",
+        "backup_peak": 0,
+        "release_date": "2026-09-02",
+        "origin": None
+    },
+    "The Blood of Dawnwalker": {
+        "steam_id": 3751260,
+        "metacritic_slug": "pc/the-blood-of-dawnwalker",
+        "opencritic_id": 0,
+        "opencritic_slug": "the-blood-of-dawnwalker",
+        "backup_peak": 0,
+        "release_date": "2026-09-02",
+        "origin": None
+    },
+    "Cosmo Tales": {
+        "steam_id": 3601630,
+        "metacritic_slug": "pc/cosmo-tales",
+        "opencritic_id": 0,
+        "opencritic_slug": "cosmo-tales",
+        "backup_peak": 0,
+        "release_date": "2026-09-03",
+        "origin": "CZ"
+    },
+    "Orbitals": {
+        "steam_id": 0,
+        "metacritic_slug": "nintendo-switch-2/orbitals",
+        "opencritic_id": 0,
+        "opencritic_slug": "orbitals",
+        "backup_peak": 0,
+        "release_date": "2026-09-03",
+        "origin": None
+    },
+    "SpeedRunners 2: King of Speed (Game Pass)": {
+        "steam_id": 3183760,
+        "metacritic_slug": "pc/speedrunners-2-king-of-speed",
+        "opencritic_id": 0,
+        "opencritic_slug": "speedrunners-2-king-of-speed",
+        "backup_peak": 0,
+        "release_date": "2026-09-03",
+        "origin": None
+    },
+    "Onimusha: Way of the Sword": {
+        "steam_id": 2638890,
+        "metacritic_slug": "pc/onimusha-way-of-the-sword",
+        "opencritic_id": 0,
+        "opencritic_slug": "onimusha-way-of-the-sword",
+        "backup_peak": 0,
+        "release_date": "2026-09-04",
+        "origin": None
+    },
+    "NBA 2K27": {
+        "steam_id": 4356430,
+        "metacritic_slug": "pc/nba-2k27",
+        "opencritic_id": 0,
+        "opencritic_slug": "nba-2k27",
+        "backup_peak": 0,
+        "release_date": "2026-09-04",
+        "origin": None
+    },
+    "Mewgenics consoles": {
+        "steam_id": 0,
+        "metacritic_slug": "playstation-5/mewgenics",
+        "opencritic_id": 0,
+        "opencritic_slug": "mewgenics",
+        "backup_peak": 0,
+        "release_date": "2026-09-08",
+        "origin": None
+    },
+    "Wanderburg (Early Access)": {
+        "steam_id": 3624140,
+        "metacritic_slug": "pc/wanderburg",
+        "opencritic_id": 0,
+        "opencritic_slug": "wanderburg",
+        "backup_peak": 0,
+        "release_date": "2026-09-08",
+        "origin": None
+    },
+    "Moonlighter 2": {
+        "steam_id": 2350790,
+        "metacritic_slug": "pc/moonlighter-2-the-endless-vault",
+        "opencritic_id": 0,
+        "opencritic_slug": "moonlighter-2-the-endless-vault",
+        "backup_peak": 0,
+        "origin": None
+    },
+    "Valheim 1.0": {
+        "steam_id": 892970,
+        "metacritic_slug": "pc/valheim",
+        "opencritic_id": 11100,
+        "opencritic_slug": "valheim",
+        "backup_peak": 0,
+        "release_date": "2026-09-09",
+        "origin": None
+    },
+    "Wardogs (Early Access)": {
+        "steam_id": 1867240,
+        "metacritic_slug": "pc/wardogs",
+        "opencritic_id": 0,
+        "opencritic_slug": "wardogs",
+        "backup_peak": 0,
+        "release_date": "2026-09-10",
+        "origin": None
+    },
+    "NHL 27": {
+        "steam_id": 0,
+        "metacritic_slug": "playstation-5/nhl-27",
+        "opencritic_id": 0,
+        "opencritic_slug": "nhl-27",
+        "backup_peak": 0,
+        "release_date": "2026-09-11",
+        "origin": None
+    },
+    "Active Matter": {
+        "steam_id": 2887580,
+        "metacritic_slug": "pc/active-matter",
+        "opencritic_id": 0,
+        "opencritic_slug": "active-matter",
+        "backup_peak": 0,
+        "release_date": "2026-09-15",
+        "origin": None
+    },
+    "Marvel's Wolverine": {
+        "steam_id": 0,
+        "metacritic_slug": "playstation-5/marvels-wolverine",
+        "opencritic_id": 0,
+        "opencritic_slug": "marvels-wolverine",
+        "backup_peak": 0,
+        "release_date": "2026-09-15",
+        "origin": None
     }
 }
