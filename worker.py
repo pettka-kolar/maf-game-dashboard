@@ -128,7 +128,7 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
         if parsed_dt and parsed_dt <= datetime.now():
             is_released = True
 
-    # 4. Fetch Storefront Details (Discounted Release Price, Full Price, & Release Discount)
+    # 4. Fetch Storefront Details (Discounted Release Price, Full MSRP, & Release Discount)
     if appid:
         url = f"https://store.steampowered.com/api/appdetails?appids={appid}&cc=DE&l=english"
         try:
@@ -147,13 +147,11 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
                     initial_price = round(po.get("initial", 0) / 100.0, 2)
                     disc_pct = po.get("discount_percent", 0)
                     
+                    # Full non-discounted price is initial_price if discount exists, else final_price
                     full_base_price = initial_price if initial_price > 0 else final_price
                     
                     game_record["price_current_eur"] = final_price
-
-                    # Track base full price
-                    if game_record.get("price_full_eur") in (None, "N/A", "—"):
-                        game_record["price_full_eur"] = full_base_price
+                    game_record["price_full_eur"] = full_base_price
 
                     # Track launch pricing and launch discount
                     if not is_released:

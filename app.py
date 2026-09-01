@@ -42,7 +42,7 @@ else:
         
         release_date = game_config.get("release_date") or metrics.get("release_date")
         
-        # Pull release pricing: discounted release price vs full base price
+        # Pull release pricing: discounted release price vs full undiscounted base price
         price_full = metrics.get("price_full_eur", metrics.get("price_release_eur", metrics.get("price_eur")))
         price_disc_rel = metrics.get("price_release_discounted_eur", price_full)
         release_discount = metrics.get("discount_release_pct", metrics.get("discount_pct", 0))
@@ -148,7 +148,7 @@ if not df.empty:
                 "Origin": st.column_config.TextColumn(width="small", help="Country of origin (CZ / SK)"),
                 "Tags": st.column_config.TextColumn(width="medium", help="Top popular user tags from Steam"),
                 "Release Date": st.column_config.TextColumn(width="small"),
-                "Price (EUR)": st.column_config.TextColumn(width="small", help="Discounted Release Price / Full Game Price (EUR)"),
+                "Price (EUR)": st.column_config.TextColumn(width="small", help="Discounted Release Price / Full Base Price (EUR)"),
                 "Release Discount %": st.column_config.NumberColumn(format="-%d%%", help="Official launch discount percentage"),
                 "Followers (Initial)": st.column_config.NumberColumn(format="%d", help="Follower count when first tracked"),
                 "Followers (Release)": st.column_config.NumberColumn(format="%d", help="Follower count at release date"),
