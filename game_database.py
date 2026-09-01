@@ -11,6 +11,7 @@ GAME_DATABASE = {
         "opencritic_id": 20099,
         "opencritic_slug": "beast-of-reincarnation",
         "backup_peak": 0,
+        "release_date": "2026-08-03",
         "origin": None
     },
     "Big Walk": {
@@ -100,6 +101,7 @@ GAME_DATABASE = {
         "opencritic_id": 21158,
         "opencritic_slug": "security-51",
         "backup_peak": 0,
+        "release_date": "2026-08-12",
         "origin": None
     },
     "Agefield High: Rock the School": {
@@ -234,6 +236,7 @@ GAME_DATABASE = {
         "opencritic_id": 16998,
         "opencritic_slug": "once-human",
         "backup_peak": 0,
+        "release_date": "2024-07-09",
         "origin": None
     },
     "Aliens: Fireteam Elite 2": {
@@ -296,6 +299,7 @@ GAME_DATABASE = {
         "opencritic_id": 0,
         "opencritic_slug": "serious-sam-shatterverse",
         "backup_peak": 0,
+        "release_date": "2026-08-31",
         "origin": None
     },
     "Fake Snake": {
@@ -344,7 +348,7 @@ GAME_DATABASE = {
         "opencritic_id": 0,
         "opencritic_slug": "the-blood-of-dawnwalker",
         "backup_peak": 0,
-        "release_date": "2026-09-02",
+        "release_date": "2026-09-03",
         "origin": None
     },
     "Cosmo Tales": {
@@ -416,6 +420,7 @@ GAME_DATABASE = {
         "opencritic_id": 0,
         "opencritic_slug": "moonlighter-2-the-endless-vault",
         "backup_peak": 0,
+        "release_date": "2026-09-02",
         "origin": None
     },
     "Valheim 1.0": {
