@@ -90,7 +90,8 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
     game_record.setdefault("opencritic_score", "N/A")
     game_record.setdefault("metacritic_score", "N/A")
     game_record.setdefault("price_current_eur", game_record.get("price_eur", "N/A"))
-    game_record.setdefault("price_release_eur", game_record.get("price_eur", "N/A"))
+    game_record.setdefault("price_full_eur", game_record.get("price_release_eur", game_record.get("price_eur", "N/A")))
+    game_record.setdefault("price_release_discounted_eur", game_record.get("price_eur", "N/A"))
     game_record.setdefault("discount_release_pct", game_record.get("discount_pct", 0))
     game_record.setdefault("followers_initial", "N/A")
     game_record.setdefault("followers_release", "N/A")
@@ -127,7 +128,7 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
         if parsed_dt and parsed_dt <= datetime.now():
             is_released = True
 
-    # 4. Fetch Storefront Details (Price in EUR, Release Date, & Release Discount)
+    # 4. Fetch Storefront Details (Discounted Release Price, Full Price, & Release Discount)
     if appid:
         url = f"https://store.steampowered.com/api/appdetails?appids={appid}&cc=DE&l=english"
         try:
@@ -137,7 +138,8 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
                 
                 if app_data.get("is_free"):
                     game_record["price_current_eur"] = 0.0
-                    game_record["price_release_eur"] = 0.0
+                    game_record["price_full_eur"] = 0.0
+                    game_record["price_release_discounted_eur"] = 0.0
                     game_record["discount_release_pct"] = 0
                 elif "price_overview" in app_data:
                     po = app_data["price_overview"]
@@ -145,18 +147,23 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
                     initial_price = round(po.get("initial", 0) / 100.0, 2)
                     disc_pct = po.get("discount_percent", 0)
                     
+                    full_base_price = initial_price if initial_price > 0 else final_price
+                    
                     game_record["price_current_eur"] = final_price
 
-                    # Record release price baseline
-                    if game_record.get("price_release_eur") in (None, "N/A", "—"):
-                        game_record["price_release_eur"] = initial_price if initial_price > 0 else final_price
+                    # Track base full price
+                    if game_record.get("price_full_eur") in (None, "N/A", "—"):
+                        game_record["price_full_eur"] = full_base_price
 
-                    # Lock in release discount: update freely while unreleased, freeze once released
+                    # Track launch pricing and launch discount
                     if not is_released:
                         game_record["discount_release_pct"] = disc_pct
+                        game_record["price_release_discounted_eur"] = final_price
                     else:
                         if game_record.get("discount_release_pct") in (None, "N/A", "—"):
                             game_record["discount_release_pct"] = disc_pct
+                        if game_record.get("price_release_discounted_eur") in (None, "N/A", "—"):
+                            game_record["price_release_discounted_eur"] = final_price
 
                 if not is_released:
                     rd = app_data.get("release_date", {})

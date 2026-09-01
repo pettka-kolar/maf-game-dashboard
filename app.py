@@ -16,13 +16,15 @@ st.set_page_config(page_title="Gaming Metrics Dashboard", page_icon="🎮", layo
 st.title("🎮 Real-Time Video Game Metrics Dashboard")
 st.markdown("This serverless dashboard displays metrics automatically kept current by background GitHub Action triggers.")
 
-def format_price_pair(current, release):
-    if current == 0 and release == 0:
+def format_price_pair(discounted_release, full_price):
+    if discounted_release == 0 and full_price == 0:
         return "Free"
-    if isinstance(current, (int, float)) and isinstance(release, (int, float)):
-        return f"€{current:.2f} / €{release:.2f}"
-    if isinstance(current, (int, float)):
-        return f"€{current:.2f} / €{current:.2f}"
+    if isinstance(discounted_release, (int, float)) and isinstance(full_price, (int, float)):
+        return f"€{discounted_release:.2f} / €{full_price:.2f}"
+    if isinstance(full_price, (int, float)):
+        return f"€{full_price:.2f} / €{full_price:.2f}"
+    if isinstance(discounted_release, (int, float)):
+        return f"€{discounted_release:.2f} / €{discounted_release:.2f}"
     return "—"
 
 # Read metrics snapshot data safely
@@ -40,10 +42,9 @@ else:
         
         release_date = game_config.get("release_date") or metrics.get("release_date")
         
-        price_curr = metrics.get("price_current_eur", metrics.get("price_eur"))
-        price_rel = metrics.get("price_release_eur", price_curr)
-        
-        # Pull release discount
+        # Pull release pricing: discounted release price vs full base price
+        price_full = metrics.get("price_full_eur", metrics.get("price_release_eur", metrics.get("price_eur")))
+        price_disc_rel = metrics.get("price_release_discounted_eur", price_full)
         release_discount = metrics.get("discount_release_pct", metrics.get("discount_pct", 0))
         
         rows.append({
@@ -52,7 +53,7 @@ else:
             "Tags": metrics.get("tags", "—"),
             "steam_id": steam_id,
             "Release Date": release_date,
-            "Price (EUR)": format_price_pair(price_curr, price_rel),
+            "Price (EUR)": format_price_pair(price_disc_rel, price_full),
             "Release Discount %": release_discount,
             "Followers (Initial)": metrics.get("followers_initial"),
             "Followers (Release)": metrics.get("followers_release"),
@@ -147,7 +148,7 @@ if not df.empty:
                 "Origin": st.column_config.TextColumn(width="small", help="Country of origin (CZ / SK)"),
                 "Tags": st.column_config.TextColumn(width="medium", help="Top popular user tags from Steam"),
                 "Release Date": st.column_config.TextColumn(width="small"),
-                "Price (EUR)": st.column_config.TextColumn(width="small", help="Current Price / Release Price (EUR)"),
+                "Price (EUR)": st.column_config.TextColumn(width="small", help="Discounted Release Price / Full Game Price (EUR)"),
                 "Release Discount %": st.column_config.NumberColumn(format="-%d%%", help="Official launch discount percentage"),
                 "Followers (Initial)": st.column_config.NumberColumn(format="%d", help="Follower count when first tracked"),
                 "Followers (Release)": st.column_config.NumberColumn(format="%d", help="Follower count at release date"),
