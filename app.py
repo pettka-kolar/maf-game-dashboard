@@ -16,6 +16,15 @@ st.set_page_config(page_title="Gaming Metrics Dashboard", page_icon="🎮", layo
 st.title("🎮 Real-Time Video Game Metrics Dashboard")
 st.markdown("This serverless dashboard displays metrics automatically kept current by background GitHub Action triggers.")
 
+def format_price_pair(current, release):
+    if current == 0 and release == 0:
+        return "Free"
+    if isinstance(current, (int, float)) and isinstance(release, (int, float)):
+        return f"€{current:.2f} / €{release:.2f}"
+    if isinstance(current, (int, float)):
+        return f"€{current:.2f} / €{current:.2f}"
+    return "—"
+
 # Read metrics snapshot data safely
 if not os.path.exists(METRICS_FILE):
     st.warning("Data file initializing. Run worker.py locally or activate your GitHub Workflow task.")
@@ -25,13 +34,17 @@ else:
     
     rows = []
     for game_name, metrics in raw_data.items():
-        # Look up the game configuration profile dynamically
         game_config = gd.GAME_DATABASE.get(game_name, {})
         steam_id = game_config.get("steam_id", 0)
         origin = game_config.get("origin")
         
-        # Prioritize manual date from game_database.py. If missing, fall back to metrics.json
         release_date = game_config.get("release_date") or metrics.get("release_date")
+        
+        price_curr = metrics.get("price_current_eur", metrics.get("price_eur"))
+        price_rel = metrics.get("price_release_eur", price_curr)
+        
+        # Pull release discount
+        release_discount = metrics.get("discount_release_pct", metrics.get("discount_pct", 0))
         
         rows.append({
             "Game Title": game_name,
@@ -39,8 +52,8 @@ else:
             "Tags": metrics.get("tags", "—"),
             "steam_id": steam_id,
             "Release Date": release_date,
-            "Price (EUR)": metrics.get("price_eur"),
-            "Discount %": metrics.get("discount_pct"),
+            "Price (EUR)": format_price_pair(price_curr, price_rel),
+            "Release Discount %": release_discount,
             "Followers (Initial)": metrics.get("followers_initial"),
             "Followers (Release)": metrics.get("followers_release"),
             "Followers (Current)": metrics.get("followers_current"),
@@ -55,12 +68,11 @@ else:
     df = pd.DataFrame(rows)
 
 if not df.empty:
-    # Correctly parse heterogeneous date formats seamlessly
     df["Release Date"] = pd.to_datetime(df["Release Date"], errors="coerce", format="mixed")
     df["Release Date"] = df["Release Date"].fillna(pd.to_datetime("2099-01-01"))
 
     # -------------------------------------------------------------------------
-    # INTERACTIVE DATE FILTER (Defaults to 15 days ago for episode windows)
+    # INTERACTIVE DATE FILTER
     # -------------------------------------------------------------------------
     current_time = pd.Timestamp.now().normalize()
     default_cutoff_date = (current_time - pd.Timedelta(days=15)).date()
@@ -73,16 +85,14 @@ if not df.empty:
             help="Filter to show games released on or after this date (or scheduled for future release)."
         )
 
-    # Filter by selected cutoff date
     cutoff_timestamp = pd.to_datetime(selected_cutoff)
     df = df[df["Release Date"] >= cutoff_timestamp]
 
-    # Convert datetime objects to standard ISO strings for clean output formatting
     df["Release Date"] = df["Release Date"].dt.strftime('%Y-%m-%d').replace("2099-01-01", "To be released")
 
-    # Convert all numeric data columns cleanly
+    # Numeric columns to parse
     numeric_columns = [
-        "Price (EUR)", "Discount %", 
+        "Release Discount %", 
         "Followers (Initial)", "Followers (Release)", "Followers (Current)",
         "Live CCU (Steam)", "All-Time Peak", "Steam Rating %", 
         "Total Steam Reviews", "OpenCritic Score", "Metacritic Score"
@@ -90,7 +100,6 @@ if not df.empty:
     for col in numeric_columns:
         df[col] = pd.to_numeric(df[col], errors="coerce")
 
-    # Set up combined row styling (bolding for released titles + soft blue tint for local CZ/SK titles)
     current_time_str = current_time.strftime('%Y-%m-%d')
     
     def style_rows(row):
@@ -119,10 +128,9 @@ if not df.empty:
         df_steam = df_steam.sort_values(by="Steam Rating %", ascending=False, na_position="last")
         df_steam = df_steam.drop(columns=["steam_id"])
         
-        # Explicit column ordering
         column_order = [
             "Game Title", "Origin", "Tags", "Release Date", 
-            "Price (EUR)", "Discount %",
+            "Price (EUR)", "Release Discount %",
             "Followers (Initial)", "Followers (Release)", "Followers (Current)",
             "Live CCU (Steam)", "All-Time Peak", "Steam Rating %", 
             "Total Steam Reviews", "OpenCritic Score", "Metacritic Score", "SteamDB"
@@ -139,8 +147,8 @@ if not df.empty:
                 "Origin": st.column_config.TextColumn(width="small", help="Country of origin (CZ / SK)"),
                 "Tags": st.column_config.TextColumn(width="medium", help="Top popular user tags from Steam"),
                 "Release Date": st.column_config.TextColumn(width="small"),
-                "Price (EUR)": st.column_config.NumberColumn(format="€%.2f", help="Price in EUR"),
-                "Discount %": st.column_config.NumberColumn(format="-%d%%", help="Launch / Current discount"),
+                "Price (EUR)": st.column_config.TextColumn(width="small", help="Current Price / Release Price (EUR)"),
+                "Release Discount %": st.column_config.NumberColumn(format="-%d%%", help="Official launch discount percentage"),
                 "Followers (Initial)": st.column_config.NumberColumn(format="%d", help="Follower count when first tracked"),
                 "Followers (Release)": st.column_config.NumberColumn(format="%d", help="Follower count at release date"),
                 "Followers (Current)": st.column_config.NumberColumn(format="%d", help="Current live Steam follower count"),

@@ -51,10 +51,6 @@ def save_metrics(data):
         json.dump(data, f, indent=4)
 
 def select_games_for_follower_check(database, existing_data):
-    """
-    Selects up to MAX_FOLLOWER_CHECKS_PER_RUN games to poll for followers.
-    Prioritizes missing ('N/A') data first, then oldest timestamps.
-    """
     candidates = []
     now = datetime.now()
 
@@ -67,12 +63,10 @@ def select_games_for_follower_check(database, existing_data):
         last_updated_str = record.get("followers_last_updated")
         current_followers = record.get("followers_current")
 
-        # Priority 1: Never fetched or currently 'N/A'
         if current_followers in (None, "N/A", "—") or not last_updated_str:
             candidates.append((game_name, datetime.min))
             continue
 
-        # Priority 2: Fetched, but older than TTL
         try:
             last_dt = datetime.fromisoformat(last_updated_str)
             if now - last_dt >= timedelta(hours=FOLLOWER_TTL_HOURS):
@@ -80,10 +74,8 @@ def select_games_for_follower_check(database, existing_data):
         except ValueError:
             candidates.append((game_name, datetime.min))
 
-    # Sort so oldest / unpopulated entries are first
     candidates.sort(key=lambda x: x[1])
-    selected = set(name for name, _ in candidates[:MAX_FOLLOWER_CHECKS_PER_RUN])
-    return selected
+    return set(name for name, _ in candidates[:MAX_FOLLOWER_CHECKS_PER_RUN])
 
 def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
     appid = config["steam_id"]
@@ -97,8 +89,9 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
     game_record.setdefault("total_reviews", "N/A")
     game_record.setdefault("opencritic_score", "N/A")
     game_record.setdefault("metacritic_score", "N/A")
-    game_record.setdefault("price_eur", "N/A")
-    game_record.setdefault("discount_pct", 0)
+    game_record.setdefault("price_current_eur", game_record.get("price_eur", "N/A"))
+    game_record.setdefault("price_release_eur", game_record.get("price_eur", "N/A"))
+    game_record.setdefault("discount_release_pct", game_record.get("discount_pct", 0))
     game_record.setdefault("followers_initial", "N/A")
     game_record.setdefault("followers_release", "N/A")
     game_record.setdefault("followers_current", "N/A")
@@ -134,7 +127,7 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
         if parsed_dt and parsed_dt <= datetime.now():
             is_released = True
 
-    # 4. Fetch Storefront Details (Price in EUR, Release Date, & Discount)
+    # 4. Fetch Storefront Details (Price in EUR, Release Date, & Release Discount)
     if appid:
         url = f"https://store.steampowered.com/api/appdetails?appids={appid}&cc=DE&l=english"
         try:
@@ -143,12 +136,27 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
                 app_data = res.json()[str(appid)]["data"]
                 
                 if app_data.get("is_free"):
-                    game_record["price_eur"] = 0.0
-                    game_record["discount_pct"] = 0
+                    game_record["price_current_eur"] = 0.0
+                    game_record["price_release_eur"] = 0.0
+                    game_record["discount_release_pct"] = 0
                 elif "price_overview" in app_data:
                     po = app_data["price_overview"]
-                    game_record["price_eur"] = round(po.get("final", 0) / 100.0, 2)
-                    game_record["discount_pct"] = po.get("discount_percent", 0)
+                    final_price = round(po.get("final", 0) / 100.0, 2)
+                    initial_price = round(po.get("initial", 0) / 100.0, 2)
+                    disc_pct = po.get("discount_percent", 0)
+                    
+                    game_record["price_current_eur"] = final_price
+
+                    # Record release price baseline
+                    if game_record.get("price_release_eur") in (None, "N/A", "—"):
+                        game_record["price_release_eur"] = initial_price if initial_price > 0 else final_price
+
+                    # Lock in release discount: update freely while unreleased, freeze once released
+                    if not is_released:
+                        game_record["discount_release_pct"] = disc_pct
+                    else:
+                        if game_record.get("discount_release_pct") in (None, "N/A", "—"):
+                            game_record["discount_release_pct"] = disc_pct
 
                 if not is_released:
                     rd = app_data.get("release_date", {})
@@ -162,7 +170,7 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
         except Exception:
             pass
 
-    # 5. Fetch Steam Followers (Only for games selected in this batch)
+    # 5. Fetch Steam Followers (Batch-managed)
     if appid and fetch_followers:
         followers_count = None
         xml_url = f"https://steamcommunity.com/games/{appid}/memberslistxml/?xml=1"
@@ -178,7 +186,6 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
         except Exception:
             pass
 
-        # Fallback to Community Hub HTML if XML fails
         if followers_count is None:
             hub_url = f"https://steamcommunity.com/app/{appid}"
             try:
@@ -204,7 +211,6 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
             if is_released and game_record.get("followers_release") in (None, "N/A", 0, "—"):
                 game_record["followers_release"] = followers_count
         
-        # Friendly breathing room between follower endpoints
         time.sleep(3.0)
 
     # 6. Fetch Steam Community Tags
@@ -299,7 +305,6 @@ def main():
     existing_data = load_existing_metrics()
     updated_data = {}
     
-    # Identify the batch of games scheduled for follower collection this run
     follower_targets = select_games_for_follower_check(gd.GAME_DATABASE, existing_data)
     print(f"Scheduled {len(follower_targets)} games for follower updates in this run: {list(follower_targets)}")
     
