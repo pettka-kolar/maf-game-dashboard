@@ -80,7 +80,7 @@ def select_games_for_follower_check(database, existing_data):
 def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
     appid = config["steam_id"]
     
-    # Pre-populate defaults and guarantee all keys exist
+    # Pre-populate defaults and guarantee all keys exist (legacy keys purged)
     game_record = existing_data.get(game_name, {})
     game_record.setdefault("all_time_peak", config["backup_peak"])
     game_record.setdefault("release_date", "2099-01-01")
@@ -89,10 +89,10 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
     game_record.setdefault("total_reviews", "N/A")
     game_record.setdefault("opencritic_score", "N/A")
     game_record.setdefault("metacritic_score", "N/A")
-    game_record.setdefault("price_current_eur", game_record.get("price_eur", "N/A"))
-    game_record.setdefault("price_full_eur", game_record.get("price_release_eur", game_record.get("price_eur", "N/A")))
-    game_record.setdefault("price_release_discounted_eur", game_record.get("price_eur", "N/A"))
-    game_record.setdefault("discount_release_pct", game_record.get("discount_pct", 0))
+    game_record.setdefault("price_current_eur", "N/A")
+    game_record.setdefault("price_full_eur", "N/A")
+    game_record.setdefault("price_release_discounted_eur", "N/A")
+    game_record.setdefault("discount_release_pct", 0)
     game_record.setdefault("followers_initial", "N/A")
     game_record.setdefault("followers_release", "N/A")
     game_record.setdefault("followers_current", "N/A")
@@ -128,7 +128,7 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
         if parsed_dt and parsed_dt <= datetime.now():
             is_released = True
 
-    # 4. Fetch Storefront Details (Discounted Release Price, Full MSRP, & Release Discount)
+    # 4. Fetch Storefront Details (Discounted Release Price, Full Base MSRP, & Release Discount)
     if appid:
         url = f"https://store.steampowered.com/api/appdetails?appids={appid}&cc=DE&l=english"
         try:
@@ -147,13 +147,11 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
                     initial_price = round(po.get("initial", 0) / 100.0, 2)
                     disc_pct = po.get("discount_percent", 0)
                     
-                    # Full non-discounted price is initial_price if discount exists, else final_price
                     full_base_price = initial_price if initial_price > 0 else final_price
                     
                     game_record["price_current_eur"] = final_price
                     game_record["price_full_eur"] = full_base_price
 
-                    # Track launch pricing and launch discount
                     if not is_released:
                         game_record["discount_release_pct"] = disc_pct
                         game_record["price_release_discounted_eur"] = final_price

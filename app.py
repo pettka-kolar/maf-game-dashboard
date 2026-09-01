@@ -3,7 +3,6 @@ import pandas as pd
 import json
 import os
 import importlib
-from datetime import datetime, timedelta
 
 # Cross-reference database definitions to identify console vs steam tracks natively
 import game_database as gd
@@ -42,10 +41,10 @@ else:
         
         release_date = game_config.get("release_date") or metrics.get("release_date")
         
-        # Pull release pricing: discounted release price vs full undiscounted base price
-        price_full = metrics.get("price_full_eur", metrics.get("price_release_eur", metrics.get("price_eur")))
+        # Cleaned pricing extraction
+        price_full = metrics.get("price_full_eur")
         price_disc_rel = metrics.get("price_release_discounted_eur", price_full)
-        release_discount = metrics.get("discount_release_pct", metrics.get("discount_pct", 0))
+        release_discount = metrics.get("discount_release_pct", 0)
         
         rows.append({
             "Game Title": game_name,
