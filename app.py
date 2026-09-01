@@ -3,6 +3,7 @@ import pandas as pd
 import json
 import os
 import importlib
+from datetime import datetime, timedelta
 
 # Cross-reference database definitions to identify console vs steam tracks natively
 import game_database as gd
@@ -58,10 +59,23 @@ if not df.empty:
     df["Release Date"] = pd.to_datetime(df["Release Date"], errors="coerce", format="mixed")
     df["Release Date"] = df["Release Date"].fillna(pd.to_datetime("2099-01-01"))
 
-    # Dynamic lookback window matching requirements
+    # -------------------------------------------------------------------------
+    # INTERACTIVE DATE FILTER (Defaults to 15 days ago for episode windows)
+    # -------------------------------------------------------------------------
     current_time = pd.Timestamp.now().normalize()
-    fifteen_days_ago = current_time - pd.Timedelta(days=15)
-    df = df[df["Release Date"] >= fifteen_days_ago]
+    default_cutoff_date = (current_time - pd.Timedelta(days=15)).date()
+
+    col_filter, _ = st.columns([1, 3])
+    with col_filter:
+        selected_cutoff = st.date_input(
+            "📅 Select Release Cutoff Date:",
+            value=default_cutoff_date,
+            help="Filter to show games released on or after this date (or scheduled for future release)."
+        )
+
+    # Filter by selected cutoff date
+    cutoff_timestamp = pd.to_datetime(selected_cutoff)
+    df = df[df["Release Date"] >= cutoff_timestamp]
 
     # Convert datetime objects to standard ISO strings for clean output formatting
     df["Release Date"] = df["Release Date"].dt.strftime('%Y-%m-%d').replace("2099-01-01", "To be released")
@@ -143,7 +157,7 @@ if not df.empty:
             height=dynamic_height_steam
         )
     else:
-        st.info("No Steam releases currently within the tracking window viewport.")
+        st.info("No Steam releases currently within the selected cutoff window.")
 
     st.markdown("---")
 
@@ -174,6 +188,6 @@ if not df.empty:
             height=dynamic_height_console
         )
     else:
-        st.info("No Console-first exclusives currently within the tracking window viewport.")
+        st.info("No Console-first exclusives currently within the selected cutoff window.")
 
     st.caption("Ecosystem Status: Active. Public presentation data synchronized.")
