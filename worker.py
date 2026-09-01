@@ -9,9 +9,9 @@ import game_database as gd
 
 METRICS_FILE = "metrics.json"
 TIMEOUT = 12
-DELAY_BETWEEN_GAMES = 2.5
+DELAY_BETWEEN_GAMES = 2.0
 
-# Initialize persistent session to retain cookies and avoid 429 throttling
+# Initialize persistent session without static session IDs that trigger bot filters
 session = requests.Session()
 session.headers.update({
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
@@ -21,8 +21,7 @@ session.headers.update({
 session.cookies.update({
     "wants_mature_content": "1",
     "lastagecheckage": "1-1-1990",
-    "birthtime": "631180801",
-    "sessionid": "0987d4e177888ccac3dc51cc"
+    "birthtime": "631180801"
 })
 
 def parse_date(date_str):
@@ -124,7 +123,7 @@ def fetch_game_data(game_name, config, existing_data):
         except Exception:
             pass
 
-    # 5. Fetch Steam Followers (With 429 Retry & XML + Community Hub Fallbacks)
+    # 5. Fetch Steam Followers (With Exponential 429 Cooldown & Fail-safe Preservation)
     if appid:
         followers_count = None
         xml_url = f"https://steamcommunity.com/games/{appid}/memberslistxml/?xml=1"
@@ -138,12 +137,14 @@ def fetch_game_data(game_name, config, existing_data):
                         followers_count = int(match.group(1).replace(",", ""))
                         break
                 elif res.status_code == 429:
-                    print(f"  [!] Steam 429 rate limit encountered for {game_name}, backing off...")
-                    time.sleep(4.0)
+                    # Steam 429 cooldown requires a longer wait to clear the burst token bucket
+                    wait_time = 12 if attempt == 0 else 20
+                    print(f"  [!] Steam rate limited on {game_name}. Cooling down for {wait_time}s...")
+                    time.sleep(wait_time)
             except Exception:
                 pass
 
-        # Strategy B: Community Hub HTML Fallback if XML is throttled
+        # Strategy B: Community Hub HTML Fallback
         if followers_count is None:
             hub_url = f"https://steamcommunity.com/app/{appid}"
             try:
@@ -158,14 +159,16 @@ def fetch_game_data(game_name, config, existing_data):
             except Exception:
                 pass
 
-        # Record follower counts
+        # Record follower counts without clobbering existing valid data on network failure
         if followers_count is not None:
             game_record["followers_current"] = followers_count
             print(f"  -> {game_name} Followers: {followers_count}")
             
+            # Initial milestone: set once on first observation
             if game_record.get("followers_initial") in (None, "N/A", 0, "—"):
                 game_record["followers_initial"] = followers_count
                 
+            # Release milestone: lock in permanently once the game has launched
             if is_released and game_record.get("followers_release") in (None, "N/A", 0, "—"):
                 game_record["followers_release"] = followers_count
 
@@ -210,7 +213,7 @@ def fetch_game_data(game_name, config, existing_data):
 
         for target_url in urls_to_try:
             try:
-                res = session.get(target_url, timeout=TIMEOUT)
+                res = requests.get(target_url, headers=session.headers, timeout=TIMEOUT)
                 if res.status_code == 200:
                     soup = BeautifulSoup(res.text, "html.parser")
                     orb_elem = soup.find(class_=re.compile(r"inner-orb|score-orb|score-number"))
@@ -240,7 +243,7 @@ def fetch_game_data(game_name, config, existing_data):
     if config.get("metacritic_slug"):
         url = f"https://www.metacritic.com/game/{config['metacritic_slug']}/"
         try:
-            res = session.get(url, timeout=TIMEOUT)
+            res = requests.get(url, headers=session.headers, timeout=TIMEOUT)
             if res.status_code == 200:
                 soup = BeautifulSoup(res.text, "html.parser")
                 for tag in soup.find_all("script", type="application/ld+json"):
