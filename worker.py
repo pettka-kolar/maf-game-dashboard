@@ -8,14 +8,22 @@ from bs4 import BeautifulSoup
 import game_database as gd
 
 METRICS_FILE = "metrics.json"
-TIMEOUT = 10
-DELAY_BETWEEN_GAMES = 2
+TIMEOUT = 12
+DELAY_BETWEEN_GAMES = 2.5
 
-BASE_HEADERS = {
+# Initialize persistent session to retain cookies and avoid 429 throttling
+session = requests.Session()
+session.headers.update({
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9"
-}
+})
+session.cookies.update({
+    "wants_mature_content": "1",
+    "lastagecheckage": "1-1-1990",
+    "birthtime": "631180801",
+    "sessionid": "0987d4e177888ccac3dc51cc"
+})
 
 def parse_date(date_str):
     if not date_str or date_str == "2099-01-01":
@@ -43,7 +51,7 @@ def save_metrics(data):
 def fetch_game_data(game_name, config, existing_data):
     appid = config["steam_id"]
     
-    # Pre-populate defaults and guarantee all keys exist even for existing records
+    # Pre-populate defaults and guarantee all keys exist
     game_record = existing_data.get(game_name, {})
     game_record.setdefault("all_time_peak", config["backup_peak"])
     game_record.setdefault("release_date", "2099-01-01")
@@ -64,7 +72,7 @@ def fetch_game_data(game_name, config, existing_data):
     if appid:
         url = f"https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid={appid}"
         try:
-            res = requests.get(url, headers=BASE_HEADERS, timeout=TIMEOUT)
+            res = session.get(url, timeout=TIMEOUT)
             if res.status_code == 200:
                 live_ccu = res.json().get("response", {}).get("player_count", "N/A")
         except Exception:
@@ -92,11 +100,10 @@ def fetch_game_data(game_name, config, existing_data):
     if appid:
         url = f"https://store.steampowered.com/api/appdetails?appids={appid}&cc=DE&l=english"
         try:
-            res = requests.get(url, headers=BASE_HEADERS, timeout=TIMEOUT)
+            res = session.get(url, timeout=TIMEOUT)
             if res.status_code == 200 and res.json().get(str(appid), {}).get("success"):
                 app_data = res.json()[str(appid)]["data"]
                 
-                # Parse Pricing & Discounts
                 if app_data.get("is_free"):
                     game_record["price_eur"] = 0.0
                     game_record["discount_pct"] = 0
@@ -105,7 +112,6 @@ def fetch_game_data(game_name, config, existing_data):
                     game_record["price_eur"] = round(po.get("final", 0) / 100.0, 2)
                     game_record["discount_pct"] = po.get("discount_percent", 0)
 
-                # Update release date if unreleased
                 if not is_released:
                     rd = app_data.get("release_date", {})
                     if rd.get("coming_soon"):
@@ -118,26 +124,30 @@ def fetch_game_data(game_name, config, existing_data):
         except Exception:
             pass
 
-    # 5. Fetch Steam Followers (Dual-Strategy XML & Hub HTML Parser)
+    # 5. Fetch Steam Followers (With 429 Retry & XML + Community Hub Fallbacks)
     if appid:
         followers_count = None
-        
-        # Strategy A: Community Group XML Endpoint (strips commas)
         xml_url = f"https://steamcommunity.com/games/{appid}/memberslistxml/?xml=1"
-        try:
-            res = requests.get(xml_url, headers=BASE_HEADERS, timeout=TIMEOUT)
-            if res.status_code == 200:
-                match = re.search(r'<memberCount>([0-9,]+)</memberCount>', res.text)
-                if match:
-                    followers_count = int(match.group(1).replace(",", ""))
-        except Exception:
-            pass
+        
+        for attempt in range(2):
+            try:
+                res = session.get(xml_url, timeout=TIMEOUT)
+                if res.status_code == 200:
+                    match = re.search(r'<memberCount>\s*([0-9,]+)\s*</memberCount>', res.text)
+                    if match:
+                        followers_count = int(match.group(1).replace(",", ""))
+                        break
+                elif res.status_code == 429:
+                    print(f"  [!] Steam 429 rate limit encountered for {game_name}, backing off...")
+                    time.sleep(4.0)
+            except Exception:
+                pass
 
-        # Strategy B: Community Hub HTML Fallback
+        # Strategy B: Community Hub HTML Fallback if XML is throttled
         if followers_count is None:
             hub_url = f"https://steamcommunity.com/app/{appid}"
             try:
-                res = requests.get(hub_url, headers=BASE_HEADERS, timeout=TIMEOUT)
+                res = session.get(hub_url, timeout=TIMEOUT)
                 if res.status_code == 200:
                     soup = BeautifulSoup(res.text, "html.parser")
                     elem = soup.find(class_=re.compile(r"apphub_NumInGroup|apphub_NumMembers"))
@@ -148,33 +158,22 @@ def fetch_game_data(game_name, config, existing_data):
             except Exception:
                 pass
 
-        # Record follower milestones
+        # Record follower counts
         if followers_count is not None:
             game_record["followers_current"] = followers_count
+            print(f"  -> {game_name} Followers: {followers_count}")
             
-            # Initial tracker: store first-seen baseline
             if game_record.get("followers_initial") in (None, "N/A", 0, "—"):
                 game_record["followers_initial"] = followers_count
                 
-            # Release tracker: lock in count if title is currently released
             if is_released and game_record.get("followers_release") in (None, "N/A", 0, "—"):
                 game_record["followers_release"] = followers_count
 
     # 6. Fetch Steam Community Tags
     if appid and game_record.get("tags", "—") in ("—", "N/A", ""):
         url = f"https://store.steampowered.com/app/{appid}/"
-        steam_age_bypass_cookies = {
-            "wants_mature_content": "1",
-            "lastagecheckage": "1-1-1990",
-            "birthtime": "631180801"
-        }
         try:
-            res = requests.get(
-                url, 
-                headers=BASE_HEADERS, 
-                cookies=steam_age_bypass_cookies, 
-                timeout=TIMEOUT
-            )
+            res = session.get(url, timeout=TIMEOUT)
             if res.status_code == 200:
                 soup = BeautifulSoup(res.text, "html.parser")
                 tag_elements = soup.find_all("a", class_="app_tag")
@@ -188,7 +187,7 @@ def fetch_game_data(game_name, config, existing_data):
     if appid:
         url = f"https://store.steampowered.com/appreviews/{appid}?json=1&language=all&purchase_type=all"
         try:
-            res = requests.get(url, headers=BASE_HEADERS, timeout=TIMEOUT)
+            res = session.get(url, timeout=TIMEOUT)
             if res.status_code == 200:
                 summary = res.json().get("query_summary", {})
                 tot = summary.get("total_reviews", 0)
@@ -211,7 +210,7 @@ def fetch_game_data(game_name, config, existing_data):
 
         for target_url in urls_to_try:
             try:
-                res = requests.get(target_url, headers=BASE_HEADERS, timeout=TIMEOUT)
+                res = session.get(target_url, timeout=TIMEOUT)
                 if res.status_code == 200:
                     soup = BeautifulSoup(res.text, "html.parser")
                     orb_elem = soup.find(class_=re.compile(r"inner-orb|score-orb|score-number"))
@@ -241,7 +240,7 @@ def fetch_game_data(game_name, config, existing_data):
     if config.get("metacritic_slug"):
         url = f"https://www.metacritic.com/game/{config['metacritic_slug']}/"
         try:
-            res = requests.get(url, headers=BASE_HEADERS, timeout=TIMEOUT)
+            res = session.get(url, timeout=TIMEOUT)
             if res.status_code == 200:
                 soup = BeautifulSoup(res.text, "html.parser")
                 for tag in soup.find_all("script", type="application/ld+json"):
