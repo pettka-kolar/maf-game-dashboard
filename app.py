@@ -129,11 +129,11 @@ if not df.empty:
         df_steam = df_steam.drop(columns=["steam_id"])
         
         column_order = [
-            "Game Title", "Origin", "Tags", "Release Date", 
-            "Price (EUR)", "Release Discount %",
-            "Followers (Initial)", "Followers (Release)", "Followers (Current)",
+            "Game Title", "Origin", "Tags", "Release Date",
             "Live CCU (Steam)", "All-Time Peak", "Steam Rating %", 
-            "Total Steam Reviews", "OpenCritic Score", "Metacritic Score", "SteamDB"
+            "Total Steam Reviews", "OpenCritic Score", "Metacritic Score", "SteamDB",
+            "Price (EUR)", "Release Discount %",
+            "Followers (Initial)", "Followers (Release)", "Followers (Current)"
         ]
         df_steam = df_steam[column_order]
         
