@@ -348,7 +348,7 @@ GAME_DATABASE = {
         "opencritic_id": 0,
         "opencritic_slug": "the-blood-of-dawnwalker",
         "backup_peak": 0,
-        "release_date": "2026-09-03",
+        "release_date": "2026-09-02",
         "origin": None
     },
     "Cosmo Tales": {
@@ -450,6 +450,15 @@ GAME_DATABASE = {
         "release_date": "2026-09-11",
         "origin": None
     },
+    "Aniimo": {
+        "steam_id": 4126040,
+        "metacritic_slug": "pc/aniimo",
+        "opencritic_id": 0,
+        "opencritic_slug": "aniimo",
+        "backup_peak": 0,
+        "release_date": "2026-09-15",
+        "origin": None
+    },
     "Active Matter": {
         "steam_id": 2887580,
         "metacritic_slug": "pc/active-matter",
@@ -462,10 +471,91 @@ GAME_DATABASE = {
     "Marvel's Wolverine": {
         "steam_id": 0,
         "metacritic_slug": "playstation-5/marvels-wolverine",
-        "opencritic_id": 0,
+        "opencritic_id": 12318,
         "opencritic_slug": "marvels-wolverine",
         "backup_peak": 0,
         "release_date": "2026-09-15",
         "origin": None
+    },
+    "Trails in the Sky: 2nd Chapter": {
+        "steam_id": 4225980,
+        "metacritic_slug": "pc/trails-in-the-sky-2nd-chapter",
+        "opencritic_id": 0,
+        "opencritic_slug": "trails-in-the-sky-2nd-chapter",
+        "backup_peak": 0,
+        "release_date": "2026-09-17",
+        "origin": None
+    },
+    "Flamecraft": {
+        "steam_id": 3201730,
+        "metacritic_slug": "pc/flamecraft",
+        "opencritic_id": 0,
+        "opencritic_slug": "flamecraft",
+        "backup_peak": 0,
+        "release_date": "2026-09-17",
+        "origin": None
+    },
+    "Fire Emblem: Fortune's Weave": {
+        "steam_id": 0,
+        "metacritic_slug": "nintendo-switch-2/fire-emblem-fortunes-weave",
+        "opencritic_id": 0,
+        "opencritic_slug": "fire-emblem-fortunes-weave",
+        "backup_peak": 0,
+        "release_date": "2026-09-17",
+        "origin": None
+    },
+    "The Guild 1 Remaster - Europa 1410": {
+        "steam_id": 2977260,
+        "metacritic_slug": "pc/the-guild-1-remake-europa-1410",
+        "opencritic_id": 0,
+        "opencritic_slug": "the-guild-1-remake-europa-1410",
+        "backup_peak": 0,
+        "release_date": "2026-09-17",
+        "origin": "CZ"
+    },
+    "Silent Hill: Townfall": {
+        "steam_id": 1636440,
+        "metacritic_slug": "pc/silent-hill-townfall",
+        "opencritic_id": 13915,
+        "opencritic_slug": "silent-hill-townfall",
+        "backup_peak": 0,
+        "release_date": "2026-09-24",
+        "origin": None
+    },
+    "Control Resonant": {
+        "steam_id": 3669870,
+        "metacritic_slug": "pc/control-resonant",
+        "opencritic_id": 0,
+        "opencritic_slug": "control-resonant",
+        "backup_peak": 0,
+        "release_date": "2026-09-24",
+        "origin": None
+    },
+    "Minecraft Dungeons 2": {
+        "steam_id": 1912410,
+        "metacritic_slug": "pc/minecraft-dungeons-ii",
+        "opencritic_id": 0,
+        "opencritic_slug": "minecraft-dungeons-ii",
+        "backup_peak": 0,
+        "release_date": "2026-09-29",
+        "origin": None
+    },
+    "The Witcher 3: Wild Hunt Remastered": {
+        "steam_id": 292030,
+        "metacritic_slug": "pc/the-witcher-3-wild-hunt-complete-edition",
+        "opencritic_id": 14006,
+        "opencritic_slug": "the-witcher-3-wild-hunt-complete-edition",
+        "backup_peak": 103329,
+        "release_date": "2022-12-14",
+        "origin": None
+    },
+    "Way of the Hunter 2": {
+        "steam_id": 2543830,
+        "metacritic_slug": "pc/way-of-the-hunter-2",
+        "opencritic_id": 0,
+        "opencritic_slug": "way-of-the-hunter-2",
+        "backup_peak": 0,
+        "release_date": "2026-09-29",
+        "origin": "SK"
     }
 }
