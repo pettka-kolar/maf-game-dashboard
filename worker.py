@@ -177,46 +177,46 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
         except Exception:
             pass
 
-    # 5. Fetch Steam Followers (With Failure Backoff to Prevent Queue Starvation)
-    if appid and fetch_followers:
+    # 5. Fetch Steam Followers (HTML Hub primary, XML fallback, immediate circuit breaker)
+    if appid and fetch_followers and not getattr(session, "follower_rate_limited", False):
         followers_count = None
-        rate_limited = False
-        xml_url = f"https://steamcommunity.com/games/{appid}/memberslistxml/?xml=1"
         
+        # Strategy A: Community Hub HTML (much less prone to 429 than XML)
+        hub_url = f"https://steamcommunity.com/app/{appid}"
         try:
-            res = session.get(xml_url, timeout=TIMEOUT)
+            res = session.get(hub_url, timeout=TIMEOUT)
             if res.status_code == 200:
-                match = re.search(r'<memberCount>\s*([0-9,]+)\s*</memberCount>', res.text)
-                if match:
-                    followers_count = int(match.group(1).replace(",", ""))
+                soup = BeautifulSoup(res.text, "html.parser")
+                elem = soup.find(class_=re.compile(r"apphub_NumInGroup|apphub_NumMembers"))
+                if elem:
+                    match = re.search(r'([0-9,]+)', elem.get_text())
+                    if match:
+                        followers_count = int(match.group(1).replace(",", ""))
             elif res.status_code == 429:
-                rate_limited = True
-                print(f"  [!] Steam 429 on {game_name}. Cooling down for 20s...")
-                time.sleep(20.0)
+                print(f"  [!] Steam Community 429 encountered on {game_name}. Halting follower checks for this run.")
+                session.follower_rate_limited = True
         except Exception:
             pass
 
-        # Strategy B: Community Hub HTML Fallback (skipped if 429 triggered)
-        if followers_count is None and not rate_limited:
-            hub_url = f"https://steamcommunity.com/app/{appid}"
+        # Strategy B: XML Fallback (only if not 429 rate-limited)
+        if followers_count is None and not getattr(session, "follower_rate_limited", False):
+            xml_url = f"https://steamcommunity.com/games/{appid}/memberslistxml/?xml=1"
             try:
-                res = session.get(hub_url, timeout=TIMEOUT)
+                res = session.get(xml_url, timeout=TIMEOUT)
                 if res.status_code == 200:
-                    soup = BeautifulSoup(res.text, "html.parser")
-                    elem = soup.find(class_=re.compile(r"apphub_NumInGroup|apphub_NumMembers"))
-                    if elem:
-                        match = re.search(r'([0-9,]+)', elem.get_text())
-                        if match:
-                            followers_count = int(match.group(1).replace(",", ""))
+                    match = re.search(r'<memberCount>\s*([0-9,]+)\s*</memberCount>', res.text)
+                    if match:
+                        followers_count = int(match.group(1).replace(",", ""))
                 elif res.status_code == 429:
-                    print(f"  [!] Steam 429 on {game_name} Hub. Cooling down for 20s...")
-                    time.sleep(20.0)
+                    print(f"  [!] Steam XML 429 on {game_name}. Halting follower checks for this run.")
+                    session.follower_rate_limited = True
             except Exception:
                 pass
 
+        now_str = datetime.now().isoformat()
         if followers_count is not None:
             game_record["followers_current"] = followers_count
-            game_record["followers_last_updated"] = datetime.now().isoformat()
+            game_record["followers_last_updated"] = now_str
             print(f"  -> [Followers Updated] {game_name}: {followers_count:,}")
             
             if game_record.get("followers_initial") in (None, "N/A", 0, "—"):
@@ -225,13 +225,11 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
             if is_released and game_record.get("followers_release") in (None, "N/A", 0, "—"):
                 game_record["followers_release"] = followers_count
         else:
-            # Mark attempt timestamp with a 2-hour backoff so other titles can be processed
-            now = datetime.now()
-            backoff_dt = now - timedelta(hours=FOLLOWER_TTL_HOURS - RETRY_BACKOFF_HOURS)
-            game_record["followers_last_updated"] = backoff_dt.isoformat()
-            print(f"  [!] Follower check failed for {game_name}. Backing off for {RETRY_BACKOFF_HOURS}h.")
+            # Set timestamp to now so it respects the 2h RETRY_BACKOFF_HOURS window
+            game_record["followers_last_updated"] = now_str
+            print(f"  [!] Follower check failed for {game_name}. Backing off.")
         
-        time.sleep(3.5)
+        time.sleep(3.0)
 
     # 6. Fetch Steam Community Tags
     if appid and game_record.get("tags", "—") in ("—", "N/A", ""):
