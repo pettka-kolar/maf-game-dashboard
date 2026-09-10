@@ -13,7 +13,8 @@ DELAY_BETWEEN_GAMES = 1.5
 
 # Follower Batch Settings
 MAX_FOLLOWER_CHECKS_PER_RUN = 8  # Safe budget per execution run
-FOLLOWER_TTL_HOURS = 20          # Re-fetch after 20 hours
+FOLLOWER_TTL_HOURS = 20          # Normal refresh cycle (20 hours)
+RETRY_BACKOFF_HOURS = 2          # Failed attempts back off for 2 hours
 
 session = requests.Session()
 session.headers.update({
@@ -63,24 +64,27 @@ def select_games_for_follower_check(database, existing_data):
         last_updated_str = record.get("followers_last_updated")
         current_followers = record.get("followers_current")
 
-        if current_followers in (None, "N/A", "—") or not last_updated_str:
+        # Unpopulated games with no attempt history get top priority
+        if not last_updated_str:
             candidates.append((game_name, datetime.min))
             continue
 
         try:
             last_dt = datetime.fromisoformat(last_updated_str)
-            if now - last_dt >= timedelta(hours=FOLLOWER_TTL_HOURS):
+            # If current followers is missing, allow retry after short backoff (2h)
+            ttl = RETRY_BACKOFF_HOURS if current_followers in (None, "N/A", "—") else FOLLOWER_TTL_HOURS
+            if now - last_dt >= timedelta(hours=ttl):
                 candidates.append((game_name, last_dt))
         except ValueError:
             candidates.append((game_name, datetime.min))
 
+    # Sort so oldest / unattempted records are checked first
     candidates.sort(key=lambda x: x[1])
     return set(name for name, _ in candidates[:MAX_FOLLOWER_CHECKS_PER_RUN])
 
 def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
     appid = config["steam_id"]
     
-    # Pre-populate defaults and guarantee all keys exist (legacy keys purged)
     game_record = existing_data.get(game_name, {})
     game_record.setdefault("all_time_peak", config["backup_peak"])
     game_record.setdefault("release_date", "2099-01-01")
@@ -128,7 +132,7 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
         if parsed_dt and parsed_dt <= datetime.now():
             is_released = True
 
-    # 4. Fetch Storefront Details (Discounted Release Price, Full Base MSRP, & Release Discount)
+    # 4. Fetch Storefront Details
     if appid:
         url = f"https://store.steampowered.com/api/appdetails?appids={appid}&cc=DE&l=english"
         try:
@@ -173,9 +177,10 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
         except Exception:
             pass
 
-    # 5. Fetch Steam Followers (Batch-managed)
+    # 5. Fetch Steam Followers (With Failure Backoff to Prevent Queue Starvation)
     if appid and fetch_followers:
         followers_count = None
+        rate_limited = False
         xml_url = f"https://steamcommunity.com/games/{appid}/memberslistxml/?xml=1"
         
         try:
@@ -185,11 +190,14 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
                 if match:
                     followers_count = int(match.group(1).replace(",", ""))
             elif res.status_code == 429:
-                print(f"  [!] Rate limited on followers for {game_name}. Will retry next scheduled run.")
+                rate_limited = True
+                print(f"  [!] Steam 429 on {game_name}. Cooling down for 20s...")
+                time.sleep(20.0)
         except Exception:
             pass
 
-        if followers_count is None:
+        # Strategy B: Community Hub HTML Fallback (skipped if 429 triggered)
+        if followers_count is None and not rate_limited:
             hub_url = f"https://steamcommunity.com/app/{appid}"
             try:
                 res = session.get(hub_url, timeout=TIMEOUT)
@@ -200,6 +208,9 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
                         match = re.search(r'([0-9,]+)', elem.get_text())
                         if match:
                             followers_count = int(match.group(1).replace(",", ""))
+                elif res.status_code == 429:
+                    print(f"  [!] Steam 429 on {game_name} Hub. Cooling down for 20s...")
+                    time.sleep(20.0)
             except Exception:
                 pass
 
@@ -213,8 +224,14 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
                 
             if is_released and game_record.get("followers_release") in (None, "N/A", 0, "—"):
                 game_record["followers_release"] = followers_count
+        else:
+            # Mark attempt timestamp with a 2-hour backoff so other titles can be processed
+            now = datetime.now()
+            backoff_dt = now - timedelta(hours=FOLLOWER_TTL_HOURS - RETRY_BACKOFF_HOURS)
+            game_record["followers_last_updated"] = backoff_dt.isoformat()
+            print(f"  [!] Follower check failed for {game_name}. Backing off for {RETRY_BACKOFF_HOURS}h.")
         
-        time.sleep(3.0)
+        time.sleep(3.5)
 
     # 6. Fetch Steam Community Tags
     if appid and game_record.get("tags", "—") in ("—", "N/A", ""):
