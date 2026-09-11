@@ -3,18 +3,13 @@ import time
 import requests
 import os
 import re
-from datetime import datetime, timedelta
+from datetime import datetime
 from bs4 import BeautifulSoup
 import game_database as gd
 
 METRICS_FILE = "metrics.json"
 TIMEOUT = 12
 DELAY_BETWEEN_GAMES = 1.5
-
-# Follower Batch Settings
-MAX_FOLLOWER_CHECKS_PER_RUN = 8  # Safe budget per execution run
-FOLLOWER_TTL_HOURS = 20          # Normal refresh cycle (20 hours)
-RETRY_BACKOFF_HOURS = 2          # Failed attempts back off for 2 hours
 
 session = requests.Session()
 session.headers.update({
@@ -51,40 +46,10 @@ def save_metrics(data):
     with open(METRICS_FILE, "w") as f:
         json.dump(data, f, indent=4)
 
-def select_games_for_follower_check(database, existing_data):
-    candidates = []
-    now = datetime.now()
-
-    for game_name, config in database.items():
-        appid = config.get("steam_id", 0)
-        if not appid:
-            continue
-
-        record = existing_data.get(game_name, {})
-        last_updated_str = record.get("followers_last_updated")
-        current_followers = record.get("followers_current")
-
-        # Unpopulated games with no attempt history get top priority
-        if not last_updated_str:
-            candidates.append((game_name, datetime.min))
-            continue
-
-        try:
-            last_dt = datetime.fromisoformat(last_updated_str)
-            # If current followers is missing, allow retry after short backoff (2h)
-            ttl = RETRY_BACKOFF_HOURS if current_followers in (None, "N/A", "—") else FOLLOWER_TTL_HOURS
-            if now - last_dt >= timedelta(hours=ttl):
-                candidates.append((game_name, last_dt))
-        except ValueError:
-            candidates.append((game_name, datetime.min))
-
-    # Sort so oldest / unattempted records are checked first
-    candidates.sort(key=lambda x: x[1])
-    return set(name for name, _ in candidates[:MAX_FOLLOWER_CHECKS_PER_RUN])
-
-def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
+def fetch_game_data(game_name, config, existing_data):
     appid = config["steam_id"]
     
+    # Pre-populate defaults and retain previous state without follower tracking
     game_record = existing_data.get(game_name, {})
     game_record.setdefault("all_time_peak", config["backup_peak"])
     game_record.setdefault("release_date", "2099-01-01")
@@ -97,11 +62,11 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
     game_record.setdefault("price_full_eur", "N/A")
     game_record.setdefault("price_release_discounted_eur", "N/A")
     game_record.setdefault("discount_release_pct", 0)
-    game_record.setdefault("followers_initial", "N/A")
-    game_record.setdefault("followers_release", "N/A")
-    game_record.setdefault("followers_current", "N/A")
-    game_record.setdefault("followers_last_updated", None)
     game_record.setdefault("tags", "—")
+
+    # Purge any legacy follower keys that might still reside in cached records
+    for key in ("followers_initial", "followers_release", "followers_current", "followers_last_updated"):
+        game_record.pop(key, None)
 
     # 1. Fetch Live CCU
     live_ccu = "N/A"
@@ -132,7 +97,7 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
         if parsed_dt and parsed_dt <= datetime.now():
             is_released = True
 
-    # 4. Fetch Storefront Details
+    # 4. Fetch Storefront Details (Price in EUR, Base Full Price, & Release Discount)
     if appid:
         url = f"https://store.steampowered.com/api/appdetails?appids={appid}&cc=DE&l=english"
         try:
@@ -177,61 +142,7 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
         except Exception:
             pass
 
-    # 5. Fetch Steam Followers (HTML Hub primary, XML fallback, immediate circuit breaker)
-    if appid and fetch_followers and not getattr(session, "follower_rate_limited", False):
-        followers_count = None
-        
-        # Strategy A: Community Hub HTML (much less prone to 429 than XML)
-        hub_url = f"https://steamcommunity.com/app/{appid}"
-        try:
-            res = session.get(hub_url, timeout=TIMEOUT)
-            if res.status_code == 200:
-                soup = BeautifulSoup(res.text, "html.parser")
-                elem = soup.find(class_=re.compile(r"apphub_NumInGroup|apphub_NumMembers"))
-                if elem:
-                    match = re.search(r'([0-9,]+)', elem.get_text())
-                    if match:
-                        followers_count = int(match.group(1).replace(",", ""))
-            elif res.status_code == 429:
-                print(f"  [!] Steam Community 429 encountered on {game_name}. Halting follower checks for this run.")
-                session.follower_rate_limited = True
-        except Exception:
-            pass
-
-        # Strategy B: XML Fallback (only if not 429 rate-limited)
-        if followers_count is None and not getattr(session, "follower_rate_limited", False):
-            xml_url = f"https://steamcommunity.com/games/{appid}/memberslistxml/?xml=1"
-            try:
-                res = session.get(xml_url, timeout=TIMEOUT)
-                if res.status_code == 200:
-                    match = re.search(r'<memberCount>\s*([0-9,]+)\s*</memberCount>', res.text)
-                    if match:
-                        followers_count = int(match.group(1).replace(",", ""))
-                elif res.status_code == 429:
-                    print(f"  [!] Steam XML 429 on {game_name}. Halting follower checks for this run.")
-                    session.follower_rate_limited = True
-            except Exception:
-                pass
-
-        now_str = datetime.now().isoformat()
-        if followers_count is not None:
-            game_record["followers_current"] = followers_count
-            game_record["followers_last_updated"] = now_str
-            print(f"  -> [Followers Updated] {game_name}: {followers_count:,}")
-            
-            if game_record.get("followers_initial") in (None, "N/A", 0, "—"):
-                game_record["followers_initial"] = followers_count
-                
-            if is_released and game_record.get("followers_release") in (None, "N/A", 0, "—"):
-                game_record["followers_release"] = followers_count
-        else:
-            # Set timestamp to now so it respects the 2h RETRY_BACKOFF_HOURS window
-            game_record["followers_last_updated"] = now_str
-            print(f"  [!] Follower check failed for {game_name}. Backing off.")
-        
-        time.sleep(3.0)
-
-    # 6. Fetch Steam Community Tags
+    # 5. Fetch Steam Community Tags
     if appid and game_record.get("tags", "—") in ("—", "N/A", ""):
         url = f"https://store.steampowered.com/app/{appid}/"
         try:
@@ -245,7 +156,7 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
         except Exception:
             pass
 
-    # 7. Fetch Steam Storefront Reviews
+    # 6. Fetch Steam Storefront Reviews
     if appid:
         url = f"https://store.steampowered.com/appreviews/{appid}?json=1&language=all&purchase_type=all"
         try:
@@ -260,7 +171,7 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
         except Exception:
             pass
 
-    # 8. Fetch OpenCritic Scores
+    # 7. Fetch OpenCritic Scores
     oc_id = config.get("opencritic_id")
     oc_slug = config.get("opencritic_slug")
     if oc_id and oc_id != 0:
@@ -298,7 +209,7 @@ def fetch_game_data(game_name, config, existing_data, fetch_followers=False):
         if score_val and score_val > 0:
             game_record["opencritic_score"] = score_val
 
-    # 9. Fetch Metacritic Scores
+    # 8. Fetch Metacritic Scores
     if config.get("metacritic_slug"):
         url = f"https://www.metacritic.com/game/{config['metacritic_slug']}/"
         try:
@@ -323,18 +234,9 @@ def main():
     existing_data = load_existing_metrics()
     updated_data = {}
     
-    follower_targets = select_games_for_follower_check(gd.GAME_DATABASE, existing_data)
-    print(f"Scheduled {len(follower_targets)} games for follower updates in this run: {list(follower_targets)}")
-    
     for game_name, config in gd.GAME_DATABASE.items():
         print(f"Polling update cycle for {game_name}...")
-        should_check_followers = game_name in follower_targets
-        updated_data[game_name] = fetch_game_data(
-            game_name, 
-            config, 
-            existing_data, 
-            fetch_followers=should_check_followers
-        )
+        updated_data[game_name] = fetch_game_data(game_name, config, existing_data)
         time.sleep(DELAY_BETWEEN_GAMES)
         
     save_metrics(updated_data)

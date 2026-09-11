@@ -41,7 +41,6 @@ else:
         
         release_date = game_config.get("release_date") or metrics.get("release_date")
         
-        # Cleaned pricing extraction
         price_full = metrics.get("price_full_eur")
         price_disc_rel = metrics.get("price_release_discounted_eur", price_full)
         release_discount = metrics.get("discount_release_pct", 0)
@@ -54,9 +53,6 @@ else:
             "Release Date": release_date,
             "Price (EUR)": format_price_pair(price_disc_rel, price_full),
             "Release Discount %": release_discount,
-            "Followers (Initial)": metrics.get("followers_initial"),
-            "Followers (Release)": metrics.get("followers_release"),
-            "Followers (Current)": metrics.get("followers_current"),
             "Live CCU (Steam)": metrics.get("live_ccu"),
             "All-Time Peak": metrics.get("all_time_peak"),
             "Steam Rating %": metrics.get("steam_rating"),
@@ -90,10 +86,9 @@ if not df.empty:
 
     df["Release Date"] = df["Release Date"].dt.strftime('%Y-%m-%d').replace("2099-01-01", "To be released")
 
-    # Numeric columns to parse
+    # Parse numeric values cleanly
     numeric_columns = [
         "Release Discount %", 
-        "Followers (Initial)", "Followers (Release)", "Followers (Current)",
         "Live CCU (Steam)", "All-Time Peak", "Steam Rating %", 
         "Total Steam Reviews", "OpenCritic Score", "Metacritic Score"
     ]
@@ -132,8 +127,7 @@ if not df.empty:
             "Game Title", "Origin", "Tags", "Release Date",
             "Live CCU (Steam)", "All-Time Peak", "Steam Rating %", 
             "Total Steam Reviews", "OpenCritic Score", "Metacritic Score", "SteamDB",
-            "Price (EUR)", "Release Discount %",
-            "Followers (Initial)", "Followers (Release)", "Followers (Current)"
+            "Price (EUR)", "Release Discount %"
         ]
         df_steam = df_steam[column_order]
         
@@ -149,9 +143,6 @@ if not df.empty:
                 "Release Date": st.column_config.TextColumn(width="small"),
                 "Price (EUR)": st.column_config.TextColumn(width="small", help="Discounted Release Price / Full Base Price (EUR)"),
                 "Release Discount %": st.column_config.NumberColumn(format="-%d%%", help="Official launch discount percentage"),
-                "Followers (Initial)": st.column_config.NumberColumn(format="%d", help="Follower count when first tracked"),
-                "Followers (Release)": st.column_config.NumberColumn(format="%d", help="Follower count at release date"),
-                "Followers (Current)": st.column_config.NumberColumn(format="%d", help="Current live Steam follower count"),
                 "Live CCU (Steam)": st.column_config.NumberColumn(format="%d"),
                 "All-Time Peak": st.column_config.NumberColumn(format="%d"),
                 "Steam Rating %": st.column_config.NumberColumn(format="%.2f%%"),
