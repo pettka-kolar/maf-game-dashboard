@@ -313,7 +313,7 @@ GAME_DATABASE = {
     },
 
     # -------------------------------------------------------------------------
-    # SEPTEMBER 2026 RELEASES & UPCOMING TRACKS
+    # SEPTEMBER 2026 RELEASES & ACTIVE TRACKS
     # -------------------------------------------------------------------------
     "Crimson Moon": {
         "steam_id": 4317690,
@@ -468,13 +468,22 @@ GAME_DATABASE = {
         "release_date": "2026-09-15",
         "origin": None
     },
-    "Marvel's Wolverine": {
+    "Marvel’s Wolverine": {
         "steam_id": 0,
         "metacritic_slug": "playstation-5/marvels-wolverine",
         "opencritic_id": 12318,
         "opencritic_slug": "marvels-wolverine",
         "backup_peak": 0,
         "release_date": "2026-09-15",
+        "origin": None
+    },
+    "Endless Legend 2": {
+        "steam_id": 3407390,
+        "metacritic_slug": "pc/endless-legend-2",
+        "opencritic_id": 0,
+        "opencritic_slug": "endless-legend-2",
+        "backup_peak": 0,
+        "release_date": "2026-09-17",
         "origin": None
     },
     "Trails in the Sky: 2nd Chapter": {
@@ -504,7 +513,7 @@ GAME_DATABASE = {
         "release_date": "2026-09-17",
         "origin": None
     },
-    "The Guild 1 Remaster - Europa 1410": {
+    "The Guild 1 Remake: Europa 1410": {
         "steam_id": 2977260,
         "metacritic_slug": "pc/the-guild-1-remake-europa-1410",
         "opencritic_id": 0,
@@ -513,11 +522,38 @@ GAME_DATABASE = {
         "release_date": "2026-09-17",
         "origin": "CZ"
     },
-    "Silent Hill: Townfall": {
-        "steam_id": 1636440,
-        "metacritic_slug": "pc/silent-hill-townfall",
-        "opencritic_id": 13915,
-        "opencritic_slug": "silent-hill-townfall",
+    "Jarred Defense": {
+        "steam_id": 4525520,
+        "metacritic_slug": "pc/jarred-defense",
+        "opencritic_id": 0,
+        "opencritic_slug": "jarred-defense",
+        "backup_peak": 0,
+        "release_date": "2026-09-22",
+        "origin": "CZ"
+    },
+    "Graveyard Keeper II": {
+        "steam_id": 4358690,
+        "metacritic_slug": "pc/graveyard-keeper-2",
+        "opencritic_id": 0,
+        "opencritic_slug": "graveyard-keeper-2",
+        "backup_peak": 0,
+        "release_date": "2026-09-22",
+        "origin": None
+    },
+    "Rivage": {
+        "steam_id": 4094660,
+        "metacritic_slug": "pc/rivage",
+        "opencritic_id": 0,
+        "opencritic_slug": "rivage",
+        "backup_peak": 0,
+        "release_date": "2026-09-22",
+        "origin": None
+    },
+    "AlieN Breed 35th Anniversary Collection": {
+        "steam_id": 4870460,
+        "metacritic_slug": "pc/alien-breed-35th-anniversary-collection",
+        "opencritic_id": 0,
+        "opencritic_slug": "alien-breed-35th-anniversary-collection",
         "backup_peak": 0,
         "release_date": "2026-09-24",
         "origin": None
@@ -531,13 +567,31 @@ GAME_DATABASE = {
         "release_date": "2026-09-24",
         "origin": None
     },
-    "Minecraft Dungeons 2": {
-        "steam_id": 1912410,
-        "metacritic_slug": "pc/minecraft-dungeons-ii",
-        "opencritic_id": 0,
-        "opencritic_slug": "minecraft-dungeons-ii",
+    "Silent Hill: Townfall": {
+        "steam_id": 1636440,
+        "metacritic_slug": "pc/silent-hill-townfall",
+        "opencritic_id": 13915,
+        "opencritic_slug": "silent-hill-townfall",
         "backup_peak": 0,
-        "release_date": "2026-09-29",
+        "release_date": "2026-09-24",
+        "origin": None
+    },
+    "FC 27": {
+        "steam_id": 4080220,
+        "metacritic_slug": "pc/ea-sports-fc-27",
+        "opencritic_id": 0,
+        "opencritic_slug": "ea-sports-fc-27",
+        "backup_peak": 0,
+        "release_date": "2026-09-24",
+        "origin": None
+    },
+    "Wild West Pioneers": {
+        "steam_id": 3222640,
+        "metacritic_slug": "pc/wild-west-pioneers",
+        "opencritic_id": 0,
+        "opencritic_slug": "wild-west-pioneers",
+        "backup_peak": 0,
+        "release_date": "2026-09-25",
         "origin": None
     },
     "The Witcher 3: Wild Hunt Remastered": {
@@ -549,13 +603,49 @@ GAME_DATABASE = {
         "release_date": "2022-12-14",
         "origin": None
     },
+    "Ace Combat 8: Wings of Thebes": {
+        "steam_id": 2288340,
+        "metacritic_slug": "pc/ace-combat-8-wings-of-thebes",
+        "opencritic_id": 0,
+        "opencritic_slug": "ace-combat-8-wings-of-thebes",
+        "backup_peak": 0,
+        "release_date": "2026-09-28",
+        "origin": None
+    },
+    "Minecraft Dungeons II": {
+        "steam_id": 1912410,
+        "metacritic_slug": "pc/minecraft-dungeons-ii",
+        "opencritic_id": 0,
+        "opencritic_slug": "minecraft-dungeons-ii",
+        "backup_peak": 0,
+        "release_date": "2026-09-29",
+        "origin": None
+    },
+    "Nivalis Nights": {
+        "steam_id": 1488490,
+        "metacritic_slug": "pc/nivalis-nights",
+        "opencritic_id": 0,
+        "opencritic_slug": "nivalis-nights",
+        "backup_peak": 0,
+        "release_date": "2026-09-29",
+        "origin": None
+    },
+    "Transport Fever 3": {
+        "steam_id": 3493540,
+        "metacritic_slug": "pc/transport-fever-3",
+        "opencritic_id": 0,
+        "opencritic_slug": "transport-fever-3",
+        "backup_peak": 0,
+        "release_date": "2026-09-29",
+        "origin": None
+    },
     "Way of the Hunter 2": {
         "steam_id": 2543830,
         "metacritic_slug": "pc/way-of-the-hunter-2",
         "opencritic_id": 0,
         "opencritic_slug": "way-of-the-hunter-2",
         "backup_peak": 0,
-        "release_date": "2026-09-29",
+        "release_date": "2026-03-26",
         "origin": "SK"
     }
 }
