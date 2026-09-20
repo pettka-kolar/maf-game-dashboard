@@ -64,7 +64,7 @@ def fetch_game_data(game_name, config, existing_data):
     game_record.setdefault("discount_release_pct", 0)
     game_record.setdefault("tags", "—")
 
-    # Purge any legacy follower keys that might still reside in cached records
+    # Purge any legacy follower keys
     for key in ("followers_initial", "followers_release", "followers_current", "followers_last_updated"):
         game_record.pop(key, None)
 
@@ -117,18 +117,31 @@ def fetch_game_data(game_name, config, existing_data):
                     disc_pct = po.get("discount_percent", 0)
                     
                     full_base_price = initial_price if initial_price > 0 else final_price
+
+                    # Automatically calculate discount percentage if Steam reported 0% but prices differ
+                    if disc_pct == 0 and full_base_price > final_price > 0:
+                        disc_pct = round((1.0 - (final_price / full_base_price)) * 100)
                     
                     game_record["price_current_eur"] = final_price
                     game_record["price_full_eur"] = full_base_price
 
                     if not is_released:
+                        # Pre-release / Coming Soon: update pre-order pricing freely
                         game_record["discount_release_pct"] = disc_pct
                         game_record["price_release_discounted_eur"] = final_price
                     else:
-                        if game_record.get("discount_release_pct") in (None, "N/A", "—"):
-                            game_record["discount_release_pct"] = disc_pct
+                        # Released title: lock in release price if not yet set
                         if game_record.get("price_release_discounted_eur") in (None, "N/A", "—"):
                             game_record["price_release_discounted_eur"] = final_price
+                        elif game_record.get("price_release_discounted_eur", 0) > full_base_price:
+                            game_record["price_release_discounted_eur"] = final_price
+
+                        # Lock in release discount: update if not recorded, or if recorded as 0 while an actual discount is present
+                        curr_disc = game_record.get("discount_release_pct")
+                        if curr_disc in (None, "N/A", "—"):
+                            game_record["discount_release_pct"] = disc_pct
+                        elif curr_disc == 0 and disc_pct > 0:
+                            game_record["discount_release_pct"] = disc_pct
 
                 if not is_released:
                     rd = app_data.get("release_date", {})

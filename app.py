@@ -43,7 +43,21 @@ else:
         
         price_full = metrics.get("price_full_eur")
         price_disc_rel = metrics.get("price_release_discounted_eur", price_full)
-        release_discount = metrics.get("discount_release_pct", 0)
+        release_discount = metrics.get("discount_release_pct")
+
+        # Sanity check: discounted release price cannot exceed full base price
+        if isinstance(price_full, (int, float)) and isinstance(price_disc_rel, (int, float)):
+            if price_disc_rel > price_full:
+                price_disc_rel = price_full
+
+        # Dynamic discount fallback: if discount is 0/missing but prices show a discount, calculate it
+        if (release_discount in (None, "N/A", 0, 0.0)) and isinstance(price_full, (int, float)) and isinstance(price_disc_rel, (int, float)):
+            if price_full > price_disc_rel > 0:
+                release_discount = round((1.0 - (price_disc_rel / price_full)) * 100)
+            else:
+                release_discount = None
+        elif release_discount == 0:
+            release_discount = None
         
         rows.append({
             "Game Title": game_name,
