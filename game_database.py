@@ -600,7 +600,7 @@ GAME_DATABASE = {
         "opencritic_id": 14006,
         "opencritic_slug": "the-witcher-3-wild-hunt-complete-edition",
         "backup_peak": 103329,
-        "release_date": "2026-09-27",
+        "release_date": "2026-09-29",
         "origin": None
     },
     "Ace Combat 8: Wings of Thebes": {
@@ -645,7 +645,7 @@ GAME_DATABASE = {
         "opencritic_id": 0,
         "opencritic_slug": "way-of-the-hunter-2",
         "backup_peak": 0,
-        "release_date": "2026-03-26",
+        "release_date": "2026-09-29",
         "origin": "SK"
     }
 }
