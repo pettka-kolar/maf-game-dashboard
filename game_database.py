@@ -647,5 +647,14 @@ GAME_DATABASE = {
         "backup_peak": 0,
         "release_date": "2026-09-29",
         "origin": "SK"
+    },
+    "ATS: Road Trip: Ford": {
+        "steam_id": 3793200,
+        "metacritic_slug": "pc/amercian-truck-simulator",
+        "opencritic_id": 0,
+        "opencritic_slug": "amercian-truck-simulator",
+        "backup_peak": 0,
+        "release_date": "2026-09-29",
+        "origin": "CZ"
     }
 }
