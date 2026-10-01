@@ -656,5 +656,156 @@ GAME_DATABASE = {
         "backup_peak": 0,
         "release_date": "2026-09-29",
         "origin": "CZ"
+    },
+
+    # -------------------------------------------------------------------------
+    # OCTOBER 2026 RELEASES & ACTIVE TRACKS
+    # -------------------------------------------------------------------------
+    "Enshrouded": {
+        "steam_id": 1203620,
+        "metacritic_slug": "pc/enshrouded",
+        "opencritic_id": 16119,
+        "opencritic_slug": "enshrouded",
+        "backup_peak": 160405,
+        "release_date": "2026-10-15",
+        "origin": None
+    },
+    "Octopath Traveler I & II": {
+        # Steam Bundle ID: 36119. Primary flagship AppID is Octopath Traveler II (1971650)
+        "steam_id": 1971650,
+        "metacritic_slug": "playstation-5/octopath-traveler-i-ii",
+        "opencritic_id": 13876,
+        "opencritic_slug": "octopath-traveler-ii",
+        "backup_peak": 17512,
+        "release_date": "2026-10-01",
+        "origin": None
+    },
+    "Aion 2": {
+        "steam_id": 3393110,
+        "metacritic_slug": "pc/aion-2",
+        "opencritic_id": 0,
+        "opencritic_slug": "aion-2",
+        "backup_peak": 0,
+        "release_date": "2026-10-05",
+        "origin": None
+    },
+    "Gears of War: E-Day": {
+        "steam_id": 3010850,
+        "metacritic_slug": "pc/gears-of-war-e-day",
+        "opencritic_id": 20801,
+        "opencritic_slug": "gears-of-war-e-day",
+        "backup_peak": 0,
+        "release_date": "2026-10-06",
+        "origin": None
+    },
+    "Star Wars: Galactic Racer": {
+        "steam_id": 4078430,
+        "metacritic_slug": "pc/star-wars-galactic-racer",
+        "opencritic_id": 0,
+        "opencritic_slug": "star-wars-galactic-racer",
+        "backup_peak": 0,
+        "release_date": "2026-10-06",
+        "origin": None
+    },
+    "Clive Barker's Hellraiser: Revival": {
+        "steam_id": 1551980,
+        "metacritic_slug": "pc/clive-barkers-hellraiser-revival",
+        "opencritic_id": 0,
+        "opencritic_slug": "clive-barkers-hellraiser-revival",
+        "backup_peak": 0,
+        "release_date": "2026-10-08",
+        "origin": None
+    },
+    "Kingdom Hearts Collection 1-3": {
+        # PS5, Xbox Series X|S, Switch 2 collection release; PC counterpart is Integrum Masterpiece (App 2552430)
+        "steam_id": 2552430,
+        "metacritic_slug": "playstation-5/kingdom-hearts-collection-i-iii",
+        "opencritic_id": 0,
+        "opencritic_slug": "kingdom-hearts-collection-i-iii",
+        "backup_peak": 8500,
+        "release_date": "2026-10-08",
+        "origin": None
+    },
+    "Neon Abyss 2": {
+        "steam_id": 2235200,
+        "metacritic_slug": "pc/neon-abyss-2",
+        "opencritic_id": 0,
+        "opencritic_slug": "neon-abyss-2",
+        "backup_peak": 403,
+        "release_date": "2026-10-08",
+        "origin": None
+    },
+    "Order of the Sinking Star": {
+        "steam_id": 499170,
+        "metacritic_slug": "pc/order-of-the-sinking-star",
+        "opencritic_id": 0,
+        "opencritic_slug": "order-of-the-sinking-star",
+        "backup_peak": 0,
+        "release_date": "2026-10-08",
+        "origin": None
+    },
+    "Dragon's Dogma 2: Dark Arisen": {
+        # Expansion DLC AppID 2593290; base game is 2054970
+        "steam_id": 2593290,
+        "metacritic_slug": "pc/dragons-dogma-2-dark-arisen",
+        "opencritic_id": 0,
+        "opencritic_slug": "dragons-dogma-2-dark-arisen",
+        "backup_peak": 0,
+        "release_date": "2026-10-08",
+        "origin": None
+    },
+    "Permafrost (Early Access)": {
+        "steam_id": 2254990,
+        "metacritic_slug": "pc/permafrost",
+        "opencritic_id": 0,
+        "opencritic_slug": "permafrost",
+        "backup_peak": 0,
+        "release_date": "2026-10-09",
+        "origin": None
+    },
+    "Hubert": {
+        "steam_id": 764930,
+        "metacritic_slug": "pc/hubert",
+        "opencritic_id": 0,
+        "opencritic_slug": "hubert",
+        "backup_peak": 0,
+        "release_date": "2026-10-12",
+        "origin": "CZ"
+    },
+    "Planet Zoo 2": {
+        "steam_id": 3219030,
+        "metacritic_slug": "pc/planet-zoo-2",
+        "opencritic_id": 0,
+        "opencritic_slug": "planet-zoo-2",
+        "backup_peak": 0,
+        "release_date": "2026-10-13",
+        "origin": None
+    },
+    "Valor Mortis": {
+        "steam_id": 2828710,
+        "metacritic_slug": "pc/valor-mortis",
+        "opencritic_id": 0,
+        "opencritic_slug": "valor-mortis",
+        "backup_peak": 0,
+        "release_date": "2026-10-13",
+        "origin": None
+    },
+    "Warhammer 40,000: Boltgun 2": {
+        "steam_id": 3115160,
+        "metacritic_slug": "pc/warhammer-40000-boltgun-2",
+        "opencritic_id": 0,
+        "opencritic_slug": "warhammer-40000-boltgun-2",
+        "backup_peak": 0,
+        "release_date": "2026-10-14",
+        "origin": None
+    },
+    "Castlevania: Belmont's Curse": {
+        "steam_id": 4231820,
+        "metacritic_slug": "pc/castlevania-belmonts-curse",
+        "opencritic_id": 0,
+        "opencritic_slug": "castlevania-belmonts-curse",
+        "backup_peak": 0,
+        "release_date": "2026-10-14",
+        "origin": None
     }
 }
