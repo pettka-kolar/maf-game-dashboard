@@ -798,6 +798,15 @@ GAME_DATABASE = {
         "backup_peak": 0,
         "release_date": "2026-10-14",
         "origin": None
+    },    
+    "Polda 5.5": {
+        "steam_id": 4971930,
+        "metacritic_slug": "pc/polda-5-5",
+        "opencritic_id": 0,
+        "opencritic_slug": "polda-5-5",
+        "backup_peak": 0,
+        "release_date": "2026-10-09",
+        "origin": "CZ"
     },
     "Castlevania: Belmont's Curse": {
         "steam_id": 4231820,
