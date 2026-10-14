@@ -661,15 +661,6 @@ GAME_DATABASE = {
     # -------------------------------------------------------------------------
     # OCTOBER 2026 RELEASES & ACTIVE TRACKS
     # -------------------------------------------------------------------------
-    "Enshrouded": {
-        "steam_id": 1203620,
-        "metacritic_slug": "pc/enshrouded",
-        "opencritic_id": 16119,
-        "opencritic_slug": "enshrouded",
-        "backup_peak": 160405,
-        "release_date": "2026-10-15",
-        "origin": None
-    },
     "Octopath Traveler I & II": {
         # Steam Bundle ID: 36119. Primary flagship AppID is Octopath Traveler II (1971650)
         "steam_id": 1971650,
@@ -763,6 +754,15 @@ GAME_DATABASE = {
         "release_date": "2026-10-09",
         "origin": None
     },
+    "Polda 5.5": {
+        "steam_id": 4971930,
+        "metacritic_slug": "pc/polda-5-5",
+        "opencritic_id": 0,
+        "opencritic_slug": "polda-5-5",
+        "backup_peak": 0,
+        "release_date": "2026-10-09",
+        "origin": "CZ"
+    },
     "Hubert": {
         "steam_id": 764930,
         "metacritic_slug": "pc/hubert",
@@ -798,15 +798,6 @@ GAME_DATABASE = {
         "backup_peak": 0,
         "release_date": "2026-10-14",
         "origin": None
-    },    
-    "Polda 5.5": {
-        "steam_id": 4971930,
-        "metacritic_slug": "pc/polda-5-5",
-        "opencritic_id": 0,
-        "opencritic_slug": "polda-5-5",
-        "backup_peak": 0,
-        "release_date": "2026-10-09",
-        "origin": "CZ"
     },
     "Castlevania: Belmont's Curse": {
         "steam_id": 4231820,
@@ -814,7 +805,106 @@ GAME_DATABASE = {
         "opencritic_id": 0,
         "opencritic_slug": "castlevania-belmonts-curse",
         "backup_peak": 0,
-        "release_date": "2026-10-14",
+        "release_date": "2026-10-15",
+        "origin": None
+    },
+    "Enshrouded (1.0)": {
+        "steam_id": 1203620,
+        "metacritic_slug": "pc/enshrouded",
+        "opencritic_id": 16119,
+        "opencritic_slug": "enshrouded",
+        "backup_peak": 160405,
+        "release_date": "2026-10-15",
+        "origin": None
+    },
+    "Frosthaven": {
+        "steam_id": 2347080,
+        "metacritic_slug": "pc/frosthaven",
+        "opencritic_id": 0,
+        "opencritic_slug": "frosthaven",
+        "backup_peak": 0,
+        "release_date": "2026-10-15",
+        "origin": None
+    },
+    "Beyond These Stars (Game Pass)": {
+        "steam_id": 2295060,
+        "metacritic_slug": "pc/beyond-these-stars",
+        "opencritic_id": 21537,
+        "opencritic_slug": "beyond-these-stars",
+        "backup_peak": 0,
+        "release_date": "2026-10-16",
+        "origin": None
+    },
+    "Dreadline Express": {
+        "steam_id": 3327120,
+        "metacritic_slug": "pc/dreadline-express",
+        "opencritic_id": 0,
+        "opencritic_slug": "dreadline-express",
+        "backup_peak": 0,
+        "release_date": "2026-10-16",
+        "origin": "CZ"
+    },
+    "Athanasia (Early Access)": {
+        "steam_id": 1761910,
+        "metacritic_slug": "pc/athanasia",
+        "opencritic_id": 0,
+        "opencritic_slug": "athanasia",
+        "backup_peak": 0,
+        "release_date": "2026-10-19",
+        "origin": None
+    },
+    "Star Trek: Outposts Unknown": {
+        "steam_id": 3469910,
+        "metacritic_slug": "pc/star-trek-outposts-unknown",
+        "opencritic_id": 0,
+        "opencritic_slug": "star-trek-outposts-unknown",
+        "backup_peak": 0,
+        "release_date": "2026-10-20",
+        "origin": None
+    },
+    "Final Fantasy Resonance": {
+        "steam_id": 3259780,
+        "metacritic_slug": "pc/final-fantasy-resonance",
+        "opencritic_id": 0,
+        "opencritic_slug": "final-fantasy-resonance",
+        "backup_peak": 0,
+        "release_date": "2026-10-22",
+        "origin": None
+    },
+    "Call of Duty: Modern Warfare 4": {
+        "steam_id": 4435490,
+        "metacritic_slug": "pc/call-of-duty-modern-warfare-4",
+        "opencritic_id": 0,
+        "opencritic_slug": "call-of-duty-modern-warfare-4",
+        "backup_peak": 0,
+        "release_date": "2026-10-22",
+        "origin": None
+    },
+    "Emberville (Early Access)": {
+        "steam_id": 2295170,
+        "metacritic_slug": "pc/emberville",
+        "opencritic_id": 0,
+        "opencritic_slug": "emberville",
+        "backup_peak": 0,
+        "release_date": "2026-10-27",
+        "origin": None
+    },
+    "Phantom Blade Zero": {
+        "steam_id": 4115450,
+        "metacritic_slug": "playstation-5/phantom-blade-zero",
+        "opencritic_id": 19914,
+        "opencritic_slug": "phantom-blade-zero",
+        "backup_peak": 0,
+        "release_date": "2026-10-29",
+        "origin": None
+    },
+    "Heir of the Dog": {
+        "steam_id": 2431920,
+        "metacritic_slug": "pc/heir-of-the-dog",
+        "opencritic_id": 0,
+        "opencritic_slug": "heir-of-the-dog",
+        "backup_peak": 0,
+        "release_date": "2026-10-29",
         "origin": None
     }
 }
