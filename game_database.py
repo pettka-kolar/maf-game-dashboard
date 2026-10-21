@@ -480,7 +480,7 @@ GAME_DATABASE = {
     "Endless Legend 2": {
         "steam_id": 3407390,
         "metacritic_slug": "pc/endless-legend-2",
-        "opencritic_id": 0,
+        "opencritic_id": 21364,
         "opencritic_slug": "endless-legend-2",
         "backup_peak": 0,
         "release_date": "2026-09-17",
@@ -489,7 +489,7 @@ GAME_DATABASE = {
     "Trails in the Sky: 2nd Chapter": {
         "steam_id": 4225980,
         "metacritic_slug": "pc/trails-in-the-sky-2nd-chapter",
-        "opencritic_id": 0,
+        "opencritic_id": 21335,
         "opencritic_slug": "trails-in-the-sky-2nd-chapter",
         "backup_peak": 0,
         "release_date": "2026-09-17",
@@ -498,7 +498,7 @@ GAME_DATABASE = {
     "Flamecraft": {
         "steam_id": 3201730,
         "metacritic_slug": "pc/flamecraft",
-        "opencritic_id": 0,
+        "opencritic_id": 21398,
         "opencritic_slug": "flamecraft",
         "backup_peak": 0,
         "release_date": "2026-09-17",
@@ -516,7 +516,7 @@ GAME_DATABASE = {
     "The Guild 1 Remake: Europa 1410": {
         "steam_id": 2977260,
         "metacritic_slug": "pc/the-guild-1-remake-europa-1410",
-        "opencritic_id": 0,
+        "opencritic_id": 21400,
         "opencritic_slug": "the-guild-1-remake-europa-1410",
         "backup_peak": 0,
         "release_date": "2026-09-17",
@@ -534,7 +534,7 @@ GAME_DATABASE = {
     "Graveyard Keeper II": {
         "steam_id": 4358690,
         "metacritic_slug": "pc/graveyard-keeper-2",
-        "opencritic_id": 0,
+        "opencritic_id": 21284,
         "opencritic_slug": "graveyard-keeper-2",
         "backup_peak": 0,
         "release_date": "2026-09-22",
@@ -561,7 +561,7 @@ GAME_DATABASE = {
     "Control Resonant": {
         "steam_id": 3669870,
         "metacritic_slug": "pc/control-resonant",
-        "opencritic_id": 0,
+        "opencritic_id": 20766,
         "opencritic_slug": "control-resonant",
         "backup_peak": 0,
         "release_date": "2026-09-24",
@@ -579,7 +579,7 @@ GAME_DATABASE = {
     "FC 27": {
         "steam_id": 4080220,
         "metacritic_slug": "pc/ea-sports-fc-27",
-        "opencritic_id": 0,
+        "opencritic_id": 21101,
         "opencritic_slug": "ea-sports-fc-27",
         "backup_peak": 0,
         "release_date": "2026-09-24",
@@ -606,8 +606,8 @@ GAME_DATABASE = {
     "Ace Combat 8: Wings of Thebes": {
         "steam_id": 2288340,
         "metacritic_slug": "pc/ace-combat-8-wings-of-thebes",
-        "opencritic_id": 0,
-        "opencritic_slug": "ace-combat-8-wings-of-thebes",
+        "opencritic_id": 20762,
+        "opencritic_slug": "ace-combat-8-wings-of-theve-deluxe-edition",
         "backup_peak": 0,
         "release_date": "2026-09-28",
         "origin": None
@@ -624,7 +624,7 @@ GAME_DATABASE = {
     "Nivalis Nights": {
         "steam_id": 1488490,
         "metacritic_slug": "pc/nivalis-nights",
-        "opencritic_id": 0,
+        "opencritic_id": 20929,
         "opencritic_slug": "nivalis-nights",
         "backup_peak": 0,
         "release_date": "2026-09-29",
@@ -633,7 +633,7 @@ GAME_DATABASE = {
     "Transport Fever 3": {
         "steam_id": 3493540,
         "metacritic_slug": "pc/transport-fever-3",
-        "opencritic_id": 0,
+        "opencritic_id": 21274,
         "opencritic_slug": "transport-fever-3",
         "backup_peak": 0,
         "release_date": "2026-09-29",
@@ -662,7 +662,6 @@ GAME_DATABASE = {
     # OCTOBER 2026 RELEASES & ACTIVE TRACKS
     # -------------------------------------------------------------------------
     "Octopath Traveler I & II": {
-        # Steam Bundle ID: 36119. Primary flagship AppID is Octopath Traveler II (1971650)
         "steam_id": 1971650,
         "metacritic_slug": "playstation-5/octopath-traveler-i-ii",
         "opencritic_id": 13876,
@@ -692,8 +691,8 @@ GAME_DATABASE = {
     "Star Wars: Galactic Racer": {
         "steam_id": 4078430,
         "metacritic_slug": "pc/star-wars-galactic-racer",
-        "opencritic_id": 0,
-        "opencritic_slug": "star-wars-galactic-racer",
+        "opencritic_id": 20501,
+        "opencritic_slug": "star-wars-galactic-racer-deluxe-edition",
         "backup_peak": 0,
         "release_date": "2026-10-06",
         "origin": None
@@ -708,7 +707,6 @@ GAME_DATABASE = {
         "origin": None
     },
     "Kingdom Hearts Collection 1-3": {
-        # PS5, Xbox Series X|S, Switch 2 collection release; PC counterpart is Integrum Masterpiece (App 2552430)
         "steam_id": 2552430,
         "metacritic_slug": "playstation-5/kingdom-hearts-collection-i-iii",
         "opencritic_id": 0,
@@ -729,14 +727,13 @@ GAME_DATABASE = {
     "Order of the Sinking Star": {
         "steam_id": 499170,
         "metacritic_slug": "pc/order-of-the-sinking-star",
-        "opencritic_id": 0,
+        "opencritic_id": 21501,
         "opencritic_slug": "order-of-the-sinking-star",
         "backup_peak": 0,
         "release_date": "2026-10-08",
         "origin": None
     },
     "Dragon's Dogma 2: Dark Arisen": {
-        # Expansion DLC AppID 2593290; base game is 2054970
         "steam_id": 2593290,
         "metacritic_slug": "pc/dragons-dogma-2-dark-arisen",
         "opencritic_id": 0,
@@ -775,7 +772,7 @@ GAME_DATABASE = {
     "Planet Zoo 2": {
         "steam_id": 3219030,
         "metacritic_slug": "pc/planet-zoo-2",
-        "opencritic_id": 0,
+        "opencritic_id": 20786,
         "opencritic_slug": "planet-zoo-2",
         "backup_peak": 0,
         "release_date": "2026-10-13",
@@ -784,7 +781,7 @@ GAME_DATABASE = {
     "Valor Mortis": {
         "steam_id": 2828710,
         "metacritic_slug": "pc/valor-mortis",
-        "opencritic_id": 0,
+        "opencritic_id": 20805,
         "opencritic_slug": "valor-mortis",
         "backup_peak": 0,
         "release_date": "2026-10-13",
@@ -793,8 +790,8 @@ GAME_DATABASE = {
     "Warhammer 40,000: Boltgun 2": {
         "steam_id": 3115160,
         "metacritic_slug": "pc/warhammer-40000-boltgun-2",
-        "opencritic_id": 0,
-        "opencritic_slug": "warhammer-40000-boltgun-2",
+        "opencritic_id": 21486,
+        "opencritic_slug": "warhammer-40-000-boltgun-2",
         "backup_peak": 0,
         "release_date": "2026-10-14",
         "origin": None
@@ -802,7 +799,7 @@ GAME_DATABASE = {
     "Castlevania: Belmont's Curse": {
         "steam_id": 4231820,
         "metacritic_slug": "pc/castlevania-belmonts-curse",
-        "opencritic_id": 0,
+        "opencritic_id": 20804,
         "opencritic_slug": "castlevania-belmonts-curse",
         "backup_peak": 0,
         "release_date": "2026-10-15",
@@ -865,7 +862,7 @@ GAME_DATABASE = {
     "Final Fantasy Resonance": {
         "steam_id": 3259780,
         "metacritic_slug": "pc/final-fantasy-resonance",
-        "opencritic_id": 0,
+        "opencritic_id": 20820,
         "opencritic_slug": "final-fantasy-resonance",
         "backup_peak": 0,
         "release_date": "2026-10-22",
@@ -874,7 +871,7 @@ GAME_DATABASE = {
     "Call of Duty: Modern Warfare 4": {
         "steam_id": 4435490,
         "metacritic_slug": "pc/call-of-duty-modern-warfare-4",
-        "opencritic_id": 0,
+        "opencritic_id": 20690,
         "opencritic_slug": "call-of-duty-modern-warfare-4",
         "backup_peak": 0,
         "release_date": "2026-10-22",
