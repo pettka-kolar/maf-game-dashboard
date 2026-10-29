@@ -169,13 +169,13 @@ def fetch_game_data(game_name, config, existing_data):
         except Exception:
             pass
 
-    # 6. Fetch Steam Storefront Reviews
+    # 6. Fetch Steam Storefront Reviews (Updated to IUserReviewsService)
     if appid:
-        url = f"https://store.steampowered.com/appreviews/{appid}?json=1&language=all&purchase_type=all"
+        url = f"https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/?appid={appid}&filter=all&review_type=all&purchase_type=all"
         try:
             res = session.get(url, timeout=TIMEOUT)
             if res.status_code == 200:
-                summary = res.json().get("query_summary", {})
+                summary = res.json().get("response", {}).get("query_summary", {})
                 tot = summary.get("total_reviews", 0)
                 pos = summary.get("total_positive", 0)
                 if tot > 0:
