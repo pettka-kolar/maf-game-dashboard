@@ -169,9 +169,9 @@ def fetch_game_data(game_name, config, existing_data):
         except Exception:
             pass
 
-    # 6. Fetch Steam Storefront Reviews (Updated to IUserReviewsService)
+    # 6. Fetch Steam Storefront Reviews (All Languages + All Purchase Types)
     if appid:
-        url = f"https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/?appid={appid}&filter=all&review_type=all&purchase_type=all"
+        url = f"https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/?appid={appid}&filter=all&review_type=all&purchase_type=steam&language=all"
         try:
             res = session.get(url, timeout=TIMEOUT)
             if res.status_code == 200:
