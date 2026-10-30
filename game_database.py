@@ -903,5 +903,108 @@ GAME_DATABASE = {
         "backup_peak": 0,
         "release_date": "2026-10-29",
         "origin": None
+    },
+
+    # -------------------------------------------------------------------------
+    # NOVEMBER 2026 RELEASES & ACTIVE TRACKS
+    # -------------------------------------------------------------------------
+    "Gravhounds (EA)": {
+        "steam_id": 3144820,
+        "metacritic_slug": "pc/gravhounds",
+        "opencritic_id": 0,
+        "opencritic_slug": "gravhounds",
+        "backup_peak": 0,
+        "release_date": "2026-11-03",
+        "origin": None
+    },
+    "ArcheAge Chronicles (EA)": {
+        "steam_id": 2341200,
+        "metacritic_slug": "pc/archeage-chronicles",
+        "opencritic_id": 0,
+        "opencritic_slug": "archeage-chronicles",
+        "backup_peak": 0,
+        "release_date": "2026-11-04",
+        "origin": None
+    },
+    "Lightyear Frontier (1.0)": {
+        "steam_id": 1677110,
+        "metacritic_slug": "pc/lightyear-frontier",
+        "opencritic_id": 16467,
+        "opencritic_slug": "lightyear-frontier",
+        "backup_peak": 0,
+        "release_date": "2026-11-05",
+        "origin": None
+    },
+    "World of Warcraft: Forever": {
+        "steam_id": 0,
+        "metacritic_slug": "pc/world-of-warcraft-forever",
+        "opencritic_id": 0,
+        "opencritic_slug": "world-of-warcraft-forever",
+        "backup_peak": 0,
+        "release_date": "2026-11-05",
+        "origin": None
+    },
+    "Void/Breaker (1.0)": {
+        "steam_id": 2728940,
+        "metacritic_slug": "pc/void-breaker",
+        "opencritic_id": 0,
+        "opencritic_slug": "void-breaker",
+        "backup_peak": 0,
+        "release_date": "2026-11-06",
+        "origin": None
+    },
+    "County of Fortune (EA)": {
+        "steam_id": 3589110,
+        "metacritic_slug": "pc/county-of-fortune",
+        "opencritic_id": 0,
+        "opencritic_slug": "county-of-fortune",
+        "backup_peak": 0,
+        "release_date": "2026-11-10",
+        "origin": None
+    },
+    "Underkeep": {
+        "steam_id": 2981540,
+        "metacritic_slug": "pc/underkeep",
+        "opencritic_id": 0,
+        "opencritic_slug": "underkeep",
+        "backup_peak": 0,
+        "release_date": "2026-11-10",
+        "origin": None
+    },
+    "The Legend of Zelda: Ocarina of Time": {
+        "steam_id": 0,
+        "metacritic_slug": "nintendo-switch-2/the-legend-of-zelda-ocarina-of-time",
+        "opencritic_id": 0,
+        "opencritic_slug": "the-legend-of-zelda-ocarina-of-time",
+        "backup_peak": 0,
+        "release_date": "2026-11-11",
+        "origin": None
+    },
+    "Dreadmoor": {
+        "steam_id": 3218990,
+        "metacritic_slug": "pc/dreadmoor",
+        "opencritic_id": 0,
+        "opencritic_slug": "dreadmoor",
+        "backup_peak": 0,
+        "release_date": "2026-11-12",
+        "origin": None
+    },
+    "Football Manager 27": {
+        "steam_id": 3614120,
+        "metacritic_slug": "pc/football-manager-27",
+        "opencritic_id": 0,
+        "opencritic_slug": "football-manager-27",
+        "backup_peak": 0,
+        "release_date": "2026-11-12",
+        "origin": None
+    },
+    "Warhammer Survivors": {
+        "steam_id": 3485120,
+        "metacritic_slug": "pc/warhammer-survivors",
+        "opencritic_id": 0,
+        "opencritic_slug": "warhammer-survivors",
+        "backup_peak": 0,
+        "release_date": "2026-11-13",
+        "origin": None
     }
 }
