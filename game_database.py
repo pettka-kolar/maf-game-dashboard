@@ -960,7 +960,7 @@ GAME_DATABASE = {
         "opencritic_slug": "county-of-fortune",
         "backup_peak": 0,
         "release_date": "2026-11-10",
-        "origin": CZ
+        "origin": "CZ"
     },
     "Underkeep": {
         "steam_id": 2981540,
@@ -969,7 +969,7 @@ GAME_DATABASE = {
         "opencritic_slug": "underkeep",
         "backup_peak": 0,
         "release_date": "2026-11-10",
-        "origin": CZ
+        "origin": "CZ"
     },
     "The Legend of Zelda: Ocarina of Time": {
         "steam_id": 0,
