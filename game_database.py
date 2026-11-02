@@ -963,7 +963,7 @@ GAME_DATABASE = {
         "origin": "CZ"
     },
     "Underkeep": {
-        "steam_id": 2981540,
+        "steam_id": 2411200,
         "metacritic_slug": "pc/underkeep",
         "opencritic_id": 0,
         "opencritic_slug": "underkeep",
