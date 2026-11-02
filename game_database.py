@@ -909,21 +909,21 @@ GAME_DATABASE = {
     # NOVEMBER 2026 RELEASES & ACTIVE TRACKS
     # -------------------------------------------------------------------------
     "Gravhounds (EA)": {
-        "steam_id": 3144820,
+        "steam_id": 2440760,
         "metacritic_slug": "pc/gravhounds",
         "opencritic_id": 0,
         "opencritic_slug": "gravhounds",
         "backup_peak": 0,
-        "release_date": "2026-11-03",
+        "release_date": "2026-11-02",
         "origin": None
     },
     "ArcheAge Chronicles (EA)": {
-        "steam_id": 2341200,
+        "steam_id": 3218230,
         "metacritic_slug": "pc/archeage-chronicles",
         "opencritic_id": 0,
         "opencritic_slug": "archeage-chronicles",
         "backup_peak": 0,
-        "release_date": "2026-11-04",
+        "release_date": "2026-11-03",
         "origin": None
     },
     "Lightyear Frontier (1.0)": {
@@ -945,21 +945,21 @@ GAME_DATABASE = {
         "origin": None
     },
     "Void/Breaker (1.0)": {
-        "steam_id": 2728940,
+        "steam_id": 2615540,
         "metacritic_slug": "pc/void-breaker",
         "opencritic_id": 0,
         "opencritic_slug": "void-breaker",
         "backup_peak": 0,
-        "release_date": "2026-11-06",
+        "release_date": "2026-11-04",
         "origin": None
     },
     "County of Fortune (EA)": {
-        "steam_id": 3589110,
+        "steam_id": 3204330,
         "metacritic_slug": "pc/county-of-fortune",
         "opencritic_id": 0,
         "opencritic_slug": "county-of-fortune",
         "backup_peak": 0,
-        "release_date": "2026-11-10",
+        "release_date": "2026-11-05",
         "origin": "CZ"
     },
     "Underkeep": {
@@ -968,7 +968,7 @@ GAME_DATABASE = {
         "opencritic_id": 0,
         "opencritic_slug": "underkeep",
         "backup_peak": 0,
-        "release_date": "2026-11-10",
+        "release_date": "2026-11-05",
         "origin": "CZ"
     },
     "The Legend of Zelda: Ocarina of Time": {
@@ -981,30 +981,30 @@ GAME_DATABASE = {
         "origin": None
     },
     "Dreadmoor": {
-        "steam_id": 3218990,
+        "steam_id": 3629430,
         "metacritic_slug": "pc/dreadmoor",
         "opencritic_id": 0,
         "opencritic_slug": "dreadmoor",
         "backup_peak": 0,
-        "release_date": "2026-11-12",
+        "release_date": "2026-11-09",
         "origin": None
     },
     "Football Manager 27": {
-        "steam_id": 3614120,
+        "steam_id": 4530370,
         "metacritic_slug": "pc/football-manager-27",
         "opencritic_id": 0,
         "opencritic_slug": "football-manager-27",
         "backup_peak": 0,
-        "release_date": "2026-11-12",
+        "release_date": "2026-11-10",
         "origin": None
     },
     "Warhammer Survivors": {
-        "steam_id": 3485120,
+        "steam_id": 3669620,
         "metacritic_slug": "pc/warhammer-survivors",
         "opencritic_id": 0,
         "opencritic_slug": "warhammer-survivors",
         "backup_peak": 0,
-        "release_date": "2026-11-13",
+        "release_date": "2026-11-10",
         "origin": None
     }
 }
