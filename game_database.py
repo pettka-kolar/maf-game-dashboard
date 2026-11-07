@@ -311,7 +311,6 @@ GAME_DATABASE = {
         "release_date": "2026-08-28",
         "origin": "CZ"
     },
-
     # -------------------------------------------------------------------------
     # SEPTEMBER 2026 RELEASES & ACTIVE TRACKS
     # -------------------------------------------------------------------------
@@ -657,7 +656,6 @@ GAME_DATABASE = {
         "release_date": "2026-09-29",
         "origin": "CZ"
     },
-
     # -------------------------------------------------------------------------
     # OCTOBER 2026 RELEASES & ACTIVE TRACKS
     # -------------------------------------------------------------------------
@@ -904,7 +902,6 @@ GAME_DATABASE = {
         "release_date": "2026-10-29",
         "origin": None
     },
-
     # -------------------------------------------------------------------------
     # NOVEMBER 2026 RELEASES & ACTIVE TRACKS
     # -------------------------------------------------------------------------
@@ -929,10 +926,10 @@ GAME_DATABASE = {
     "Lightyear Frontier (1.0)": {
         "steam_id": 1677110,
         "metacritic_slug": "pc/lightyear-frontier",
-        "opencritic_id": 16467,
+        "opencritic_id": 16457,
         "opencritic_slug": "lightyear-frontier",
-        "backup_peak": 0,
-        "release_date": "2026-11-05",
+        "backup_peak": 12874,
+        "release_date": "2026-11-04",
         "origin": None
     },
     "World of Warcraft: Forever": {
@@ -941,7 +938,7 @@ GAME_DATABASE = {
         "opencritic_id": 0,
         "opencritic_slug": "world-of-warcraft-forever",
         "backup_peak": 0,
-        "release_date": "2026-11-05",
+        "release_date": "2026-11-04",
         "origin": None
     },
     "Void/Breaker (1.0)": {
@@ -973,11 +970,11 @@ GAME_DATABASE = {
     },
     "The Legend of Zelda: Ocarina of Time": {
         "steam_id": 0,
-        "metacritic_slug": "nintendo-switch-2/the-legend-of-zelda-ocarina-of-time",
-        "opencritic_id": 0,
+        "metacritic_slug": "nintendo-switch-2/the-legend-of-zelda-ocarina-of-time-2026",
+        "opencritic_id": 21344,
         "opencritic_slug": "the-legend-of-zelda-ocarina-of-time",
         "backup_peak": 0,
-        "release_date": "2026-11-11",
+        "release_date": "2026-11-05",
         "origin": None
     },
     "Dreadmoor": {
@@ -992,7 +989,7 @@ GAME_DATABASE = {
     "Football Manager 27": {
         "steam_id": 4530370,
         "metacritic_slug": "pc/football-manager-27",
-        "opencritic_id": 0,
+        "opencritic_id": 21676,
         "opencritic_slug": "football-manager-27",
         "backup_peak": 0,
         "release_date": "2026-11-10",
