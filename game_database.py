@@ -311,6 +311,7 @@ GAME_DATABASE = {
         "release_date": "2026-08-28",
         "origin": "CZ"
     },
+
     # -------------------------------------------------------------------------
     # SEPTEMBER 2026 RELEASES & ACTIVE TRACKS
     # -------------------------------------------------------------------------
@@ -656,6 +657,7 @@ GAME_DATABASE = {
         "release_date": "2026-09-29",
         "origin": "CZ"
     },
+
     # -------------------------------------------------------------------------
     # OCTOBER 2026 RELEASES & ACTIVE TRACKS
     # -------------------------------------------------------------------------
@@ -902,6 +904,7 @@ GAME_DATABASE = {
         "release_date": "2026-10-29",
         "origin": None
     },
+
     # -------------------------------------------------------------------------
     # NOVEMBER 2026 RELEASES & ACTIVE TRACKS
     # -------------------------------------------------------------------------
@@ -935,7 +938,7 @@ GAME_DATABASE = {
     "World of Warcraft: Forever": {
         "steam_id": 0,
         "metacritic_slug": "pc/world-of-warcraft-forever",
-        "opencritic_id": 0,
+        "opencritic_id": 21389,
         "opencritic_slug": "world-of-warcraft-forever",
         "backup_peak": 0,
         "release_date": "2026-11-04",
@@ -998,10 +1001,84 @@ GAME_DATABASE = {
     "Warhammer Survivors": {
         "steam_id": 3669620,
         "metacritic_slug": "pc/warhammer-survivors",
-        "opencritic_id": 0,
+        "opencritic_id": 21596,
         "opencritic_slug": "warhammer-survivors",
         "backup_peak": 0,
         "release_date": "2026-11-10",
+        "origin": None
+    },
+    "Trees Hate You": {
+        "steam_id": 4171850,
+        "metacritic_slug": "pc/trees-hate-you",
+        "opencritic_id": 0,
+        "opencritic_slug": "trees-hate-you",
+        "backup_peak": 0,
+        "release_date": "2026-11-16",
+        "origin": None
+    },
+    "Spirit Crossing": {
+        "steam_id": 2321960,
+        "metacritic_slug": "pc/spirit-crossing",
+        "opencritic_id": 0,
+        "opencritic_slug": "spirit-crossing",
+        "backup_peak": 0,
+        "release_date": "2026-11-16",
+        "origin": None
+    },
+    "Dawn of Defense": {
+        "steam_id": 2781660,
+        "metacritic_slug": "pc/dawn-of-defense",
+        "opencritic_id": 0,
+        "opencritic_slug": "dawn-of-defense",
+        "backup_peak": 0,
+        "release_date": "2026-11-17",
+        "origin": None
+    },
+    "OKUREK": {
+        "steam_id": 4735450,
+        "metacritic_slug": "pc/okurek",
+        "opencritic_id": 0,
+        "opencritic_slug": "okurek",
+        "backup_peak": 0,
+        "release_date": "2026-11-17",
+        "origin": "CZ"
+    },
+    "Grand Theft Auto VI": {
+        "steam_id": 0,
+        "metacritic_slug": "playstation-5/grand-theft-auto-vi",
+        "opencritic_id": 15398,
+        "opencritic_slug": "grand-theft-auto-vi",
+        "backup_peak": 0,
+        "release_date": "2026-11-19",
+        "origin": None
+    },
+    "Gothic 3 Classic": {
+        # Console release (PS5 / Xbox Series X|S) on Nov 24, 2026.
+        # Set steam_id to 39500 if you prefer tracking it in the PC/Steam table instead.
+        "steam_id": 0,
+        "metacritic_slug": "playstation-5/gothic-3",
+        "opencritic_id": 0,
+        "opencritic_slug": "gothic-3-classic",
+        "backup_peak": 0,
+        "release_date": "2026-11-24",
+        "origin": None
+    },
+    "Appulse": {
+        "steam_id": 3498700,
+        "metacritic_slug": "pc/appulse",
+        "opencritic_id": 0,
+        "opencritic_slug": "appulse",
+        "backup_peak": 0,
+        "release_date": "2026-11-26",
+        "origin": None
+    },
+    "Grimkeep": {
+        "steam_id": 3509380,
+        "metacritic_slug": "pc/grimkeep",
+        "opencritic_id": 0,
+        "opencritic_slug": "grimkeep",
+        "backup_peak": 0,
+        "release_date": "2026-11-30",
         "origin": None
     }
 }
