@@ -1,11 +1,12 @@
-import streamlit as st
-import pandas as pd
 import json
 import os
 import importlib
 
+pd = importlib.import_module("pandas")
+st = importlib.import_module("streamlit")
+
 # Cross-reference database definitions to identify console vs steam tracks natively
-import game_database as gd
+gd = importlib.import_module("game_database")
 importlib.reload(gd)
 
 METRICS_FILE = "metrics.json"

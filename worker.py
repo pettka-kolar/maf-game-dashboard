@@ -1,27 +1,154 @@
 import json
 import time
-import requests
 import os
 import re
+import importlib
 from datetime import datetime
-from bs4 import BeautifulSoup
-import game_database as gd
+from html.parser import HTMLParser
+from urllib.request import Request, urlopen
+
+# Resolve optional/runtime dependencies through importlib so this module remains
+# usable in editors and environments where dependencies are not preloaded.
+try:
+    requests = importlib.import_module("requests")
+except ImportError:
+    requests = None
+
+try:
+    bs4 = importlib.import_module("bs4")
+    BeautifulSoup = bs4.BeautifulSoup
+except ImportError:
+    bs4 = None
+    BeautifulSoup = None
+
+gd = importlib.import_module("game_database")
 
 METRICS_FILE = "metrics.json"
 TIMEOUT = 12
 DELAY_BETWEEN_GAMES = 1.5
 
-session = requests.Session()
-session.headers.update({
+DEFAULT_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.9"
-})
+    "Accept-Language": "en-US,en;q=0.9",
+}
+
+class _FallbackResponse:
+    def __init__(self, status_code, text=""):
+        self.status_code = status_code
+        self.text = text
+
+    def json(self):
+        return json.loads(self.text)
+
+class _FallbackSession:
+    def __init__(self):
+        self.headers = dict(DEFAULT_HEADERS)
+        self.cookies = {}
+
+    def cookies_update(self, cookies):
+        self.cookies.update(cookies)
+
+    def get(self, url, timeout=TIMEOUT, **kwargs):
+        headers = dict(self.headers)
+        headers.update(kwargs.get("headers", {}))
+        if self.cookies:
+            headers["Cookie"] = "; ".join(f"{key}={value}" for key, value in self.cookies.items())
+        try:
+            request = Request(url, headers=headers)
+            with urlopen(request, timeout=timeout) as response:
+                return _FallbackResponse(response.status, response.read().decode("utf-8", errors="replace"))
+        except Exception:
+            return _FallbackResponse(0)
+
+if requests is not None:
+    session = requests.Session()
+else:
+    session = _FallbackSession()
+session.headers.update(DEFAULT_HEADERS)
 session.cookies.update({
     "wants_mature_content": "1",
     "lastagecheckage": "1-1-1990",
     "birthtime": "631180801"
 })
+
+# Minimal stdlib HTML parser used only when BeautifulSoup is unavailable.
+class _HTMLNode:
+    def __init__(self, name="", attrs=None, text="", parser=None):
+        self.name = name
+        self.attrs = attrs or {}
+        self.text = text
+        self.string = text or None
+        self._parser = parser
+
+    def get_text(self, strip=False):
+        text = self.text
+        return text.strip() if strip else text
+
+    def get(self, key, default=None):
+        return self.attrs.get(key, default)
+
+    def find_all(self, name=None, attrs=None, **kwargs):
+        if not self._parser:
+            return []
+        class_name = kwargs.get("class_")
+        required_type = kwargs.get("type")
+        property_name = kwargs.get("property")
+        matches = []
+        for node in self._parser.nodes:
+            if name and node.name != name:
+                continue
+            if class_name:
+                classes = node.attrs.get("class", "")
+                if hasattr(class_name, "search"):
+                    if not class_name.search(classes):
+                        continue
+                elif class_name not in classes.split():
+                    continue
+            if required_type and node.attrs.get("type") != required_type:
+                continue
+            if property_name and node.attrs.get("property") != property_name:
+                continue
+            if attrs:
+                if any(node.attrs.get(key) != value for key, value in attrs.items()):
+                    continue
+            matches.append(node)
+        return matches
+
+    def find(self, name=None, attrs=None, **kwargs):
+        matches = self.find_all(name, attrs, **kwargs)
+        return matches[0] if matches else None
+
+class _HTMLExtractor(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.nodes = []
+        self.text_parts = []
+
+    def handle_starttag(self, tag, attrs):
+        attr_dict = dict(attrs)
+        node = _HTMLNode(tag, attr_dict, parser=self)
+        self.nodes.append(node)
+
+    def handle_data(self, data):
+        self.text_parts.append(data)
+
+    def get_text(self, strip=False):
+        text = " ".join(part.strip() for part in self.text_parts if part.strip())
+        return text.strip() if strip else text
+
+def _fallback_soup(html):
+    parser = _HTMLExtractor()
+    parser.feed(html)
+
+    for node in parser.nodes:
+        descendants = []
+        for part in re.findall(r">([^<>]+)<", html):
+            descendants.append(part.strip())
+        node.text = " ".join(descendants) if node.name in ("a", "script", "meta") else ""
+
+    return _HTMLNode(attrs={}, parser=parser)
+
 
 def parse_date(date_str):
     if not date_str or date_str == "2099-01-01":
