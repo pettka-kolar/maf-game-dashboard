@@ -2,7 +2,7 @@
     "Beast of Reincarnation (Game Pass)": {
         "all_time_peak": 14860,
         "release_date": "Aug 3, 2026",
-        "live_ccu": 52,
+        "live_ccu": 47,
         "steam_rating": 64.16,
         "total_reviews": 1585,
         "opencritic_score": 72,
@@ -16,9 +16,9 @@
     "Big Walk": {
         "all_time_peak": 46345,
         "release_date": "2099-01-01",
-        "live_ccu": 1178,
+        "live_ccu": 1047,
         "steam_rating": 94.68,
-        "total_reviews": 32640,
+        "total_reviews": 32644,
         "opencritic_score": 89,
         "metacritic_score": 91,
         "price_current_eur": 18.99,
@@ -58,7 +58,7 @@
     "Iron Nest: Heavy Turest Simulator": {
         "all_time_peak": 17495,
         "release_date": "2099-01-01",
-        "live_ccu": 189,
+        "live_ccu": 195,
         "steam_rating": 97.64,
         "total_reviews": 8543,
         "opencritic_score": "N/A",
@@ -72,7 +72,7 @@
     "Expeditions: Samurai": {
         "all_time_peak": 661,
         "release_date": "2099-01-01",
-        "live_ccu": 6,
+        "live_ccu": 5,
         "steam_rating": 59.91,
         "total_reviews": 227,
         "opencritic_score": 68,
@@ -86,7 +86,7 @@
     "Pax Autocratica (Early Access)": {
         "all_time_peak": 6123,
         "release_date": "2099-01-01",
-        "live_ccu": 52,
+        "live_ccu": 60,
         "steam_rating": 91.37,
         "total_reviews": 2225,
         "opencritic_score": "N/A",
@@ -100,7 +100,7 @@
     "Agent 64: Spies Never Die": {
         "all_time_peak": 772,
         "release_date": "2099-01-01",
-        "live_ccu": 9,
+        "live_ccu": 7,
         "steam_rating": 86.66,
         "total_reviews": 832,
         "opencritic_score": 73,
@@ -142,7 +142,7 @@
     "Security 51": {
         "all_time_peak": 1251,
         "release_date": "Aug 12, 2026",
-        "live_ccu": 7,
+        "live_ccu": 6,
         "steam_rating": 71.67,
         "total_reviews": 233,
         "opencritic_score": "N/A",
@@ -170,7 +170,7 @@
     "Duskfade": {
         "all_time_peak": 964,
         "release_date": "2099-01-01",
-        "live_ccu": 3,
+        "live_ccu": 2,
         "steam_rating": 90.32,
         "total_reviews": 599,
         "opencritic_score": 79,
@@ -184,9 +184,9 @@
     "Madden NFL 27": {
         "all_time_peak": 5003,
         "release_date": "2099-01-01",
-        "live_ccu": 1759,
-        "steam_rating": 40.25,
-        "total_reviews": 1528,
+        "live_ccu": 1421,
+        "steam_rating": 40.2,
+        "total_reviews": 1530,
         "opencritic_score": 75,
         "metacritic_score": "N/A",
         "price_current_eur": 34.99,
@@ -198,7 +198,7 @@
     "Sandustry (Game Pass)": {
         "all_time_peak": 12550,
         "release_date": "2099-01-01",
-        "live_ccu": 702,
+        "live_ccu": 703,
         "steam_rating": 97.36,
         "total_reviews": 3567,
         "opencritic_score": "N/A",
@@ -212,7 +212,7 @@
     "Defender of the Crown: The Legend Returns": {
         "all_time_peak": 337,
         "release_date": "2099-01-01",
-        "live_ccu": 2,
+        "live_ccu": 1,
         "steam_rating": 69.48,
         "total_reviews": 154,
         "opencritic_score": 73,
@@ -226,7 +226,7 @@
     "Hell let loose - Vietnam": {
         "all_time_peak": 30448,
         "release_date": "2099-01-01",
-        "live_ccu": 323,
+        "live_ccu": 289,
         "steam_rating": 62.42,
         "total_reviews": 9166,
         "opencritic_score": 73,
@@ -254,7 +254,7 @@
     "The Sinking City 2": {
         "all_time_peak": 1896,
         "release_date": "2099-01-01",
-        "live_ccu": 12,
+        "live_ccu": 18,
         "steam_rating": 81.02,
         "total_reviews": 964,
         "opencritic_score": 80,
@@ -282,7 +282,7 @@
     "Feed the Scorchpot": {
         "all_time_peak": 998,
         "release_date": "2099-01-01",
-        "live_ccu": 12,
+        "live_ccu": 16,
         "steam_rating": 94.9,
         "total_reviews": 196,
         "opencritic_score": "N/A",
@@ -296,7 +296,7 @@
     "Mortal Shell II": {
         "all_time_peak": 44435,
         "release_date": "2099-01-01",
-        "live_ccu": 711,
+        "live_ccu": 700,
         "steam_rating": 83.14,
         "total_reviews": 10221,
         "opencritic_score": 83,
@@ -338,7 +338,7 @@
     "1666: Amsterdam": {
         "all_time_peak": 2069,
         "release_date": "2099-01-01",
-        "live_ccu": 5,
+        "live_ccu": 6,
         "steam_rating": 58.72,
         "total_reviews": 470,
         "opencritic_score": "N/A",
@@ -352,7 +352,7 @@
     "Once Human": {
         "all_time_peak": 44220,
         "release_date": "Jul 9, 2024",
-        "live_ccu": 13485,
+        "live_ccu": 13363,
         "steam_rating": 97.22,
         "total_reviews": 36,
         "opencritic_score": 74,
@@ -366,7 +366,7 @@
     "Aliens: Fireteam Elite 2": {
         "all_time_peak": 7724,
         "release_date": "2099-01-01",
-        "live_ccu": 73,
+        "live_ccu": 58,
         "steam_rating": 60.98,
         "total_reviews": 2888,
         "opencritic_score": 63,
@@ -380,7 +380,7 @@
     "Brigandine Abyss": {
         "all_time_peak": 661,
         "release_date": "2099-01-01",
-        "live_ccu": 11,
+        "live_ccu": 14,
         "steam_rating": 46.76,
         "total_reviews": 139,
         "opencritic_score": 70,
@@ -394,7 +394,7 @@
     "Metal Gear Solid: Master Collection Vol. 2": {
         "all_time_peak": 284,
         "release_date": "2099-01-01",
-        "live_ccu": 0,
+        "live_ccu": 1,
         "steam_rating": 70.27,
         "total_reviews": 37,
         "opencritic_score": 84,
@@ -408,7 +408,7 @@
     "Resonance: A Plague Tale Legacy": {
         "all_time_peak": 5450,
         "release_date": "2099-01-01",
-        "live_ccu": 70,
+        "live_ccu": 77,
         "steam_rating": 92.29,
         "total_reviews": 1815,
         "opencritic_score": 81,
@@ -422,9 +422,9 @@
     "Star Wars Zero Company": {
         "all_time_peak": 77586,
         "release_date": "2099-01-01",
-        "live_ccu": 1064,
+        "live_ccu": 877,
         "steam_rating": 83.22,
-        "total_reviews": 18726,
+        "total_reviews": 18727,
         "opencritic_score": 84,
         "metacritic_score": 84,
         "price_current_eur": 39.99,
@@ -478,9 +478,9 @@
     "Crimson Moon": {
         "all_time_peak": 10050,
         "release_date": "2099-01-01",
-        "live_ccu": 31,
-        "steam_rating": 59.92,
-        "total_reviews": 2076,
+        "live_ccu": 25,
+        "steam_rating": 59.94,
+        "total_reviews": 2077,
         "opencritic_score": "N/A",
         "metacritic_score": 71,
         "price_current_eur": 12.99,
@@ -492,7 +492,7 @@
     "WheelMates": {
         "all_time_peak": 1182,
         "release_date": "2099-01-01",
-        "live_ccu": 11,
+        "live_ccu": 13,
         "steam_rating": 83.04,
         "total_reviews": 448,
         "opencritic_score": "N/A",
@@ -520,7 +520,7 @@
     "The Blood of Dawnwalker": {
         "all_time_peak": 77773,
         "release_date": "2 Sep, 2026",
-        "live_ccu": 872,
+        "live_ccu": 881,
         "steam_rating": 87.79,
         "total_reviews": 14273,
         "opencritic_score": "N/A",
@@ -534,7 +534,7 @@
     "Cosmo Tales": {
         "all_time_peak": 15,
         "release_date": "2099-01-01",
-        "live_ccu": 0,
+        "live_ccu": 1,
         "steam_rating": 85.71,
         "total_reviews": 7,
         "opencritic_score": "N/A",
@@ -562,7 +562,7 @@
     "SpeedRunners 2: King of Speed (Game Pass)": {
         "all_time_peak": 4432,
         "release_date": "2099-01-01",
-        "live_ccu": 2312,
+        "live_ccu": 2452,
         "steam_rating": 53.45,
         "total_reviews": 333,
         "opencritic_score": "N/A",
@@ -576,7 +576,7 @@
     "Onimusha: Way of the Sword": {
         "all_time_peak": 84794,
         "release_date": "2099-01-01",
-        "live_ccu": 1286,
+        "live_ccu": 1311,
         "steam_rating": 93.84,
         "total_reviews": 6168,
         "opencritic_score": "N/A",
@@ -590,7 +590,7 @@
     "NBA 2K27": {
         "all_time_peak": 31150,
         "release_date": "2099-01-01",
-        "live_ccu": 8720,
+        "live_ccu": 9025,
         "steam_rating": 54.85,
         "total_reviews": 1816,
         "opencritic_score": "N/A",
@@ -618,7 +618,7 @@
     "Wanderburg (Early Access)": {
         "all_time_peak": 10426,
         "release_date": "2099-01-01",
-        "live_ccu": 80,
+        "live_ccu": 103,
         "steam_rating": 79.16,
         "total_reviews": 1339,
         "opencritic_score": "N/A",
@@ -632,7 +632,7 @@
     "Moonlighter 2": {
         "all_time_peak": 3861,
         "release_date": "19 Nov, 2025",
-        "live_ccu": 125,
+        "live_ccu": 122,
         "steam_rating": 81.73,
         "total_reviews": 1801,
         "opencritic_score": "N/A",
@@ -646,7 +646,7 @@
     "Valheim 1.0": {
         "all_time_peak": 308032,
         "release_date": "2 Feb, 2021",
-        "live_ccu": 16846,
+        "live_ccu": 15818,
         "steam_rating": 94.11,
         "total_reviews": 268386,
         "opencritic_score": 81,
@@ -660,9 +660,9 @@
     "Wardogs (Early Access)": {
         "all_time_peak": 425674,
         "release_date": "2099-01-01",
-        "live_ccu": 30183,
+        "live_ccu": 28615,
         "steam_rating": 77.88,
-        "total_reviews": 121173,
+        "total_reviews": 121179,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "price_current_eur": 39.99,
@@ -688,7 +688,7 @@
     "Aniimo": {
         "all_time_peak": 167956,
         "release_date": "2099-01-01",
-        "live_ccu": 14199,
+        "live_ccu": 15654,
         "steam_rating": 72.91,
         "total_reviews": 26979,
         "opencritic_score": "N/A",
@@ -702,7 +702,7 @@
     "Active Matter": {
         "all_time_peak": 10632,
         "release_date": "2099-01-01",
-        "live_ccu": 1059,
+        "live_ccu": 1039,
         "steam_rating": 79.94,
         "total_reviews": 2737,
         "opencritic_score": "N/A",
@@ -730,7 +730,7 @@
     "Endless Legend 2": {
         "all_time_peak": 4720,
         "release_date": "22 Sep, 2025",
-        "live_ccu": 249,
+        "live_ccu": 242,
         "steam_rating": 82.04,
         "total_reviews": 2416,
         "opencritic_score": 84,
@@ -744,7 +744,7 @@
     "Trails in the Sky: 2nd Chapter": {
         "all_time_peak": 15331,
         "release_date": "2099-01-01",
-        "live_ccu": 914,
+        "live_ccu": 955,
         "steam_rating": 97.79,
         "total_reviews": 861,
         "opencritic_score": 92,
@@ -758,7 +758,7 @@
     "Flamecraft": {
         "all_time_peak": 300,
         "release_date": "2099-01-01",
-        "live_ccu": 10,
+        "live_ccu": 6,
         "steam_rating": 96.93,
         "total_reviews": 163,
         "opencritic_score": "N/A",
@@ -786,7 +786,7 @@
     "The Guild 1 Remake: Europa 1410": {
         "all_time_peak": 2059,
         "release_date": "2099-01-01",
-        "live_ccu": 36,
+        "live_ccu": 43,
         "steam_rating": 67.29,
         "total_reviews": 376,
         "opencritic_score": "N/A",
@@ -814,9 +814,9 @@
     "Graveyard Keeper II": {
         "all_time_peak": 60443,
         "release_date": "2099-01-01",
-        "live_ccu": 1077,
+        "live_ccu": 1100,
         "steam_rating": 77.96,
-        "total_reviews": 4451,
+        "total_reviews": 4452,
         "opencritic_score": 79,
         "metacritic_score": 73,
         "price_current_eur": 24.99,
@@ -828,7 +828,7 @@
     "Rivage": {
         "all_time_peak": 1050,
         "release_date": "2099-01-01",
-        "live_ccu": 48,
+        "live_ccu": 47,
         "steam_rating": 71.35,
         "total_reviews": 356,
         "opencritic_score": "N/A",
@@ -856,9 +856,9 @@
     "Control Resonant": {
         "all_time_peak": 42765,
         "release_date": "2099-01-01",
-        "live_ccu": 1174,
+        "live_ccu": 1094,
         "steam_rating": 92.52,
-        "total_reviews": 10453,
+        "total_reviews": 10455,
         "opencritic_score": 83,
         "metacritic_score": 83,
         "price_current_eur": 55.99,
@@ -870,7 +870,7 @@
     "Silent Hill: Townfall": {
         "all_time_peak": 8287,
         "release_date": "2099-01-01",
-        "live_ccu": 125,
+        "live_ccu": 132,
         "steam_rating": 71.58,
         "total_reviews": 2646,
         "opencritic_score": 77,
@@ -884,9 +884,9 @@
     "FC 27": {
         "all_time_peak": 95930,
         "release_date": "2099-01-01",
-        "live_ccu": 15320,
-        "steam_rating": 48.01,
-        "total_reviews": 5009,
+        "live_ccu": 16329,
+        "steam_rating": 48.0,
+        "total_reviews": 5012,
         "opencritic_score": 77,
         "metacritic_score": 74,
         "price_current_eur": 34.99,
@@ -898,7 +898,7 @@
     "Wild West Pioneers": {
         "all_time_peak": 1756,
         "release_date": "2099-01-01",
-        "live_ccu": 53,
+        "live_ccu": 51,
         "steam_rating": 75.59,
         "total_reviews": 299,
         "opencritic_score": "N/A",
@@ -912,7 +912,7 @@
     "The Witcher 3: Wild Hunt Remastered": {
         "all_time_peak": 137724,
         "release_date": "18 May, 2015",
-        "live_ccu": 11957,
+        "live_ccu": 12971,
         "steam_rating": 96.35,
         "total_reviews": 249624,
         "opencritic_score": "N/A",
@@ -926,9 +926,9 @@
     "Ace Combat 8: Wings of Thebes": {
         "all_time_peak": 52272,
         "release_date": "2099-01-01",
-        "live_ccu": 3642,
+        "live_ccu": 3671,
         "steam_rating": 87.4,
-        "total_reviews": 11750,
+        "total_reviews": 11752,
         "opencritic_score": 88,
         "metacritic_score": "N/A",
         "price_current_eur": 69.99,
@@ -940,7 +940,7 @@
     "Minecraft Dungeons II": {
         "all_time_peak": 32420,
         "release_date": "2099-01-01",
-        "live_ccu": 260,
+        "live_ccu": 247,
         "steam_rating": 66.69,
         "total_reviews": 6167,
         "opencritic_score": "N/A",
@@ -954,7 +954,7 @@
     "Nivalis Nights": {
         "all_time_peak": 6943,
         "release_date": "2099-01-01",
-        "live_ccu": 301,
+        "live_ccu": 269,
         "steam_rating": 79.4,
         "total_reviews": 3223,
         "opencritic_score": 71,
@@ -968,9 +968,9 @@
     "Transport Fever 3": {
         "all_time_peak": 47135,
         "release_date": "2099-01-01",
-        "live_ccu": 3063,
-        "steam_rating": 71.95,
-        "total_reviews": 3426,
+        "live_ccu": 3518,
+        "steam_rating": 71.96,
+        "total_reviews": 3427,
         "opencritic_score": 81,
         "metacritic_score": 83,
         "price_current_eur": 49.99,
@@ -982,7 +982,7 @@
     "Way of the Hunter 2": {
         "all_time_peak": 1644,
         "release_date": "26 Mar, 2026",
-        "live_ccu": 148,
+        "live_ccu": 150,
         "steam_rating": 69.75,
         "total_reviews": 1147,
         "opencritic_score": "N/A",
@@ -1010,9 +1010,9 @@
     "Octopath Traveler I & II": {
         "all_time_peak": 17512,
         "release_date": "2099-01-01",
-        "live_ccu": 755,
+        "live_ccu": 801,
         "steam_rating": 93.18,
-        "total_reviews": 4854,
+        "total_reviews": 4855,
         "opencritic_score": 74,
         "metacritic_score": "N/A",
         "price_current_eur": 23.99,
@@ -1024,7 +1024,7 @@
     "Aion 2": {
         "all_time_peak": 397371,
         "release_date": "2099-01-01",
-        "live_ccu": 89038,
+        "live_ccu": 92406,
         "steam_rating": 56.84,
         "total_reviews": 8265,
         "opencritic_score": "N/A",
@@ -1038,9 +1038,9 @@
     "Gears of War: E-Day": {
         "all_time_peak": 31499,
         "release_date": "2099-01-01",
-        "live_ccu": 1608,
-        "steam_rating": 69.48,
-        "total_reviews": 8439,
+        "live_ccu": 1200,
+        "steam_rating": 69.47,
+        "total_reviews": 8438,
         "opencritic_score": 85,
         "metacritic_score": 87,
         "price_current_eur": 48.99,
@@ -1052,7 +1052,7 @@
     "Star Wars: Galactic Racer": {
         "all_time_peak": 17920,
         "release_date": "2099-01-01",
-        "live_ccu": 744,
+        "live_ccu": 567,
         "steam_rating": 86.62,
         "total_reviews": 6608,
         "opencritic_score": 87,
@@ -1066,9 +1066,9 @@
     "Clive Barker's Hellraiser: Revival": {
         "all_time_peak": 9439,
         "release_date": "2099-01-01",
-        "live_ccu": 314,
+        "live_ccu": 286,
         "steam_rating": 93.16,
-        "total_reviews": 5582,
+        "total_reviews": 5583,
         "opencritic_score": "N/A",
         "metacritic_score": 69,
         "price_current_eur": 39.99,
@@ -1080,7 +1080,7 @@
     "Kingdom Hearts Collection 1-3": {
         "all_time_peak": 8500,
         "release_date": "13 Jun, 2024",
-        "live_ccu": 1225,
+        "live_ccu": 1033,
         "steam_rating": 86.63,
         "total_reviews": 8498,
         "opencritic_score": "N/A",
@@ -1094,7 +1094,7 @@
     "Neon Abyss 2": {
         "all_time_peak": 2335,
         "release_date": "17 Jul, 2025",
-        "live_ccu": 162,
+        "live_ccu": 157,
         "steam_rating": 87.92,
         "total_reviews": 505,
         "opencritic_score": "N/A",
@@ -1108,7 +1108,7 @@
     "Order of the Sinking Star": {
         "all_time_peak": 8124,
         "release_date": "2099-01-01",
-        "live_ccu": 1617,
+        "live_ccu": 1693,
         "steam_rating": 96.17,
         "total_reviews": 2196,
         "opencritic_score": 85,
@@ -1136,7 +1136,7 @@
     "Permafrost (Early Access)": {
         "all_time_peak": 8114,
         "release_date": "2099-01-01",
-        "live_ccu": 127,
+        "live_ccu": 115,
         "steam_rating": 77.21,
         "total_reviews": 895,
         "opencritic_score": "N/A",
@@ -1164,7 +1164,7 @@
     "Hubert": {
         "all_time_peak": 85,
         "release_date": "2099-01-01",
-        "live_ccu": 1,
+        "live_ccu": 3,
         "steam_rating": 79.25,
         "total_reviews": 53,
         "opencritic_score": "N/A",
@@ -1178,7 +1178,7 @@
     "Planet Zoo 2": {
         "all_time_peak": 44318,
         "release_date": "2099-01-01",
-        "live_ccu": 2382,
+        "live_ccu": 2506,
         "steam_rating": 64.14,
         "total_reviews": 4052,
         "opencritic_score": 82,
@@ -1192,7 +1192,7 @@
     "Valor Mortis": {
         "all_time_peak": 5162,
         "release_date": "2099-01-01",
-        "live_ccu": 134,
+        "live_ccu": 144,
         "steam_rating": 82.51,
         "total_reviews": 1458,
         "opencritic_score": 79,
@@ -1206,7 +1206,7 @@
     "Warhammer 40,000: Boltgun 2": {
         "all_time_peak": 1612,
         "release_date": "2099-01-01",
-        "live_ccu": 113,
+        "live_ccu": 105,
         "steam_rating": 95.89,
         "total_reviews": 828,
         "opencritic_score": 81,
@@ -1220,9 +1220,9 @@
     "Castlevania: Belmont's Curse": {
         "all_time_peak": 21646,
         "release_date": "2099-01-01",
-        "live_ccu": 599,
-        "steam_rating": 86.08,
-        "total_reviews": 5648,
+        "live_ccu": 503,
+        "steam_rating": 86.07,
+        "total_reviews": 5649,
         "opencritic_score": 84,
         "metacritic_score": 83,
         "price_current_eur": 29.99,
@@ -1234,9 +1234,9 @@
     "Enshrouded (1.0)": {
         "all_time_peak": 160405,
         "release_date": "24 Jan, 2024",
-        "live_ccu": 13780,
+        "live_ccu": 13606,
         "steam_rating": 87.11,
-        "total_reviews": 53593,
+        "total_reviews": 53594,
         "opencritic_score": 83,
         "metacritic_score": 87,
         "price_current_eur": 39.99,
@@ -1248,7 +1248,7 @@
     "Frosthaven": {
         "all_time_peak": 1708,
         "release_date": "31 Jul, 2025",
-        "live_ccu": 262,
+        "live_ccu": 217,
         "steam_rating": 71.98,
         "total_reviews": 646,
         "opencritic_score": "N/A",
@@ -1262,7 +1262,7 @@
     "Beyond These Stars (Game Pass)": {
         "all_time_peak": 811,
         "release_date": "2099-01-01",
-        "live_ccu": 19,
+        "live_ccu": 16,
         "steam_rating": 71.73,
         "total_reviews": 191,
         "opencritic_score": "N/A",
@@ -1276,9 +1276,9 @@
     "Dreadline Express": {
         "all_time_peak": 90,
         "release_date": "2099-01-01",
-        "live_ccu": 0,
-        "steam_rating": 98.37,
-        "total_reviews": 123,
+        "live_ccu": 1,
+        "steam_rating": 98.39,
+        "total_reviews": 124,
         "opencritic_score": "N/A",
         "metacritic_score": 78,
         "price_current_eur": 12.49,
@@ -1318,9 +1318,9 @@
     "Final Fantasy Resonance": {
         "all_time_peak": 42799,
         "release_date": "2099-01-01",
-        "live_ccu": 4325,
+        "live_ccu": 4231,
         "steam_rating": 96.62,
-        "total_reviews": 3842,
+        "total_reviews": 3845,
         "opencritic_score": 85,
         "metacritic_score": 85,
         "price_current_eur": 49.99,
@@ -1360,9 +1360,9 @@
     "Phantom Blade Zero": {
         "all_time_peak": 833479,
         "release_date": "2099-01-01",
-        "live_ccu": 62877,
-        "steam_rating": 93.88,
-        "total_reviews": 11804,
+        "live_ccu": 68879,
+        "steam_rating": 93.89,
+        "total_reviews": 11808,
         "opencritic_score": 88,
         "metacritic_score": 88,
         "price_current_eur": 59.99,
@@ -1374,7 +1374,7 @@
     "Heir of the Dog": {
         "all_time_peak": 57,
         "release_date": "2099-01-01",
-        "live_ccu": 3,
+        "live_ccu": 1,
         "steam_rating": 100.0,
         "total_reviews": 36,
         "opencritic_score": "N/A",
@@ -1388,7 +1388,7 @@
     "Gravhounds (EA)": {
         "all_time_peak": 1216,
         "release_date": "2099-01-01",
-        "live_ccu": 102,
+        "live_ccu": 66,
         "steam_rating": 90.35,
         "total_reviews": 404,
         "opencritic_score": "N/A",
@@ -1402,7 +1402,7 @@
     "ArcheAge Chronicles (EA)": {
         "all_time_peak": 25945,
         "release_date": "2099-01-01",
-        "live_ccu": 3951,
+        "live_ccu": 4026,
         "steam_rating": 70.54,
         "total_reviews": 2373,
         "opencritic_score": "N/A",
@@ -1416,7 +1416,7 @@
     "Lightyear Frontier (1.0)": {
         "all_time_peak": 5878,
         "release_date": "4 Nov, 2026",
-        "live_ccu": 943,
+        "live_ccu": 918,
         "steam_rating": 81.6,
         "total_reviews": 2799,
         "opencritic_score": 77,
@@ -1444,7 +1444,7 @@
     "Void/Breaker (1.0)": {
         "all_time_peak": 855,
         "release_date": "19 Aug, 2025",
-        "live_ccu": 134,
+        "live_ccu": 137,
         "steam_rating": 92.6,
         "total_reviews": 2432,
         "opencritic_score": "N/A",
@@ -1458,7 +1458,7 @@
     "County of Fortune (EA)": {
         "all_time_peak": 975,
         "release_date": "2099-01-01",
-        "live_ccu": 109,
+        "live_ccu": 119,
         "steam_rating": 83.61,
         "total_reviews": 122,
         "opencritic_score": "N/A",
@@ -1472,9 +1472,9 @@
     "Underkeep": {
         "all_time_peak": 2874,
         "release_date": "2099-01-01",
-        "live_ccu": 242,
-        "steam_rating": 89.57,
-        "total_reviews": 901,
+        "live_ccu": 262,
+        "steam_rating": 89.58,
+        "total_reviews": 902,
         "opencritic_score": "N/A",
         "metacritic_score": 84,
         "price_current_eur": 22.95,
@@ -1500,7 +1500,7 @@
     "Dreadmoor": {
         "all_time_peak": 5104,
         "release_date": "2099-01-01",
-        "live_ccu": 483,
+        "live_ccu": 524,
         "steam_rating": 81.7,
         "total_reviews": 847,
         "opencritic_score": "N/A",
@@ -1514,9 +1514,9 @@
     "Football Manager 27": {
         "all_time_peak": 79394,
         "release_date": "2099-01-01",
-        "live_ccu": 22419,
-        "steam_rating": 82.64,
-        "total_reviews": 1146,
+        "live_ccu": 25845,
+        "steam_rating": 82.56,
+        "total_reviews": 1147,
         "opencritic_score": 82,
         "metacritic_score": 80,
         "price_current_eur": 59.99,
@@ -1528,8 +1528,8 @@
     "Warhammer Survivors": {
         "all_time_peak": 16435,
         "release_date": "2099-01-01",
-        "live_ccu": 2933,
-        "steam_rating": 68.29,
+        "live_ccu": 2853,
+        "steam_rating": 68.34,
         "total_reviews": 2277,
         "opencritic_score": 75,
         "metacritic_score": 79,
@@ -1542,7 +1542,7 @@
     "Trees Hate You": {
         "all_time_peak": 695,
         "release_date": "2099-01-01",
-        "live_ccu": 187,
+        "live_ccu": 136,
         "steam_rating": 92.28,
         "total_reviews": 246,
         "opencritic_score": "N/A",
@@ -1556,9 +1556,9 @@
     "Spirit Crossing": {
         "all_time_peak": 939,
         "release_date": "2099-01-01",
-        "live_ccu": 431,
-        "steam_rating": 85.89,
-        "total_reviews": 241,
+        "live_ccu": 401,
+        "steam_rating": 85.95,
+        "total_reviews": 242,
         "opencritic_score": "N/A",
         "metacritic_score": "N/A",
         "price_current_eur": 22.49,
@@ -1570,7 +1570,7 @@
     "Dawn of Defense": {
         "all_time_peak": 1026,
         "release_date": "2099-01-01",
-        "live_ccu": 429,
+        "live_ccu": 446,
         "steam_rating": 65.59,
         "total_reviews": 93,
         "opencritic_score": "N/A",
